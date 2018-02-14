@@ -1,0 +1,10 @@
+CACHE MANIFEST
+
+# Version: 1.4
+
+NETWORK:
+*
+
+CACHE:
+/index.html
+

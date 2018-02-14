@@ -1,0 +1,141 @@
+[Template]
+Name=Landing
+Components=Main
+Title=Aurawin Ace Test Page
+Output=index.html
+OnResize=
+OnLoad=doLoad()
+Cache Manifest=
+DocType=HTML
+Compress=1
+Cache=1
+TTL=0
+Kind=page
+Charset=UTF-8
+
+[Meta Tags]
+Description=Aurawin demo of Ace.
+Keywords=
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.1
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=yes
+
+[StyleSheets]
+Count=2
+1=/core/vdm/coVDM.css
+2=/core/vdm/editor/redactor/redactor.css
+
+[Links]
+Count=1
+1=rel="apple-touch-icon" href="/images/cld.png"
+
+[SEO Follow]
+Aurawin Downloads=/downloads/
+Aurawin Developers=/developers/
+Aurawin Partners=/partners/
+Aurawin Cloud Computing=/cloud/
+
+[JavaScripts]
+Count=87
+Embedded=0
+1=/core/vdm/jquery-2.1.1.js
+2=/core/vdm/editor/redactor/redactor.js
+3=/core/vdm/editor/redactor/fontsize.js
+4=/core/vdm/editor/redactor/fontcolor.js
+5=/core/vdm/editor/redactor/fontfamily.js
+6=/core/app/coBoot.js
+7=/core/app/coTimers.js
+8=/core/app/coUtils.js
+9=/core/app/coObject.js
+10=/core/app/coList.js
+11=/core/app/coAppKit.js
+12=/core/app/coXML.js
+13=/core/app/coDOM.js
+14=/core/app/coEvents.js
+15=/core/app/coCookies.js
+16=/core/app/coLang.js
+17=/core/app/coRegistry.js
+18=/core/app/coDB.js
+19=/core/app/coNet.js
+20=/core/app/coApp.js
+21=/core/app/coAppScreens.js
+22=/core/app/coContentType.js
+23=/core/app/coCursor.js
+24=/core/app/coLang.js
+25=/core/app/coTheme.js
+26=/core/app/coMath.js
+27=/core/app/coDragDrop.js
+28=/core/app/coEncryption.js
+29=/core/app/coDateTime.js
+30=/core/app/coAppUI.js
+31=/core/app/coEncoding.js
+32=/core/app/ui/vScroll.js
+33=/core/app/ui/Slides.js
+34=/core/app/ui/CheckBox.js
+35=/core/app/ui/Button.js
+36=/core/app/ui/Select.js
+37=/core/app/ui/TreeView.js
+38=/core/app/ui/Panels.js
+39=/core/app/ui/PopUp.js
+40=/core/app/ui/MultiView.js
+41=/core/app/ui/Elements.js
+42=/core/app/ui/Splitter.js
+43=/core/app/ui/Line.js
+44=/core/app/ui/TabsBar.js
+45=/core/app/ui/IconBar.js
+46=/core/app/ui/ThreadView.js
+47=/core/app/ui/Glyph.js
+48=/core/app/ui/ListView.js
+49=/core/app/ui/Indicator.js
+50=/core/app/ui/Request.js
+51=/core/app/ui/BoxView.js
+52=/core/app/ui/ShowCase.js
+53=/core/app/ui/ProgressIcon.js
+54=/core/app/ui/Password.js
+55=/core/app/ui/Image.js
+56=/core/app/ui/iFrame.js
+57=/core/app/ui/IconListView.js
+58=/core/app/ui/KPList.js
+59=/core/app/ui/Number.js
+60=/core/app/ui/Toolbar.js
+61=/core/app/ui/CMS.js
+62=/core/app/ui/SlidePath.js
+63=/core/app/ui/NetSelect.js
+64=/core/app/ui/Text.js
+65=/core/app/ui/Nav.js
+66=/core/app/ui/Torus.js
+67=/core/app/ui/Label.js
+68=/core/app/ui/DropFiles.js
+69=/core/app/ui/RichEdit.js
+70=/core/app/ui/ProgressBar.js
+71=/core/app/ui/FilmStrip.js
+72=/core/app/ui/PageView.js
+73=/core/app/ui/ToolWindow.js
+74=/core/app/ui/RosterView.js
+75=/core/vdm/coVDM.js
+76=/core/vdm/Browser.js
+77=/core/vdm/Clock.js
+78=/core/vdm/Display.js
+79=/core/vdm/Events.js
+80=/core/vdm/Groups.js
+81=/core/vdm/Manifest.js
+82=/core/vdm/Status.js
+83=/core/vdm/Topbar.js
+84=/core/vdm/WorkSpace.js
+85=/core/vdm/coStartup.js
+86=/ace/coAcePage.js
+87=/core/vdm/editor/ace/ace.js
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Main]
+Name=Main
+Description=Page contents
+Content=Main.html
+Code=Main.js
+Style=Main.css
+

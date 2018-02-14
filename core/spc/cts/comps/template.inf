@@ -1,0 +1,18 @@
+[Template]
+Name=Aurawin Spectrum Contacts Components
+Description=A compilation of contact components
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=4
+
+1=/core/spc/eml/DB.js
+2=/core/spc/eml/Nav.js
+3=/core/spc/eml/Recipients.js
+4=/core/spc/eml/Editor.js
+

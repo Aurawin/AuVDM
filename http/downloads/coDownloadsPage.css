@@ -1,0 +1,195 @@
+Header{
+  content: '/downloads/coDownloadsPage.css'
+}
+{$i FontFace.css}
+{$i TopNavBar.css}
+html, body {
+  background-color:gray;
+}
+div.cmpWrapper{
+  display:block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+  background-image: url('/core/vdm/imgs/slds/gph.jpg');
+}
+div.vdmWrapper{
+  position:absolute;
+  display:block;
+  top: 52px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+div.DownloadsPageScreen{
+  display:none;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  opacity:0;
+
+  transition: opacity 0.25s linear;
+  -moz-transition:opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+}
+div.bdrDownloadsPage{
+  display: block;
+  position:absolute;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  border-top-width:0px;
+  border-left-width: 0px;
+  border-right-width:0px;
+  border-bottom-width:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+div.bdrDownloadsPageClient{
+  display: block;
+  position:absolute;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  border-top-width:0px;
+  border-left-width: 0px;
+  border-right-width:0px;
+  border-bottom-width:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+div.Cloud{
+  display:block;
+  position:absolute;
+  left:0px;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  background-image:url(/images/logo/dark/lgo.svg);
+  background-size:27%;
+  background-repeat:no-repeat;
+  background-position: center;
+
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+div.Header{
+  display:block;
+  position: absolute;
+  top:0px;
+  left:0px;
+  right: 0px;
+  height: 80px;
+  box-shadow: 0px 2px 8px rgba(0,0,0,1);
+  background-color:rgba(0,0,0,.5);
+  opacity:1;
+  z-index: 4000;
+
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+div.Logo{
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 50%;
+  margin-right: -150px;
+  width: 300px;
+  height: 70px;
+  background-image: url(/images/logo/dark/au.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity:0;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+div.Info{
+  display: block;
+  position: absolute;
+  left:0px;
+  top: 0px;
+  bottom:0px;
+  right:0px;
+
+}
+div.InfoTitle{
+  display: block;
+  height: 30px;
+  font-size: 18pt;
+  line-height: 30px;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: bold;
+  color: rgba(255,255,255,.77);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+div.InfoDescription{
+  display: block;
+  top: 30px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  position: absolute;
+  font-size:11pt;
+  color: rgba(255,255,255,.77);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+div.InfoWrap{
+  display: block;
+  position: absolute;
+  left: 220px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow:hidden;
+}
+div.lvFrontPageDownloads{
+  display:block;
+  position: absolute;
+}

@@ -1,0 +1,104 @@
+Header{
+  content: '/core/spc/eml/Reader.css'
+}
+html, body {
+  padding: 0px;
+  margin: 0px;
+  left:0px;
+  right:0px;
+  top:0px;
+  bottom:0px;
+  position: absolute;
+  font-family: Tahoma,Verdana,Nimbus Sans L,Ubuntu,DejaVu Sans,Sans;
+  clear: both;
+  font-size: 9pt;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  overflow: hidden;
+  background-color:rgba(255,255,255,1);
+  color:rgba(0,0,0,1);
+  font-size:14px;
+  text-rendering: optimizeLegibility;
+}
+body{
+ -webkit-overflow-scrolling: touch !important;
+ overflow-x: hidden !important;
+ overflow-y: auto !important;
+}
+a:link,
+a:hover,
+a:visited,
+a:active
+{
+  color:rgba(0,0,240,1);
+  text-decoration:underline;
+}
+div.loadSMTPMsg{
+  font-weight:bold;
+  font-size: 14px;
+}
+div.SMTPMsg{
+  cursor: text;
+  -webkit-user-select: auto;
+  -khtml-user-select: auto;
+  -moz-user-select: auto;
+  -o-user-select: auto;
+  user-select: auto;
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-bottom: 2px;
+  padding-right: 2px;
+  display: block;
+  text-align: left;
+  white-space:normal;
+}
+
+div.txtSMTPMsg{
+  display:block;
+  font-family: Ubuntu,DejaVu Sans,Nimbus Sans L,Tahoma,Verdana,Sans;
+}
+
+img.imgSMTPMsg{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+
+  background: rgba(245,246,246,.5);
+  background: -moz-linear-gradient(top, rgba(245,246,246,.5) 0%, rgba(219,220,226,.5) 21%, rgba(184,186,198,.5) 49%, rgba(221,223,227,.5) 80%, rgba(245,246,246,.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,246,246,.5)), color-stop(21%,rgba(219,220,226,.5)), color-stop(49%,rgba(184,186,198,.5)), color-stop(80%,rgba(221,223,227,.5)), color-stop(100%,rgba(245,246,246,.5)));
+  background: -webkit-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: -o-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: -ms-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: linear-gradient(to bottom, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
+
+  box-shadow: inset 0 0 2px rgba(0,0,0,.7);
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.7);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(20, 12, 12, .3);
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+pre{
+  word-break:break-word;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+pre.moz-signature{
+  white-space:pre-line;
+}

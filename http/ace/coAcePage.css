@@ -1,0 +1,8 @@
+div.bdrAcePageClient,
+div.bdrAcePage,
+div.frmAcePage,
+div.AcePageScreen{
+  display:block;
+  position:absolute;
+}
+

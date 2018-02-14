@@ -1,0 +1,23 @@
+[Template]
+Name=Aurawin VDM Components
+Description=A compilation of all VDM components.
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=9
+1=/core/vdm/Browser.js
+2=/core/vdm/Clock.js
+3=/core/vdm/Display.js
+4=/core/vdm/Events.js
+5=/core/vdm/Groups.js
+6=/core/vdm/Manifest.js
+7=/core/vdm/Status.js
+8=/core/vdm/Topbar.js
+9=/core/vdm/WorkSpace.js
+
+

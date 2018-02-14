@@ -1,0 +1,45 @@
+[Template]
+Name=Index
+Components=Header,Main,Footer
+Title=Aurawin : Outdated Browser Detected
+Output=index.html
+OnResize=doResize()
+OnLoad=doLoad()
+Compress=1
+Cache=1
+TTL=0
+DocType=HTML
+Charset=UTF-8
+
+[Meta Tags]
+Description=Aurawin advanced web browsing technologies provided by browsers such as Firefox, Chrome, or Apple Safari.
+Keywords=Aurawin, Firefox, Chrome, Safari
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.3
+AppleWebApp=yes
+AppleWebStatusBar=black-translucent
+AppleTouchFullScreen=yes
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Header]
+Name=Header
+Description=Page header bar
+Content=Header.html
+Code=Header.js
+Style=Header.css
+
+[Main]
+Name=Main
+Description=Page contents
+Content=Main.html
+Code=Main.js
+Style=Main.css
+
+[Footer]
+Name=Footer
+Description=Page footer bar
+Content=Footer.html
+

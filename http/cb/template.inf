@@ -1,0 +1,51 @@
+[Template]
+Name=Landing
+Components=Application
+Title=Aurawin Collage Board
+Output=index.html
+OnResize=
+OnLoad=coPalmView.doLoad()
+DocType=HTML
+Compress=1
+Cache=1
+TTL=60
+Charset=UTF-8
+
+[Meta Tags]
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.1
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=false
+
+[StyleSheets]
+Count=2
+1=/core/vdm/coVDM.css
+2=/cb/coPalmView.css
+
+
+[Links]
+Count=1
+1=rel="apple-touch-icon" href="/images/cld.png"
+
+[JavaScripts]
+Count=4
+Embedded=0
+1=/core/vdm/jquery-2.0.3.js
+2=/core/app/full/code.js
+3=/core/app/ui/full/code.js
+4=/core/vdm/boot/base/code.js
+
+
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Application]
+Name=Palm View App
+Description=Palm View Page App
+Content=coPalmView.html
+Code=coPalmView.js
+Style=coPalmView.css
+

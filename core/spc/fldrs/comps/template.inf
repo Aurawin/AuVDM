@@ -1,0 +1,20 @@
+[Template]
+Name=Aurawin Spectrum Folder Components
+Description=A compilation of folder components
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=6
+
+1=/core/spc/fldrs/DB.js
+2=/core/spc/fldrs/Nav.js
+3=/core/spc/fldrs/Uploader.js
+4=/core/spc/fldrs/Converter.js
+5=/core/spc/fldrs/TreeView.js
+6=/core/spc/fldrs/ListView.js
+

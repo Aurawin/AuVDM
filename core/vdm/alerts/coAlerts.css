@@ -1,0 +1,135 @@
+Header{
+  content: '/core/vdm/alerts/coAlerts.css'
+}
+div.AlrtFrm {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 300px;
+  height: 247px;
+  min-width: 320px;
+  min-height: 247px;
+  visibility: hidden;
+}
+div.AlrtFrmNavBarCntr {
+  POSITION: absolute;
+  TEXT-ALIGN: center;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 100%;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 32px;
+  VERTICAL-ALIGN: middle;
+  TOP: 0px;
+  PADDING-TOP: 0px;
+  LEFT: 0px
+}
+div.AlrtFrmNavBarBtnFirst {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/nb/fr.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 28px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  TOP: 0px;
+  PADDING-TOP: 0px;
+  LEFT: 0px
+}
+div.AlrtFrmNavBarBtnPrevious {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/nb/pv.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 28px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  TOP: 0px;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmNavBarBtnDelete {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/nb/dl.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 70px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: no-repeat;
+  BACKGROUND-POSITION: 50% 50%;
+  HEIGHT: 28px;
+  TOP: 0px;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmNavBarBtnNext {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/nb/nx.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 28px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  TOP: 0px;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmNavBarBtnLast {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/nb/lt.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 28px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  TOP: 0px;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmMsgCaption {
+  POSITION: absolute;
+  TEXT-ALIGN: center;
+  PADDING-BOTTOM: 0px;
+  LINE-HEIGHT: 24px;
+  MARGIN: 0px;
+  PADDING-LEFT:
+  0px; WIDTH: 100%;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  VERTICAL-ALIGN: middle;
+  OVERFLOW: hidden;
+  TOP: 0px;
+  FONT-WEIGHT: bold;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmMsgDate {
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  LINE-HEIGHT: 24px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 100%;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  VERTICAL-ALIGN: middle;
+  OVERFLOW: hidden;
+  TOP: 28px;
+  PADDING-TOP: 0px
+}
+div.AlrtFrmMsgBody {
+  BORDER-BOTTOM: #7aa211 1px solid;
+  POSITION: absolute;
+  BORDER-LEFT: #7aa211 1px solid;
+  PADDING-BOTTOM: 4px;
+  OVERFLOW-Y: auto;
+  MARGIN: 0px;
+  PADDING-LEFT: 4px;
+  PADDING-RIGHT: 4px;
+  BORDER-TOP: #7aa211 1px solid;
+  TOP: 56px;
+  BORDER-RIGHT: #7aa211 1px solid;
+  PADDING-TOP: 4px
+}
+

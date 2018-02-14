@@ -1,0 +1,60 @@
+Header{
+  content: '/core/avatar/coAvatar.css'
+}
+div.pnlAvatar{
+  height: 200px;
+  width: 308px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+}
+div.wrapAvatar{
+  height: 130px;
+  width: 130px;
+
+  top: 50%;
+  left: 50%;
+
+  margin-left: -65px;
+  margin-top: -65px;
+
+  position:absolute;
+  display: block;
+}
+
+div.imgAvatar{
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 8px;
+  border: 2px solid rgba(7, 7, 79, 0.79) ;
+  width: 128px;
+  height: 128px;
+
+  position:absolute;
+  display: block;
+}
+div.imgAvatarText{
+  text-shadow: 0em 0em 1em rgba(179, 179, 179, 1), 1px 1px 2px rgba(0, 0, 0, 1), -1px -1px 2px rgba(0, 0, 0, 1), 1px -1px 2px rgba(0, 0, 0, 1),-1px 1px 2px rgba(0, 0, 0, 1);
+  text-align: center;
+
+  display: block;
+  line-height: 124px;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  position: absolute;
+
+  vertical-align: middle;
+}
+div.imgAvatar:hover{
+
+}

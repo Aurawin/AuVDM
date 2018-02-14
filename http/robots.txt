@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /core/
+Disallow: /images/
+Disallow: /cb/
+Disallow: /fp/
+Disallow: /browser/

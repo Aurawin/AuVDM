@@ -1,0 +1,227 @@
+Header{
+  content: '/core/vdm/music/coMusic.css'
+}
+div.sldMusicPlayer{
+  position: absolute;
+  display: block;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+div.Music{
+  width: 640px;
+  height: 480px;
+  visibility:hidden;
+  position: absolute;
+}
+audio.audioPlayer{
+  opacity: 0;
+  height: 28px;
+  width: 120px;
+  bottom: -12000px;
+  right: 12000px;
+  visibility:visible;
+  display:none;
+  position: absolute;
+}
+div.musicPlay{
+  height: 48px;
+  width: 48px;
+}
+div.sldCover{
+  width: 80px;
+  display: inline-block;
+  position: absolute;
+}
+div.sldDetails{
+  display: inline-block;
+  position: absolute;
+  color: rgba(0,0,0,1);
+  text-shadow: 0px 0px 1px rgba(255,255,255,.79);
+}
+
+div.sldControls{
+  width: 50px;
+  display: inline-block;
+  position: absolute;
+}
+div.sldSong{
+  height: 24px;
+  vertical-align: middle;
+  line-height: 24px;
+  font-weight:bold;
+  font-size: 10pt;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  position: absolute;
+  display: block;
+}
+div.sldArtist{
+  height: 18px;
+
+  font-size: 9pt;
+
+  line-height: 18px;
+  padding-left: 2px;
+
+  vertical-align: middle;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  white-space: nowrap;
+  position: absolute;
+  display: block;
+}
+div.sldAlbum{
+  height: 18px;
+
+  font-size: 9pt;
+
+  line-height: 18px;
+  padding-left: 2px;
+
+  vertical-align: middle;
+
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  white-space: nowrap;
+  position: absolute;
+  display: block;
+}
+div.sldProgress{
+  height: 14px;
+  position: absolute;
+  display: block;
+}
+div.sldControl{
+  position: absolute;
+  display: block;
+
+  padding-top: 4px;
+  padding-left:4px;
+  padding-right: 4px;
+  padding-bottom:4px;
+}
+div.pbPosition{
+  height: 12px;
+  width: 12px;
+  position: absolute;
+
+  border-radius: 6px;
+  z-index: 1;
+
+  border: 1px solid rgba(0, 0, 0, 0.57);
+
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+  background: #FFD740;
+  background: -moz-linear-gradient(top, rgba(255, 215, 64, 1) 0%, rgba(191, 161, 48, 1) 24%, rgba(166, 131, 0, 1) 50%, rgba(191, 161, 48, 1) 79%, rgba(255, 215, 64, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 215, 64, 1)), color-stop(24%,rgba(191, 161, 48, 1)), color-stop(50%,rgba(166, 131, 0, 1)), color-stop(79%,rgba(191, 161, 48, 1)), color-stop(100%,rgba(255, 215, 64, 1)));
+  background: -webkit-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+  background: -o-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+  background: linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+
+}
+div.pbPosition:hover{
+  color: rgba(255,255,255,.79);
+  -moz-box-shadow: 0 0 2px 2px rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 2px 2px rgba(0,0,50,.5);
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.5);
+
+border: 1px solid rgba(0, 0, 0, .7);
+background: #1E5799;
+background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30, 87, 153, 1)), color-stop(50%,rgba(41, 137, 216, 1)), color-stop(51%,rgba(32, 124, 202, 1)), color-stop(100%,rgba(125, 185, 232, 1)));
+background: -webkit-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+background: -o-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+background: -ms-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+background: linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+
+}
+div.pbFiller{
+  top: 3px;
+  left: 3px;
+  bottom: 3px;
+
+  border-radius: 2px;
+  position: absolute;
+  visibility: hidden;
+  display: block;
+
+background: -moz-linear-gradient(left, rgba(30,87,153,0.8) 0%, rgba(30,87,153,1) 4%, rgba(30,87,153,1) 7%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 93%, rgba(30,87,153,1) 96%, rgba(30,87,153,0.8) 100%);
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,0.8)), color-stop(4%,rgba(30,87,153,1)), color-stop(7%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(93%,rgba(30,87,153,1)), color-stop(96%,rgba(30,87,153,1)), color-stop(100%,rgba(30,87,153,0.8)));
+background: -webkit-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+background: -o-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+background: -ms-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+background: linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1e5799', endColorstr='#cc1e5799',GradientType=1 );
+}
+div.pbWrapper{
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+
+  display: block;
+  position: absolute;
+
+  border-radius: 4px;
+  border-top-width:1px;
+  border-left-width:1px;
+  border-right-width:1px;
+  border-bottom-width:1px;
+
+  border: 1px solid rgba(0, 0, 0, 0.57);
+
+  z-index: 1;
+
+  padding-top: 2px;
+  padding-bottom:2px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+}
+div.musicGlyph{
+  display: block;
+  position: absolute;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+
+  border-radius: 4px;
+  border: 2px solid rgba(0,0,0,0.57);
+}
+div.musicControl{
+  display: block;
+  top: 4px;
+  left: 4px;
+  position: absolute;
+  width:40px;
+  height:40px;
+}
+div.musicControlIcon{
+  display: block;
+  position: absolute;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+}

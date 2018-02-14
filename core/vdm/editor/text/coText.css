@@ -1,0 +1,43 @@
+Header{
+  content: '/core/vdm/editor/text/coText.css'
+}
+div.EditorTextScreen{
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  width: 400px;
+  height: 400px;
+}
+div.RichEditEditorTextMemo{
+  display: block;
+  position: absolute;
+  visibility: visible;
+  top: 0px;
+  left: 0px;
+  bottom:0px;
+  right:0px;
+}
+div.RichEditEditorTextMemo{
+  color:rgba(255,255,255,1);
+  background-color:rgba(0,0,0,.5);
+  overflow:hidden;
+
+  border-top: rgba(127,127,127,1) solid 1px;
+  border-left: rgba(127,127,127,1) solid 1px;
+  border-right: rgba(127,127,127,1) solid 1px;
+  border-bottom: rgba(107,107,107,1) solid 1px;
+}
+div.redactor_EditorTextMemo{
+  display: block;
+  position: absolute;
+  left: 0px;
+  right:0px;
+  bottom: 0px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+div.sldEditorTextMemo{
+  display:block;
+  position:absolute;
+}

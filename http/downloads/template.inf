@@ -1,0 +1,52 @@
+[Template]
+Name=Downloads Page
+Components=Application
+Title=Aurawin Downloads Page
+Output=index.html
+OnResize=
+OnLoad=coDownloadsPage.doPageLoad()
+DocType=HTML
+Compress=1
+Cache=1
+TTL=60
+Charset=UTF-8
+
+[Meta Tags]
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.1
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=yes
+
+[StyleSheets]
+Count=2
+1=/core/vdm/coVDM.css
+2=/downloads/coDownloadsPage.css
+
+
+[Links]
+Count=1
+1=rel="apple-touch-icon" href="/images/cld.png"
+
+[JavaScripts]
+Count=6
+Embedded=0
+1=/core/vdm/jquery-2.0.3.js
+2=/core/app/full/code.js
+3=/core/app/ui/full/code.js
+4=/core/vdm/boot/base/code.js
+5=/core/license/coLicense.js
+6=/downloads/coVDM.Post.js
+
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Application]
+Name=DownloadsPage App
+Description=Downloads Page App
+Content=coDownloadsPage.html
+Code=coDownloadsPage.js
+Style=coDownloadsPage.css
+

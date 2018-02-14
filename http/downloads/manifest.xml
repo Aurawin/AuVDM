@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<downloads>
+  <template>
+  <download>
+    <prod></prod>
+    <vers></vers>
+    <des></des>
+    <url></url>
+    <cat></cat>
+    <os></os>
+    <sze></sze>
+  </download>
+  </template>
+  <download>
+    <prod>AuCloud</prod>
+    <vers>2015.4.19</vers>
+    <des>Aurawin cloud synchronization app</des>
+    <url>/downloads/Internal/AuCloud-2015.4.19-windows-x64.exe</url>
+    <cat>Desktop</cat>
+    <os>Windows 64bit</os>
+    <sze>4.5 MB</sze>
+  </download>
+  <download>
+    <prod>AuCloud</prod>
+    <vers>2015.4.19</vers>
+    <des>Aurawin cloud synchronization app</des>
+    <url>/downloads/Internal/AuCloud-2015.4.19-windows-32.exe</url>
+    <cat>Desktop</cat>
+    <os>Windows 32bit</os>
+    <sze>3.2 MB</sze>
+  </download>
+  <download>
+    <prod>AuCloud</prod>
+    <vers>2015.2.21</vers>
+    <des>Aurawin cloud synchronization app</des>
+    <url>/downloads/Internal/AuCloud-2015.2.21-linux-x64.zip</url>
+    <cat>Desktop</cat>
+    <os>Linux 64bit</os>
+    <sze>3.2 MB</sze>
+  </download>
+  <download>
+    <prod>AuCloud</prod>
+    <vers>pending</vers>
+    <des>Aurawin cloud synchronization app</des>
+    <url></url>
+    <cat>Desktop</cat>
+    <os>Linux 32bit</os>
+    <sze>4.5 MB</sze>
+  </download>
+  <download>
+    <prod>AuCloud</prod>
+    <vers>pending</vers>
+    <des>Aurawin cloud synchronization app</des>
+    <url></url>
+    <cat>Desktop</cat>
+    <os>OSX 64bit</os>
+    <sze>4.5 MB</sze>
+  </download>
+  <download>
+    <prod>AuConsole</prod>
+    <vers>2014.8.19</vers>
+    <des>Aurawin Social Computing Server GUI Console</des>
+    <url>/downloads/Internal/AuConsole-2014.8.19-windows-x64.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>5.5 MB</sze>
+  </download>
+  <download>
+    <prod>AuConsole</prod>
+    <vers>2014.8.19</vers>
+    <des>Aurawin Social Computing Server GUI Console</des>
+    <url>/downloads/Internal/AuConsole-2014.8.19-windows-32.exe</url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>4.0 MB</sze>
+  </download>
+  <download>
+    <prod>AuConsole</prod>
+    <vers>2015.4.17</vers>
+    <des>Aurawin Social Computing Server GUI Console</des>
+    <url>/downloads/Internal/AuConsole-2015.4.17-linux-x64.zip</url>
+    <cat>Server</cat>
+    <os>Linux 64bit</os>
+    <sze>4.0 MB</sze>
+  </download>
+  <download>
+    <prod>AuConsole</prod>
+    <vers>pending</vers>
+    <des>Aurawin Social Computing Server GUI Console</des>
+    <url></url>
+    <cat>Server</cat>
+    <os>Linux 32bit</os>
+    <sze>2.4 MB</sze>
+  </download>
+  <download>
+    <prod>AuConsole</prod>
+    <vers>pending</vers>
+    <des>Aurawin Social Computing Server GUI Console</des>
+    <url></url>
+    <cat>Server</cat>
+    <os>OSX 64bit</os>
+    <sze>2.4 MB</sze>
+  </download>
+  <download>
+    <prod>AuSCS</prod>
+    <vers>2014.8.19</vers>
+    <des>Aurawin Social Computing Server</des>
+    <url>/downloads/Internal/AuSCS-2014.8.19-windows-x64.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>7.3 MB</sze>
+  </download>
+  <download>
+    <prod>AuSCS</prod>
+    <vers>pending</vers>
+    <des>Aurawin Social Computing Server</des>
+    <url></url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>2.0 MB</sze>
+  </download>
+  <download>
+    <prod>AuSCS</prod>
+    <vers>2015.4.17</vers>
+    <des>Aurawin Social Computing Server</des>
+    <url>/downloads/Internal/AuSCS-2015.4.17-linux-x64.zip</url>
+    <cat>Server</cat>
+    <os>Linux 64bit</os>
+    <sze>7.2 MB</sze>
+  </download>
+  <download>
+    <prod>AuSCS</prod>
+    <vers>pending</vers>
+    <des>Aurawin Social Computing Server</des>
+    <url></url>
+    <cat>Server</cat>
+    <os>Linux 32bit</os>
+    <sze>2.0 MB</sze>
+  </download>
+  <download>
+    <prod>AuSCS</prod>
+    <vers>pending</vers>
+    <des>Aurawin Social Computing Server</des>
+    <url></url>
+    <cat>Server</cat>
+    <os>OSX 64bit</os>
+    <sze>2.0 MB</sze>
+  </download>
+  <download>
+    <prod>AuVDM</prod>
+    <vers>2015.4.17</vers>
+    <des>Aurawin Virtual Desktop Machine (VDM)</des>
+    <url>/Downloads/Internal/AuVDM-2015.4.17.zip</url>
+    <cat>Server</cat>
+    <os>Aurawin</os>
+    <sze>34.3 MB</sze>
+  </download>
+  <download>
+    <prod>Postgresql</prod>
+    <vers>9.2.4-1</vers>
+    <des>Postgresql Database Software</des>
+    <url>/Downloads/External/postgresql-9.2.4-1-windows-x64.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>53.5 MB</sze>
+  </download>
+  <download>
+    <prod>Postgresql</prod>
+    <vers>9.2.4-1</vers>
+    <des>Postgresql Database Software</des>
+    <url>/Downloads/External/postgresql-9.2.4-1-windows.exe</url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>52.1 MB</sze>
+  </download>
+  <download>
+    <prod>Postgresql</prod>
+    <vers>9.2.4-1</vers>
+    <des>Postgresql Database Software</des>
+    <url>/Downloads/External/postgresql-9.2.4-1-linux-x64.run</url>
+    <cat>Server</cat>
+    <os>Linux 64bit</os>
+    <sze>36.5 MB</sze>
+  </download>
+  <download>
+    <prod>Postgresql</prod>
+    <vers>9.2.4-1</vers>
+    <des>Postgresql Database Software</des>
+    <url>/Downloads/External/postgresql-9.2.4-1-linux.run</url>
+    <cat>Server</cat>
+    <os>Linux 32bit</os>
+    <sze>35.1 MB</sze>
+  </download>
+  <download>
+    <prod>Postgresql</prod>
+    <vers>9.2.4-1</vers>
+    <des>Postgresql Database Software</des>
+    <url>/Downloads/External/postgresql-9.2.4-1-osx.dmg</url>
+    <cat>Server</cat>
+    <os>OSX 64bit</os>
+    <sze>35.1 MB</sze>
+  </download>
+  <download>
+    <prod>ImageMagick</prod>
+    <vers>12.3.0</vers>
+    <des>Required image libaries for SCS</des>
+    <url>/Downloads/External/ImageMagick-x86_64-apple-darwin12.3.0.tar.gz</url>
+    <cat>Server</cat>
+    <os>OSX 64bit</os>
+    <sze>8.4 MB</sze>
+  </download>
+  <download>
+    <prod>ImageMagick</prod>
+    <vers>6.8.5-2</vers>
+    <des>Required image libaries for SCS</des>
+    <url>/Downloads/External/ImageMagick-6.8.5-2-Q16-x64-dll.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>20.4 MB</sze>
+  </download>
+  <download>
+    <prod>ImageMagick</prod>
+    <vers>6.8.5-2</vers>
+    <des>Required image libaries for SCS</des>
+    <url>/Downloads/External/ImageMagick-6.8.5-2-Q16-x86-dll.exe</url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>19.9 MB</sze>
+  </download>
+  <download>
+    <prod>OpenSSL</prod>
+    <vers>1.0.1e</vers>
+    <des>Required SSL libaries for SCS</des>
+    <url>/Downloads/External/Win64OpenSSL-1_0_1e.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>20 MB</sze>
+  </download>
+  <download>
+    <prod>OpenSSL</prod>
+    <vers>1.0.1e</vers>
+    <des>Required SSL libaries for SCS</des>
+    <url>/Downloads/External/Win32OpenSSL-1_0_1e.exe</url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>18.5 MB</sze>
+  </download>
+  <download>
+    <prod>VC++ Runtime </prod>
+    <vers>2012</vers>
+    <des>Redistributables required for OpenSSL</des>
+    <url>/Downloads/External/vcredist_x64.exe</url>
+    <cat>Server</cat>
+    <os>Windows 64bit</os>
+    <sze>7.2 MB</sze>
+  </download>
+  <download>
+    <prod>VC++ Runtime </prod>
+    <vers>2012</vers>
+    <des>Redistributables required for OpenSSL</des>
+    <url>/Downloads/External/vcredist_x86.exe</url>
+    <cat>Server</cat>
+    <os>Windows 32bit</os>
+    <sze>6.6 MB</sze>
+  </download>
+</downloads>

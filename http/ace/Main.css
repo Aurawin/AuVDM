@@ -1,0 +1,45 @@
+{$i FontFace.css}
+{$i TopNavBar.css}
+html,body{
+  background-color:gray;
+}
+div.cmpWrapper{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+
+  display: block;
+  font-size: 10pt;
+}
+div.TemplateComponents{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+div.vdmWrap{
+  display:block;
+  position:absolute;
+  top: 52px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+}
+
+

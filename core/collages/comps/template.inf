@@ -1,0 +1,19 @@
+[Template]
+Name=Collage Board Components
+Description=A compilation of all Collage Board components.
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=6
+1=/core/collages/DB.js
+2=/core/collages/Editor.js
+3=/core/collages/Manifest.js
+4=/core/collages/Nav.js
+5=/core/collages/Views.js
+6=/core/collages/edtViews.js
+

@@ -1,0 +1,133 @@
+{$i FontFace.css}
+html,body{
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  width:100%;
+  font-family: Tahoma,Verdana,Sans;
+  clear: both;
+  font-size: 10pt;
+  display:block;
+  overflow: hidden;
+  background-color: rgba(64,64,64,1);
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 0px 0px 1px rgba(138, 139, 139, 1);
+}
+div.cmpWrapper{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  min-width: 640px;
+  min-height: 480px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+
+
+  display: block;
+  font-size: 10pt;
+}
+div.TemplateComponents{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  top: 0px;
+  left: 0px;
+  white-space:nowrap;
+  height: 100%;
+  width: 100%;
+}
+div.Main{
+  display: inline-block;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  -webkit-box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 1);
+  opacity: 0;
+  color: rgba(255,255,255,1);
+  font-size: 12px;
+  text-shadow: rgba(0,0,0,1) 0px 0px 1px;
+  transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  white-space: normal;
+  overflow-y: scroll;
+  padding-left: 0px;
+  padding-right:0px;
+  padding-top: 0px;
+  padding-bottom:0px;
+
+}
+iframe.iVDM{
+  display: block;
+  position:absolute;
+  right:0px;
+  top: 0px;
+  border-width: 0px;
+}
+p.mainHeader{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+p.mainTopic{
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+p.mainP{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+li.mainP{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+ul.mainList{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+li.mainListItem{
+ padding-left: 10px;
+ padding-right:10px;
+ margin-left: 10px;
+ margin-top: 10px;
+
+ text-align:justify;
+}
+ul.subList{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+ margin-top: 5px;
+}
+li.subListItem{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+a,a:visited{
+  text-decoration: underline;
+  color:rgba(255,255,255,1);
+  font-weight:normal;
+}
+a:active,a:hover{
+  text-decoration: underline;
+  color:rgba(255,255,255,.5);
+  font-weight:normal;
+}
+

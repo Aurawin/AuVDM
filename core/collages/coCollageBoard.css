@@ -1,0 +1,321 @@
+Header{
+  content: '/core/collages/coCollageBoard.css'
+}
+div.CollageBoard{
+  position:absolute;
+  display:block;
+  width: 400px;
+  height: 400px;
+  visibility: hidden;
+}
+div.sldCollageEditor{
+  position:absolute;
+  display:block;
+  background-image:url(/core/vdm/imgs/bkds/cbb.jpg);
+  background-repeat:repeat;
+}
+div.CollageEditKindTitle{
+  display:block;
+  position:absolute;
+
+  padding-top:5px;
+  padding-bottom:5px;
+  padding-left:10px;
+  padding-right:10px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+
+  font-size: 12pt;
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,.57);
+}
+div.CollageEditKindElementsElements{
+  background-color:rgba(0,0,0,.3);
+  display: block;
+  position: absolute;
+
+  margin-top: 4px;
+  margin-bottom: 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom:0px;
+}
+div.CollageEditKindDescription{
+  display:block;
+  position:absolute;
+  margin-top: 0px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left:20px;
+  padding-right:20px;
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,.57);
+
+  text-overflow:ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+}
+div.CollageEditKindElementsElementSubItem{
+  border: 2px dashed rgba(255,255,255,.5);
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+  background-color: rgba(0,0,0.5);
+  background-size: contain;
+}
+div.CollageEditKindSingleSample{
+  display:block;
+  position:absolute;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.1);
+
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+
+}
+div.CollageEditKindDoubleSample{
+  display:block;
+  position:absolute;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.1);
+
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+
+}
+div.CollageEditKindTrippleSample{
+  display:block;
+  position:absolute;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.1);
+
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+
+}
+div.CollageEditKindQuadSample{
+  display:block;
+  position:absolute;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.1);
+
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+
+}
+div.CollageEditKindElementsElement{
+  color: rgba(255,255,255,1);
+  background-color: rgba(255,255,255,.1);
+
+  border-radius: 2px;
+  -moz-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+}
+div.CollageEditDetails{
+  display:block;
+  position:absolute;
+  background-color:rgba(0,0,0,.77);
+}
+div.CollageEditDetailsCollageElements{
+  display:block;
+  position:absolute;
+}
+div.CollageEditDetailsLocation{
+  top: 0px;
+  left: 0px;
+  right: 0px;
+
+  display:block;
+  position:absolute;
+  height:35px;
+  background-color:rgba(0,0,0,.2);
+  box-shadow: 0 0 3px 3px rgba(0,0,0,.2);
+  z-index: 2;
+}
+div.CollageEditDetailsTitle{
+  display:block;
+  position:absolute;
+  height: 35px;
+}
+div.CollageEditDetailslblLocation{
+  display:block;
+  position:absolute;
+  color: rgba(255,255,255,.98);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  font-size:12pt;
+  font-weight:bold;
+}
+div.CollageEditDetailsDescription{
+  display:block;
+  position:absolute;
+  height: 120px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+textarea.CollageEditDetailstxtDescription{
+  position:absolute;
+  display: block;
+  visibility:visible;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  padding-right:7px;
+  background-color:rgba(0,0,0,.47);
+  color: rgba(255,255,255,.47);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  font-size:11pt;
+  font-weight:normal;
+}
+input.CollageEditDetailstxtLocation,
+input.CollageEditDetailstxtTitle{
+  position:absolute;
+  display: block;
+  visibility:visible;
+  border: 1px solid rgba(255,255,255,.47);
+  padding-left: 7px;
+  padding-right:7px;
+  background-color:rgba(0,0,0,.47);
+  color: rgba(255,255,255,.98);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  font-size:12pt;
+}
+input.CollageEditDetailstxtLocation{
+  font-weight:normal;
+}
+input.CollageEditDetailstxtTitle{
+  font-weight:bold;
+}
+textarea.CollageEditDetailstxtDescription::-webkit-input-placeholder,
+textarea.CollageEditDetailstxtDescription::-moz-placeholder,
+textarea.CollageEditDetailstxtDescription::-ms-input-placeholder,
+input.CollageEditDetailstxtLocation::-webkit-input-placeholder,
+input.CollageEditDetailstxtLocation::-ms-input-placeholder,
+input.CollageEditDetailstxtLocation::-moz-placeholder.
+input.CollageEditDetailstxtTitle::-webkit-input-placeholder,
+input.CollageEditDetailstxtTitle::-ms-input-placeholder,
+input.CollageEditDetailstxtTitle::-moz-placeholder{
+  line-height: 1 !important;
+  text-align:left !important;
+  font-size:12pt !important;
+  font-weight:bold !important;
+  color: rgba(255,255,255,.77) !important;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1) !important;
+}
+
+div.RichEditCollageEditDetailstxtDescription{
+  display: block;
+  position: absolute;
+  border: 1px solid rgba(255,255,255,.47);
+  border-radius: 4px;
+  background-color:rgba(0,0,0,.47) !important;
+}
+ul.RichEditCollageEditDetailstxtDescription{
+  background-color:rgba(255,255,255,.77);
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+div.redactor_CollageEditDetailstxtDescription{
+  color: rgba(255,255,255,.98);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  font-size: 12pt;
+  font-weight: normal;
+  overflow-y: auto;
+  position: absolute;
+  display: block;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+div.CollageEditDetailsCollageElementSubItem{
+  padding-top: 4px;
+  padding-bottom:4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+div.scCollageKinds{
+  background-color:rgba(0,0,0,.77);
+}
+div.CollageEditDetailsCollageElementSubItemCaption{
+  color: rgb(255, 255, 255);
+  text-shadow: rgb(0, 0, 0) 0px 0px 1px, rgb(0, 0, 0) 0px 1px 1px, rgb(0, 0, 0) 1px;
+}
+

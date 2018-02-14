@@ -1,0 +1,6 @@
+{$i body.inc}
+{$i div.topBar.inc}
+div.cmpWrapper{
+  margin-top=-10px;
+}
+

@@ -1,0 +1,55 @@
+[Template]
+Name=Developers Page
+Components=Application
+Title=Aurawin Cloud Developers
+Output=index.html
+OnResize=
+OnLoad=coDevelopersPage.doPageLoad()
+DocType=HTML
+Compress=1
+Cache=1
+TTL=0
+Charset=UTF-8
+
+[Meta Tags]
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.1
+description=Aurawin cloud application development offers you a great way to build pages and virtual desktop applications.
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=yes
+
+[StyleSheets]
+Count=2
+1=/core/vdm/coVDM.css
+2=/core/vdm/editor/redactor/redactor.css
+
+[Links]
+Count=1
+1=rel="apple-touch-icon" href="/images/cld.png"
+
+[JavaScripts]
+Count=9
+Embedded=0
+1=/core/vdm/jquery-2.1.1.js
+2=/core/vdm/editor/redactor/redactor.js
+3=/core/vdm/editor/redactor/fontsize.js
+4=/core/vdm/editor/redactor/fontcolor.js
+5=/core/vdm/editor/redactor/fontfamily.js
+6=/core/app/full/code.js
+7=/core/app/ui/full/code.js
+8=/core/vdm/boot/base/code.js
+9=/core/license/coLicense.js
+
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Application]
+Name=Developers Page Application
+Description=Developers Page App
+Content=coDevelopersPage.html
+Code=coDevelopersPage.js
+Style=coDevelopersPage.css
+

@@ -1,0 +1,29 @@
+[Template]
+Name=Aurawin Music Player Base Components
+Description=A compilation of music player components
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=15
+
+1=/core/vdm/music/DB.js
+2=/core/vdm/music/Nav.js
+3=/core/vdm/music/Stack.js
+4=/core/vdm/music/Search.js
+5=/core/vdm/music/TreeView.js
+6=/core/vdm/music/Views.js
+7=/core/vdm/music/ListView.js
+8=/core/vdm/music/Splitter.js
+9=/core/vdm/music/Toolbar.js
+10=/core/vdm/music/Player.js
+11=/core/vdm/music/PlayLists.js
+12=/core/vdm/music/Uploader.js
+13=/core/vdm/music/Manifest.js
+14=/core/vdm/music/netSelect.js
+15=/core/vdm/music/Summary.js
+

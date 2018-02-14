@@ -1,0 +1,90 @@
+Header{
+  content: '/core/docs/coDocs.css'
+}
+div.appInsight{
+  position: absolute;
+  display: block;
+  width: 400px;
+  height: 400px;
+}
+
+div.appInsightViews{
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+
+div.appInsightViews{
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+div.appInsightAdminView{
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+div.appInsightDefsList{
+  width: 150px;
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+div.appInsightEditors{
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}
+div.appInsightDefsEditor{
+  position: absolute;
+  display: block;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+}

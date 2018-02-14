@@ -1,0 +1,399 @@
+Header{
+  content: '/core/vdm/tour/coTour.css'
+}
+div.Tour{
+  display:block;
+  position:absolute;
+  visibility: hidden;
+  width: 640px;
+  height: 480px;
+}
+div.sldTourMain{
+  position: absolute;
+  display:block;
+
+  background-image:url(/core/vdm/imgs/tour/spl.jpg);
+  background-size: cover;
+  background-repeat:no-repeat;
+
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+}
+div.sldTourHeader{
+  display:block;
+  position:absolute;
+  height:150px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+}
+div.sldTourTop{
+  height: 150px;
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  overflow: hidden;
+}
+div.sldTourClient{
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+}
+div.sldTourShowCase{
+  display: block;
+  position: absolute;
+  overflow:hidden;
+  top: 0px;
+  height: 150px;
+  right: 0px;
+  width: 200px;
+
+  border-bottom-left-radius: 17px;
+  -moz-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, .1);
+  -webkit-box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, .1);
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, .1);
+
+  border: 1px solid rgba(255, 255, 255, .27);
+  border-top-width: 0px;
+  border-right-width: 0px;
+}
+div.sldTourShowCaseScroller{
+  display: block;
+  overflow: hidden;
+  height:100%;
+
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+div.sldTourShowCaseClient{
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  height: 100%;
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+
+
+div.tourWelcome{
+
+}
+div.tourImage{
+
+}
+p.tourP{
+  white-space: normal;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top:5px;
+  padding-bottom:5px;
+
+  margin-top:5px;
+  margin-bottom:5px;
+
+  text-align:left;
+}
+p.tourMainP{
+  font-size: 11pt;
+  font-weight: bold;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+
+  margin-top:3px;
+  margin-bottom:10px;
+
+  text-align:left;
+  vertical-align: middle;
+  line-height: 24px;
+  background-color: rgba(117, 117, 117, .37);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+}
+p.tourSubHeaderP{
+  font-weight: bold;
+  text-shadow:
+    0px 0px 1em rgba(7, 7, 79, 1),
+    0px 0px 1em rgba(7, 7, 79, 1),
+    0px 0px 1em rgba(7, 7, 79, 1);
+}
+p.tourSubP{
+  line-height: 17px;
+  vertical-align: middle;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  margin-top:1px;
+  margin-bottom:1px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  text-align:left;
+
+  font-size: 10pt;
+
+  background-color: rgba(7, 7, 7, .37);
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+
+
+}
+div.tourIWelcome{
+  background-image:url(/core/vdm/imgs/tour/wel2s.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  display: block;
+  position: absolute;
+  border-bottom-left-radius: 17px;
+}
+div.tourICloud{
+  background-image:url(/core/vdm/imgs/tour/cl.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  display: block;
+  position: absolute;
+  border-bottom-left-radius: 17px;
+}
+div.tourISocial{
+  background-image:url(/core/vdm/imgs/tour/soc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  display: block;
+  position: absolute;
+  border-bottom-left-radius: 17px;
+}
+div.tourISecurity{
+  background-image:url(/core/vdm/imgs/tour/sec.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left:0px;
+  display: block;
+  position: absolute;
+  border-bottom-left-radius: 17px;
+}
+div.tourSecurity{
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 4px;
+}
+div.sldTourIllustrations{
+  position: absolute;
+  display: block;
+  margin-top: 152px;
+}
+div.sldTourIllustrationsScroller{
+  display: block;
+  overflow: hidden;
+  height:100%;
+
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+div.sldTourIllustrationsClient{
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  height: 100%;
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+
+div.tourButton{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  background-color: #2054CD;
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 4px;
+  text-align: center;
+  display: inline-block;
+  width: 70px;
+  line-height: 30px;
+}
+div.tourButton:hover{
+  background: rgb(125,185,232);
+  background: -moz-linear-gradient(top, rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(49%,rgba(32,124,202,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(30,87,153,1)));
+  background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: -o-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: -ms-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: linear-gradient(to bottom, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );
+
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+}
+div.tourButton:active{
+  background: rgb(30,87,153);
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+}
+div.tourPoint{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+  display: block;
+}
+div.tourWelcomeMain{
+  display: block;
+
+
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  margin-bottom: 4px;
+
+  opacity: 1;
+}
+div.tourBlank{
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+div.tourWelcomeSplash{
+  display: none;
+  background-size: cover;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  position: absolute;
+  opacity: 1;
+
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+}
+div.tourWelcomeWrap{
+  display: block;
+  white-space:nowrap;
+  width: 100%;
+  height: 145px;
+}
+div.tourWelcomeCabinet{
+  display:inline-block;
+  width: 25%;
+  height:100%;
+  background-image:url(/core/spc/imgs/cab.png);
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+div.tourWelcomeDevices{
+  display:inline-block;
+  width: 50%;
+  height:100%;
+  background-image:url(/core/vdm/imgs/tour/devs.png);
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+div.tourWelcomeFolders{
+  display:inline-block;
+  width: 25%;
+  height:100%;
+  background-image:url(/core/vdm/imgs/tour/fldrs.png);
+  background-size: contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+

@@ -1,0 +1,25 @@
+[Template]
+Name=Aurawin Spectrum Mail Base Components
+Description=A compilation of mail components
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=11
+
+1=/core/spc/eml/DB.js
+2=/core/spc/eml/ListView.js
+3=/core/spc/eml/Manifest.js
+4=/core/spc/eml/Nav.js
+5=/core/spc/eml/Reader.js
+6=/core/spc/eml/TabsBar.js
+7=/core/spc/eml/ThreadView.js
+8=/core/spc/eml/Toolbars.js
+9=/core/spc/eml/TreeView.js
+10=/core/spc/eml/Uploader.js
+11=/core/spc/eml/Writers.js
+

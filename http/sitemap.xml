@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+ <url>
+   <loc>http://aurawin.com/</loc>
+   <changefreq>weekly</changefreq>
+   <priority>0.8</priority>
+   </url>
+ <url>
+   <loc>http://aurawin.com/aup/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/cb/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/cloud/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/developers/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/downloads/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/partners/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/privacy/</loc>
+ </url>
+ <url>
+   <loc>http://aurawin.com/tos/</loc>
+ </url>
+</urlset>

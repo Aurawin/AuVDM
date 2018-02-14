@@ -1,0 +1,56 @@
+[Template]
+Name=TOS
+Components=Nav,Main,Policy
+Title=Aurawin Terms Of Service
+Output=index.html
+OnResize=doResize()
+OnLoad=doLoad()
+Cache Manifest=
+Compress=1
+DocType=HTML
+Cache=1
+TTL=0
+Charset=UTF-8
+
+[Meta Tags]
+Description=Aurawin terms of service allowances and restrictions
+Keywords=Social Computing, Virtual Computing, Cloud Computing, Software, Hosted Service, Email, Collaboration, Text, Pictures, Videos, Music
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.3
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=yes
+
+[StyleSheets]
+Count=1
+1=/core/vdm/style.css
+
+[JavaScripts]
+Count=0
+Embedded=0
+1=
+
+[Component Wrapper]
+Class=cmpWrapper sldBackground
+ID=cmpWrapper
+Enabled=1
+
+[Main]
+Name=Main
+Description=Page contents
+Content=Main.html
+Code=Main.js
+Style=Main.css
+
+[Nav]
+Name=Nav
+Description=Navigation
+Content=Nav.html
+Style=Nav.css
+Code=Nav.js
+
+[Policy]
+Name=Policy
+Description=Site Policy Links
+Content=Policy.html
+Code=Policy.js
+Style=Policy.css

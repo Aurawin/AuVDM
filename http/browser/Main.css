@@ -1,0 +1,30 @@
+{$i FontFace.css}
+{$i div.centerBar.inc}
+{$i p.mainHeader.inc}
+{$i p.mainTopic.inc}
+{$i p.mainP.inc}
+{$i li.mainP.inc}
+div.wbList{
+  display: table;
+}
+div.wbEntry{
+  display: table-row;
+  white-space: nowrap;
+  height: 90px;
+  vertical-align: middle;
+}
+div.wbImage{
+  display: table-cell;
+  vertical-align: middle;
+}
+div.wbVendor{
+  display: table-cell;
+  padding-left: 10px;
+  vertical-align: middle;
+  font-weight: bold;
+}
+div.centerBar{
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  margin-top: 0px;
+}

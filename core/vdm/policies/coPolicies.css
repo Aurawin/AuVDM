@@ -1,0 +1,192 @@
+Header{
+  content: '/core/vdm/policies/coPolicies.css'
+}
+div.Policies{
+  display:block;
+  position:absolute;
+  visibility: hidden;
+  width: 640px;
+  height: 480px;
+}
+div.sldPolicyMain{
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  background-color: rgba(7, 7, 7, .97);
+  color: rgba(255, 255, 255, 1);
+
+  overflow: hidden;
+}
+
+div.sldPolicyAUP{
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  overflow: hidden;
+}
+
+div.sldPolicyPrivacy{
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  overflow: hidden;
+}
+
+div.sldPolicyAgreement{
+  position: absolute;
+  display:block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+
+  border-top-width:0px;
+  border-left-width:0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  overflow: hidden;
+}
+
+div.sldPolicyAgreementClient{
+  overflow:hidden;
+  display: block;
+}
+div.sldPolicyAgreementContent{
+}
+div.Main{
+  display: block;
+
+  white-space: normal;
+  overflow: hidden;
+
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom:10px;
+
+}
+
+div.sldPolicyAUPClient{
+  overflow:hidden;
+  display: block;
+}
+div.sldPolicyAUPContent{
+}
+div.Main{
+  display: block;
+
+  white-space: normal;
+  overflow: hidden;
+
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom:10px;
+
+}
+
+div.sldPolicyPrivacyClient{
+  overflow:hidden;
+  display: block;
+}
+div.sldPolicyPrivacyContent{
+}
+div.Main{
+  display: block;
+
+  white-space: normal;
+  overflow: hidden;
+
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom:10px;
+
+}
+
+
+p.mainHeader{
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+p.mainTopic{
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+p.mainP{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+li.mainP{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+ul.mainList{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+ margin-left: 30px;
+ margin-right: 30px;
+}
+li.mainListItem{
+ padding-left: 10px;
+ padding-right:10px;
+ margin-left: 10px;
+ margin-top: 10px;
+
+ text-align:justify;
+}
+ul.subList{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+ margin-top: 5px;
+}
+li.subListItem{
+ padding-left: 10px;
+ padding-right:10px;
+ text-align:justify;
+}
+a,a:visited{
+  text-decoration: underline;
+  color:rgba(255,255,255,1);
+  font-weight:normal;
+}
+a:active,a:hover{
+  text-decoration: underline;
+  color:rgba(255,255,255,.5);
+  font-weight:normal;
+}
+

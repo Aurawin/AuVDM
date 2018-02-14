@@ -1,0 +1,201 @@
+div.Login {
+  position: absolute;
+  top: 1px;
+
+
+  padding: 0px;
+
+  width: 320px;
+  min-width: 320px;
+
+  height: 227px;
+  min-height: 227px;
+
+  visibility: hidden;
+  opacity: 0;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+
+  transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+}
+div.LoginLogoBackUp{
+ background-image: url(/core/vdm/imgs/icns/lgo.png);
+ width: 100px;
+}
+div.LoginLogo {
+  top: 10px;
+  height: 127px;
+  width: 200px;
+
+  background-size: contain;
+  -moz-background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  border-right-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+
+}
+div.LoginLgoTxt {
+  top: 127px;
+  right: 0px;
+  left: 0px;
+
+  position: absolute;
+  text-align: right;
+  line-height: 24px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+
+  border: 0px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: bold;
+
+  overflow: hidden;
+  color: rgba(255,255,255,.79);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+}
+div.LoginPrmptBox{
+  position:absolute;
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top: 150px;
+
+  left: 20px;
+  right: 20px;
+  height: 38px;
+}
+div.LoginPrmptBtnDisable{
+  position:absolute;
+  padding:0px;
+  margin:0px;
+  top:4px;
+  left:4px;
+  width: 32px;
+  height: 32px;
+  z-index:2;
+  background-image:url(/core/vdm/imgs/btns/dis.png);
+}
+div.LoginPrmptBack{
+  display: block;
+  position:absolute;
+  padding:0px;
+  margin:0px;
+  top:4px;
+  left:4px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  background-image:url(/core/vdm/imgs/btns/back.png);
+}
+div.LoginPrmptNext{
+  display: block;
+  position:absolute;
+  padding:0px;
+  margin:0px;
+  top:4px;
+  right: 4px;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  background-image:url(/core/vdm/imgs/btns/fwd.png);
+}
+select.LoginResource{
+  position:absolute;
+  visibility: hidden;
+  top:8px;
+  left: 60px;
+  right: 60px;
+  height: 24px;
+  z-index:2;
+}
+select.LoginSave{
+  position:absolute;
+  visibility: hidden;
+  top:8px;
+  left: 60px;
+  right: 60px;
+  height: 24px;
+}
+input.LoginAccount{
+  position:absolute;
+  visibility: hidden;
+  top:4px;
+  left: 60px;
+  right: 60px;
+  height: 32px;
+  z-index:2;
+}
+input.LoginResource{
+  position:absolute;
+  visibility: hidden;
+  top:4px;
+  left: 60px;
+  right: 60px;
+  height: 32px;
+  z-index:2;
+}
+input.LoginPass{
+  position:absolute;
+  visibility: hidden;
+  top:4px;
+  left: 60px;
+  right: 60px;
+  height: 32px;
+  z-index:2;
+}
+input.LoginPass:focus{
+  border: 1px solid #98AB0E;
+  z-index:2;
+}
+input.LoginPass:hover{
+  border: 1px solid #B3CD00;
+  z-index:2;
+}
+div.bdrLogin{
+  background-color: rgba(77,77,77,.5);
+}
+div.bdrLoginClient{
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+}
+
+

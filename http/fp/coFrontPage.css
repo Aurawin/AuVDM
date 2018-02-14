@@ -1,0 +1,601 @@
+Header{
+  content: '/fp/coFrontPage.css'
+}
+{$i FontFace.css}
+div.FrontPageScreen{
+  display:none;
+  position: absolute;
+  top: 0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  transition: opacity 0.25s linear;
+  -moz-transition:opacity 0.25s linear;
+  -webkit-transition: opacity 0.25s linear;
+}
+div.frmFrontPage{
+  display: block;
+  position:absolute;
+}
+div.bdrFrontPage{
+  display: block;
+  position:absolute;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  border-top-width:0px;
+  border-left-width: 0px;
+  border-right-width:0px;
+  border-bottom-width:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+div.bdrFrontPageClient{
+  display: block;
+  position:absolute;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  border-top-width:0px;
+  border-left-width: 0px;
+  border-right-width:0px;
+  border-bottom-width:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+div.FrontPageBoxWelcomeClient{
+  min-height: 220px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: rgba(0,0,0,1) 2px 2px 20px;
+}
+div.FrontPageBoxEnterpriseClient{
+  min-height: 200px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.FrontPageBoxDevelopersClient{
+  min-height: 200px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.FrontPageBoxPersonalClient{
+  height: 250px;
+  min-height: 250px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+div.FrontPageBoxesLogo{
+  width: 180px;
+  height: 40px;
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  border: 12px solid rgba(0,0,0,0);
+  border-top-width: 8px;
+  border-left-width: 8px;
+  background-color:rgba(57,57,57,.7);
+  border-bottom-right-radius:8px;
+
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+}
+div.sldLogin{
+  position:absolute;
+  display:block;
+  width: 250px;
+}
+div.FrontPageBoxWelcomeTitle{
+  vertical-align:middle;
+  line-height: 30px;
+  height:30px;
+  display: block;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 10px;
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 14pt;
+  font-weight: bold;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),0px 1px 2px rgba(0, 0, 0, 1),1px 0px 2px rgba(0, 0, 0, 1),1px 1px 2px rgba(0, 0, 0, 1);
+  text-align: right;
+}
+
+.txtFrontPageBoxWelcome{
+  visibility: visible;
+  position: absolute;
+  display: block;
+
+  height: 32px;
+  width: 175px;
+
+  padding-bottom:0px;
+  padding-top: 0px;
+  padding-left: 8px;
+  padding-right:8px;
+  color: rgba(255,255,255,.79);
+  background-color:rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.5);
+  font-size: 12pt;
+  font-weight:bold;
+  border-radius: 2px;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}
+.txtFrontPageBoxWelcome:focus {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+.txtFrontPageBoxWelcome:hover {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+.txtFrontPageBoxWelcome::-webkit-input-placeholder {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+.txtFrontPageBoxWelcome::-placeholder {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+.txtFrontPageBoxWelcome::-moz-placeholder {
+  color: rgba(255,255,255,.5);
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+div.btnFrontPageBoxWelcome{
+  position: absolute;
+  display: block;
+  white-space:nowrap;
+
+  height: 32px;
+  line-height: 32px;
+  width: 77px;
+
+  padding-top    : 0px;
+  padding-bottom : 0px;
+  padding-left   : 5px;
+  padding-right  : 5px;
+
+  color: rgba(255,255,255,.79);
+  background-color:rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.5);
+  font-size: 10pt;
+  font-weight:bold;
+  border-radius: 2px;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}
+div.btnFrontPageBoxWelcome:focus {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+div.btnFrontPageBoxWelcome:hover {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+div.lbFrontPageBoxWelcome{
+  visibility:visible;
+
+  position: absolute;
+  display: block;
+
+  height: 32px;
+  line-height: 32px;
+
+  padding-top: 0px;
+  padding-bottom:0px;
+  padding-left: 10px;
+  padding-right:10px;
+
+  color: rgba(255,255,255,.79);
+  font-size: 12pt;
+  font-weight:bold;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+}
+div.sldDeviceSelect{
+  display: block;
+  position:relative;
+  width: 250px;
+}
+select.selFrontPageBoxWelcomeBackup{
+  background-image:url(/core/vdm/imgs/icns/arw/blu/d.png);
+  background-position: center right;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+}
+select.selFrontPageBoxWelcome{
+  visibility: visible;
+
+  position: absolute;
+  display: block;
+
+  width: 190px;
+
+  padding-bottom:2px;
+  padding-top: 2px;
+  padding-left: 2px;
+  padding-right:2px;
+
+  color: rgba(255,255,255,.79);
+  background-color:rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.5);
+  font-size: 12pt;
+  font-weight:bold;
+  border-radius: 2px;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}
+select.selFrontPageBoxWelcome:focus{
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+select.selFrontPageBoxWelcome:hover{
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+option.optFrontPageBoxWelcome{
+  background-color: rgba(0,0,0, .79);
+  color:rgba(255,255,255,.5);
+}
+option.optFrontPageBoxWelcome:hover{
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  background-color: rgba(255,255,255, .79);
+  color:rgba(0,0,0,.5);
+}
+div.lnFrontPageBoxWelcomeH{
+  visibility:visible;
+  display: block;
+  position:absolute;
+  height: 4px;
+  width: 200px;
+  border-top: 2px dotted rgba(79, 179, 255, .5);
+}
+div.lnFrontPageBoxWelcomeFooterH{
+  visibility:visible;
+  display: block;
+  position:absolute;
+  height: 0px;
+  width: 200px;
+  border-top: 1px solid rgba(0,0,0,0);
+}
+
+div.lnFrontPageBoxWelcomeV{
+  visibility:visible;
+  display: block;
+  position:absolute;
+  height: 200px;
+  width: 4px;
+  border-left: 2px dotted rgba(79, 179, 255, .5);
+}
+div.cbFrontPageBoxWelcome{
+  visibility: visible;
+
+  position: absolute;
+  display: block;
+
+  height: 32px;
+  width: 175px;
+
+  padding-bottom:0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right:0px;
+  color: rgba(255,255,255,.79);
+  background-color:rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.5);
+  font-size: 12pt;
+  font-weight:bold;
+  border-radius: 2px;
+  text-shadow: 0px 0px 2px rgba(0,0,0,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}
+div.cbFrontPageBoxWelcome:focus {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+div.cbFrontPageBoxWelcome:hover {
+  border: 1px solid rgba(79, 179, 255, .5);
+  border-radius: 4px;
+}
+div.sldDeviceAdd{
+  display: block;
+  position:relative;
+  width: 250px;
+}
+div.sldLoginMessage{
+  position:absolute;
+  display:block;
+  border: 0px solid rgba(255,255,255,.5);
+  font-size: 12pt;
+}
+div.sldFrontPageShowCase{
+  position: absolute;
+  display: block;
+  bottom: 0px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+div.sldFrontPageShowCaseScroller{
+  display: block;
+  overflow: hidden;
+  height: 100%;
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+p.FrontPageWelcomeHeader{
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: 12pt;
+  font-weight:bold;
+  text-align:left;
+}
+p.FrontPageWelcome{
+  font-size: 11pt;
+  text-align:left;
+}
+div.sldFrontPageShowCaseShowCaseButtons{
+  background-color: rgba(57, 57, 57, .7);
+  border-bottom-right-radius:8px;
+  border-bottom-left-radius:8px;
+  padding-bottom: 4px;
+  padding-top:4px;
+  bottom: -27px;
+  box-shadow: 2px 6px 10px rgba(0,0,0,1);
+}
+ul.FrontPageWelcome{
+  font-weight:bold;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top:10px;
+  padding-bottom:10px;
+
+  line-height:22px;
+  text-align:left;
+  list-style-position: inside;
+
+  background-color:rgba(57,57,57,.57);
+  border-radius: 8px;
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+  border:1px solid rgba(255,255,255,.1);
+  overflow:hidden;
+}
+li.FrontPageWelcome{
+  font-weight: normal;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-left:5px;
+  padding-right:5px;
+
+  text-align:left;
+}
+p.FrontPageWelcomePanel{
+  font-weight: normal;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:left;
+  background-color:rgba(57,57,57,.7);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+  border-radius: 8px;
+  overflow:hidden;
+}
+
+p.FrontPageWelcomeNote{
+  clear:both;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:left;
+  background-color:rgba(57,57,57,.7);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+  border-radius: 8px;
+}
+img.FrontPageWelcomeRoad{
+  float: left;
+
+  border-style: none;
+  background-color:transparent;
+  border: 0px solid transparent;
+
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, .5);
+  border: 1px solid rgba(255, 255, 255, .1);
+
+  position: relative;
+  display: inline;
+
+  margin-top:10px;
+  margin-bottom:10px;
+  margin-right:10px;
+  margin-left: 10px;
+
+  width: 150px;
+  height: 200px;
+
+}
+div.sldSignup{
+  display:block;
+  position:absolute;
+  width: 250px;
+}
+div.sldDevices{
+  display:block;
+  position:absolute;
+  width: 250px;
+}
+div.sldSignupName{
+  display: block;
+  position: relative;
+  width: 250px;
+}
+div.sldSignupLocation{
+  display: block;
+  position: relative;
+  width: 250px;
+  padding-bottom:10px;
+}
+div.sldSignupAccount{
+  display: block;
+  position: relative;
+  width: 250px;
+}
+div.lbFrontPageBoxWelcomeLocation{
+  display:block;
+  position:relative;
+  right:0px;
+  left:0px;
+  top:100px;
+  height:180px;
+  overflow:hidden;
+}
+div.glFrontPageBoxWelcome{
+  width: 30px;
+  height: 30px;
+}
+div.elmsFrontPageElements{
+  width: 370px;
+}
+div.pvFrontPageClient{
+  height: 200px;
+}
+div.elmsFrontPageElementsList{
+  padding-top: 10px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+}
+div.elmsFrontPageElementSubItem{
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+div.pvFrontPageContent{
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 1), 0px 1px 1px rgba(0, 0, 0, 1), 0px 1px 1px rgba(0, 0, 0, 1);
+}
+p.FrontPageWelcomeBlock{
+  clear:both;
+  font-weight: normal;
+  margin-left: 10px;
+  margin-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:15px;
+  padding-right:15px;
+  text-align:left;
+  background-color:rgba(57,57,57,.7);
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+  border-radius: 8px;
+}
+div.FrontPageBoxDownloadsClient {
+min-height: 200px;
+border-bottom-right-radius: 0px;
+border-bottom-left-radius: 8px;
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+}
+div.sldFrontPageDownloads{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  position:absolute;
+  display:block;
+}
+div.lvFrontPageDownloads{
+  position:absolute;
+  display:block;
+}
+div.sldFrontPageDownloadsRightBox{
+  position:absolute;
+  display:block;
+  top: 4px;
+  bottom: 4px;
+  left: 118px;
+  right: 4px;
+  box-shadow: 0px 0px 4px rgba(0,0,0,1);
+}
+div.lblFrontPagePolicies {
+  position:absolute;
+  cursor:pointer;
+  display:block;
+  color: rgba(255,255,255,.8);
+  font-size: 11px;
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),0px 1px 2px rgba(0, 0, 0, 1),1px 0px 2px rgba(0, 0, 0, 1),1px 1px 2px rgba(0, 0, 0, 1);
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+div.lblFrontPagePolicies:hover,div.lblFrontPagePolicies:active{
+  text-decoration: underline;
+}
+div.sldFrontPageShowCaseClient{
+  height: 340px;
+}
+div.FrontPageBoxWelcomeShell{
+  min-height: 345px;
+}

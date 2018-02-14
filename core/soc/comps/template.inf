@@ -1,0 +1,26 @@
+[Template]
+Name=Social Computing Base Components
+Description=A compilation of social computing components
+Output=code.js
+Compress=1
+TTL=86400
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=12
+
+1=/core/soc/DB.js
+2=/core/soc/Manifest.js
+3=/core/soc/Nav.js
+4=/core/soc/Search.js
+5=/core/soc/Views.js
+6=/core/soc/netJoin.js
+7=/core/soc/netListView.js
+8=/core/soc/netRequest.js
+9=/core/soc/netSelect.js
+10=/core/soc/netUploader.js
+11=/core/soc/sldEditor.js
+12=/core/soc/sldSearch.js
+

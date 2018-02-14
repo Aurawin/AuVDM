@@ -1,0 +1,55 @@
+[Template]
+Name=Landing
+Components=Main
+Title=Welcome to Aurawin
+Output=index.html
+OnResize=
+OnLoad=doLoad()
+Cache Manifest=
+DocType=HTML
+Compress=1
+Cache=1
+TTL=0
+Kind=page
+Charset=UTF-8
+
+[Meta Tags]
+Description=Aurawin is a cloud based social computing platform.  Aurawin helps users collaborate, and share a media rich experience that is secure, private, and safe.
+Keywords=Social Computing, Virtual Computing, Cloud Computing, Software, Hosted Service, Email, Collaboration, Text, Pictures, Videos, Music, Cloud Ownership
+ViewPort=user-scalable=yes, initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=0.1
+AppleWebApp=yes
+AppleWebStatusBar=black
+AppleTouchFullScreen=yes
+
+[StyleSheets]
+Count=3
+1=/core/vdm/coVDM.css
+2=/core/vdm/splash/coSplash.css
+3=/core/vdm/editor/redactor/redactor.css
+
+[Links]
+Count=1
+1=rel="apple-touch-icon" href="/images/cld.png"
+
+[SEO Follow]
+Aurawin Downloads=/downloads/
+Aurawin Developers=/developers/
+Aurawin Partners=/partners/
+Aurawin Cloud Computing=/cloud/
+
+[JavaScripts]
+{$i vdm_startup}
+
+
+[Component Wrapper]
+Class=cmpWrapper
+ID=cmpWrapper
+Enabled=1
+
+[Main]
+Name=Main
+Description=Page contents
+Content=Main.html
+Code=Main.js
+Style=Main.css
+

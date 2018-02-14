@@ -1,0 +1,110 @@
+div.WelcomeScreen {
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 27px;
+
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  width: 152px;
+  height: 152px;
+
+  visibility: visible;
+
+  -moz-box-shadow: 0 0 4px 4px rgba(37,37,37,.49);
+  -webkit-box-shadow: 0 0 4px 4px rgba(37,37,37,.49);
+  box-shadow: 0px 0px 4px 4px rgba(37,37,37,.49);
+
+  opacity: 0;
+
+  transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+
+}
+div.bdrWelcome{
+  border-bottom-right-radius: 27px;
+  background-color: rgba(77,77,77,.5);
+}
+div.bdrWelcomeClient{
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  border-bottom-right-radius: 27px;
+}
+div.WelcomePanels{
+  max-height: 200px;
+  border-bottom-right-radius: 27px;
+  color: rgba(255,255,255,1);
+  text-shadow : 0px 0px 1px rgba(0,0,0,1);
+  text-align: center;
+}
+div.pnlWelcomeTour{
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  border-bottom-width:1px;
+
+  background-image: url(/core/vdm/imgs/pnls/stage.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+
+  font-weight:bold;
+}
+div.pnlWelcomeTour:hover{
+  background-color:rgba(0,0,255,.57);
+}
+div.pnlWelcomeTour:active{
+  background-color:rgba(0,0,255,.57);
+}
+div.pnlWelcomePolicies{
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  border-bottom-width:1px;
+
+  background-image: url(/core/vdm/imgs/pnls/legal.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat:no-repeat;
+}
+div.pnlWelcomePolicies:hover{
+  background-color:rgba(0,0,255,.57);
+}
+div.pnlWelcomePolicies:active{
+  background-color:rgba(0,0,255,.57);
+}
+div.pnlWelcomeSignup{
+  border-bottom: 1px solid rgba(0,0,0,.5);
+  border-bottom-width:1px;
+
+  border-bottom-right-radius: 27px;
+  height: 50px;
+  line-height: 50px;
+  width: 150px;
+  background-image: url(/core/vdm/imgs/tour/sprout.png);
+  background-size: contain;
+  background-position: 0px -3px;
+  background-repeat:no-repeat;
+
+  padding-left: 70px;
+  text-align:left;
+  font-weight:bold;
+}
+div.pnlWelcomeSignup:hover{
+  border-bottom-right-radius: 27px;
+  background-color:rgba(0,0,255,.57);
+}
+div.pnlWelcomeSignup:active{
+  border-bottom-right-radius: 27px;
+  background-color:rgba(0,0,255,.57);
+}

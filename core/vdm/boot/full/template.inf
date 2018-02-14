@@ -1,0 +1,25 @@
+[Template]
+Name=Aurawin Virtual Desktop Boot (Full)
+Description=A compilation of a full Aurawin VDM
+Output=code.js
+Compress=1
+TTL=0
+Keywords=1
+Kind=javascript
+Cache=1
+
+[JavaScripts]
+Count=13
+1=/core/vdm/coVDM.js
+2=/core/vdm/Browser.js
+3=/core/vdm/Clock.js
+4=/core/vdm/Display.js
+5=/core/vdm/Events.js
+6=/core/vdm/Groups.js
+7=/core/vdm/Manifest.js
+8=/core/vdm/Status.js
+9=/core/vdm/Topbar.js
+10=/core/vdm/WorkSpace.js
+11=/core/vdm/splash/coSplash.js
+12=/core/vdm/coStartup.js
+13=/core/vdm/post/coPost.Full.js

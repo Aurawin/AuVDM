@@ -1,0 +1,10 @@
+Header{
+  content: '/core/vdm/thumbs/coThumbs.css'
+}
+div.ThumbNail{
+  display: inline-block;
+}
+div.ThumbStack{
+  display: absolute;
+  height: 128px;
+}
