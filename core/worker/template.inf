@@ -1,0 +1,21 @@
+[Template]
+Name=Base Rollup for Web Workers
+Description=A compilation basic units required for Web Workers
+Output=base.js
+Compress=1
+TTL=0
+Keywords=0
+Kind=javascript
+Cache=0
+
+[JavaScripts]
+Count=9
+1=/core/app/coBoot.js
+2=/core/app/coList.js
+3=/core/app/coObject.js
+4=/core/app/coUtils.js
+5=/core/app/coTimers.js
+6=/core/app/coAppKit.js
+7=/core/app/coDB.js
+8=/core/app/coNet.js
+9=/core/app/coXML.js

@@ -1,7 +1,7 @@
 coCabinet.App.Components.DB = {
-  Version        : new Version(2016,9,24,136),
+  Version        : new Version(2014,10,28,135),
   Title          : new Title("Spectrum Cabinet Database","DB"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coCabinet.App,'/core/spc/fldrs/DB.js',coAppKit.PreLoaded),
   Usage          : coAppKit.Units.Create(coCabinet.App,'/core/spc/fldrs/DB.js',coAppKit.PreLoaded),
   LoadQuick      : 250,
@@ -25,7 +25,6 @@ coCabinet.App.Components.DB = {
     DB.Mail=coObject.Create();
     DB.Mail.Inbox=null;
     DB.Mail.Outbox=null;
-    DB.Mail.Archive=null;
     DB.Mail.Sent=null;
     DB.Mail.Trash=null;
     DB.FirstLoad=true;
@@ -44,7 +43,6 @@ coCabinet.App.Components.DB = {
         DB.Mail.Outbox=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Mail.Folder+"/"+coLang.Table.Mail.Outbox);
         DB.Mail.Sent=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Mail.Folder+"/"+coLang.Table.Mail.Sent);
         DB.Mail.Trash=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Mail.Folder+"/"+coLang.Table.Mail.Trash);
-        DB.Mail.Archive=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Mail.Folder+"/"+coLang.Table.Mail.Archive);
 
         DB.MyNetworks=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Apps.Social.Networks.My);
         DB.OtherNetworks=DB.getItem(DB.Fields.MAP.Path,coLang.Table.Apps.Social.Networks.Other);

@@ -1,7 +1,7 @@
 var coDB = {
-  Version        : new Version(2015,11,13,279),
+  Version        : new Version(2014,10,28,278),
   Title          : new Title("Core Object Database API","coDB"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(null,'/core/app/coDB.js',coAppKit.PreLoaded),
   Kind           : null,
   HasNoItems     : false,
@@ -1275,21 +1275,20 @@ var coDB = {
             col.Displays.SyncStart();
           };
           // user parser to parse
-          if (inf.XML){
-              inf.xItems=coXML.getStanza(inf.XML,col.Stanza);
 
-              if (_col.Identity==null) {
-                _col.Items.Clear();
-              } else if (inf.Validate==true) {
-                _col.Fields.resetVerified(_col);
-              };
-          } else {
-              inf.xItems=null;
-          }
+          var xDoc = inf.XML;
+          inf.xItems=coXML.getStanza(xDoc,col.Stanza);
+          inf.XML=null;
+
+          if (_col.Identity==null) {
+            _col.Items.Clear();
+          } else if (inf.Validate==true) {
+            _col.Fields.resetVerified(_col);
+          };
         };
         if ( (inf.xItems) && (inf.Start<inf.xItems.childNodes.length) ) {
           inf.Items.length=0;
-          col.Fields.partialXML(inf.XML,inf.xItems,col);
+          col.Fields.partialXML(xDoc,inf.xItems,col);
         } else {
           inf.setActive(false);
           inf.Items.length=0;

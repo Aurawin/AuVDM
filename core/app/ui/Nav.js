@@ -1,7 +1,7 @@
 coAppUI.App.Components.Nav = {
-  Version        : new Version(2015,10,15,121),
+  Version        : new Version(2014,11,5,120),
   Title          : new Title("Aurawin Slide Navigator","Nav"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Nav.js',coAppKit.PreLoaded),
   debugToConsole : true,
   Create : function(sName,sClass,Screen,Slides,Owner,Parent,Align) {
@@ -529,7 +529,6 @@ coAppUI.App.Components.Nav = {
     _sn.initButton=function(itm){
       itm.Label=document.createElement('span');
       itm.Label.className=itm.Nav.Class+"ButtonLabel";
-      itm.Label.Owner=this;
       itm.Container.appendChild(itm.Label);
       itm.Container.style.height=coVDM.NavBarButtonHeight+"px";
       itm.Label.style.lineHeight=coVDM.NavBarLineHeight+"px";
@@ -657,9 +656,9 @@ coAppUI.App.Components.Nav = {
         );
       };
       if (coVDM.VDM.Browser.Mouse==true)
-        itm.evtMouseUp=coEvents.Add(itm.Label,"mouseup",function(e){itm.doClick(e);},coEvents.Capture,coEvents.Active);
-      itm.evtTouchEnd=coEvents.Add(itm.Label,"touchend",function(e){itm.doTouchEnd(e);},coEvents.Capture,coEvents.Active);
-      itm.evtTouchStart=coEvents.Add(itm.Label,"touchstart",function(e){itm.doTouchStart(e);},coEvents.Capture,coEvents.Active);
+        itm.evtMouseUp=coEvents.Add(itm.Container,"mouseup",function(e){itm.doClick(e);},coEvents.Capture,coEvents.Active);
+      itm.evtTouchEnd=coEvents.Add(itm.Container,"touchend",function(e){itm.doTouchEnd(e);},coEvents.Capture,coEvents.Active);
+      itm.evtTouchStart=coEvents.Add(itm.Container,"touchstart",function(e){itm.doTouchStart(e);},coEvents.Capture,coEvents.Active);
       itm.onShow=function(){
         var itm=this;
         itm.Label.style.visibility="visible";

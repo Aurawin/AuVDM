@@ -1,7 +1,7 @@
 coMail.App.Components.TreeView = {
-  Version        : new Version(2016,9,24,48),
+  Version        : new Version(2015,2,16,45),
   Title          : new Title("Spectrum Mail Tree View","TreeView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coMail.App,'/core/spc/eml/TreeView.js',coAppKit.PreLoaded),
   debugToConsole : true,
   Create : function (Screen,Slides,Owner,Parent,Align){
@@ -15,7 +15,6 @@ coMail.App.Components.TreeView = {
     tv.Inbox=null;
     tv.Outbox=null;
     tv.Sent=null;
-    tv.Archive=null;
 
     tv.onItemDeleted=function(itm){
       var tv=this;
@@ -31,12 +30,6 @@ coMail.App.Components.TreeView = {
         dbItem.MAP.Path.Value=itm.getPath();
         fldrs.Commands.Rename(dbItem);
       };
-    };
-    tv.onItemArchived=function(itm){
-      var mbx=this.Screen;
-      var Folder=itm.Data;
-      var vw=Folder.Display.getItemByProperty("Folder",Folder);
-      if (vw) mbx.DB.Commands.Archive(Folder,vw.DataSet,mbx.DB.Folders);
     };
     tv.onEmptyFolder=function(itm){
       var mbx=this.Screen;
@@ -76,21 +69,15 @@ coMail.App.Components.TreeView = {
       switch (itm) {
         case (fldrs.Mail.Inbox) : {
           vw=mbx.Views.Inbox;
-          tv.Editor.showEmptyTrash=false;
-          tv.Editor.showArchive=true;
           break;
         };
         case (fldrs.Mail.Outbox): {
           vw=mbx.Views.Outbox;
-          tv.Editor.showEmptyTrash=true;
-          tv.Editor.showArchive=false;
           break;
         };
         default : {
           var vw=Folder.Display.getItemByProperty("Folder",Folder);
           if (!vw) vw=coMail.App.Components.ThreadView.CreateFolderView(mbx,Folder,itm);
-          tv.Editor.showEmptyTrash=(itm==fldrs.Mail.Trash);
-          tv.Editor.showArchive=(itm!=fldrs.Mail.Archive);
           vw.Tab.setCaption(itm.getCaption());
           break;
         };
@@ -263,9 +250,6 @@ coMail.App.Components.TreeView = {
       tv.placeAvoid(itmMail);
       db.Mail=itmMail.Data;
 
-      var mbxArchive=tv.Mail.Archive=(itmMail.subItems) ? itmMail.subItems.findByText(coLang.Table.Mail.Archive) : null;
-      if (!mbxArchive) var mbxArchive=itmMail.addChild(coLang.Table.Mail.Archive);
-      db.Mail.Archive=mbxArchive.Data;
 
       var mbxIn=tv.Mail.Inbox=(itmMail.subItems) ? itmMail.subItems.findByText(coLang.Table.Mail.Inbox) : null;
       if (!mbxIn) var mbxIn=itmMail.addChild(coLang.Table.Mail.Inbox);

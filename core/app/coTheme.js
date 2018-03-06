@@ -1,7 +1,7 @@
 var coTheme= {
-  Version        : new Version(2016,9,24,115),
+  Version        : new Version(2014,11,8,114),
   Title          : new Title("Core Object Theme Table","coTheme"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(null,'/core/app/coTheme.js',coAppKit.PreLoaded),
   NoImageUrl     : "",
   Icons          : new Object(),
@@ -21,7 +21,6 @@ var coTheme= {
     var sIcons=sVDM+"icns/";
     var sApps=sVDM+"apps/";
     var sMasks=sVDM+"msks/";
-    var sAcct=sVDM+"acct/";
     var sSpec="/core/spc/imgs/";
     var sEml=sSpec+"eml/";
     var sBtns=sVDM+"btns/";
@@ -43,13 +42,6 @@ var coTheme= {
     tbl.Icons.Junk=new Object();
     tbl.Icons.Junk.Black=sIcons+"Junk/black.png";
     tbl.Icons.Junk.Blue=sIcons+"Junk/blue.png";
-
-    tbl.Icons.Account=new Object();
-    tbl.Icons.Account.Disk1=sAcct+"auDisk1.png";
-    tbl.Icons.Account.Disk2=sAcct+"auDisk2.png";
-    tbl.Icons.Account.Disk3=sAcct+"auDisk3.png";
-    tbl.Icons.Account.Disk4=sAcct+"auDisk4.png";
-    tbl.Icons.Account.Disk5=sAcct+"auDisk5.png";
 
     tbl.Icons.Apps=sApps+"apps.png";
 

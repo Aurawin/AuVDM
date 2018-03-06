@@ -581,14 +581,6 @@ coMail.App.Components.DB = {
         coVDM.VDM.Console.Append("Exception: Mailbox.DB.Commands.onFolderListComplete "+err);
       };
     };
-    DB.Commands.onArchiveComplete=function(netCMD){
-      if (netCMD.Code==coNet.CO_STATUS_OK){
-        var cmds=netCMD.Commands;
-        var Files=netCMD.Data;
-        Files.Clear();
-        cmds.RecordCount(Files.Folder);
-      };
-    };
     DB.Commands.onClearComplete=function(netCMD){
       if (netCMD.Code==coNet.CO_STATUS_OK){
         var cmds=netCMD.Commands;
@@ -629,28 +621,6 @@ coMail.App.Components.DB = {
 
         dbItem.Free();
       };
-    };
-    DB.Commands.Archive=function(Folder,Files,Folders){
-      if (Files==undefined) throw "Files parameter is required.";
-      if (Folders==undefined) throw "Folders parameter is required.";
-      if (Folder.MAP.ID.Value==Folders.Mail.Archive.MAP.ID.Value) throw "Cannot archive Archive.";
-      var cmds=this;
-      var netCMD=cmds.createCommand(
-          coVDM.VDM.Net,
-          coSpectrum.NameSpace,
-          coSpectrum.NS_EML_ARCHIVE,
-          coNet.NoData,
-          cmds.onArchiveComplete,
-          cmds.onCmdError,
-          cmds.onCmdTimeOut,
-          coNet.NoProgress,
-          coNet.CreateAndRun,
-          coNet.FreeOnComplete,
-          coNet.AutoLoadOff
-      );
-      netCMD.Data=Files;
-      netCMD.Headers.Update(coNet.fieldSearch,Folder.MAP.ID.Value);
-      return netCMD;
     };
     DB.Commands.Clear=function(Folder,Files,Folders){
       if (Files==undefined) throw "Files parameter is required.";

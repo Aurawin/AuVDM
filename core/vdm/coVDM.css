@@ -4141,12 +4141,6 @@ div.TVCMDDelICO{
   background-repeat: no-repeat;
   background-position: center;
 }
-div.TVCMDArchICO{
-  background-image:url(/core/vdm/imgs/acct/auDisk4.png);
-  background-size: 24px 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
 div.TVCMDRenICO{
   background-image:url(/core/vdm/imgs/btns/fldr/ren.png);
   background-size: 24px 24px;

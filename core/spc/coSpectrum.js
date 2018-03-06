@@ -6,9 +6,9 @@ This unit provides front-end for spectrum Contacts, Tasks, etc.
 */
 
 var coSpectrum = {
-  Version        : new Version(2016,9,24,534),
+  Version        : new Version(2014,9,8,533),
   Title          : new Title("Aurawin Spectrum","coSpectrum"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(null,'/core/spc/coSpectrum.js',coAppKit.PreLoaded),
   Usage          : coAppKit.Units.Create(null,'/core/spc/coSpectrum.js',coAppKit.PreLoaded),
   Unit           : '/core/spc/coSpectrum.js',
@@ -32,7 +32,6 @@ var coSpectrum = {
   NS_EML_LIST    : "/eml/l",
   NS_EML_DEL     : "/eml/del",
   NS_EML_CLEAR   : "/eml/clr",
-  NS_EML_ARCHIVE : "/eml/arc",
   NS_EML_COUNT   : "/eml/cnt",
   NS_EML_READ    : "/eml/r",
   NS_EML_WRITE   : "/eml/w",

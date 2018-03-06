@@ -1,5 +1,5 @@
 var coDOM={
-  Version         : new Version(2016,6,214,177),
+  Version         : new Version(2015,5,24,176),
   Title           : new Title("Core Object DOM Object","coDOM"),
   Vendor          : new Vendor("Aurawin", "Copyright (&copy;) 2011-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
 
@@ -207,7 +207,7 @@ var coDOM={
         return elm.style.webkitTransform;
       };
       this.getProgress=function(e){
-        return e.loaded;
+        return e.position;
       };
     } else if (coDOM.Browser.FireFox==true) {
       this.setBoxShadow=function(elm,sValue){
