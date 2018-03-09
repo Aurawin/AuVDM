@@ -1,7 +1,7 @@
 var coTheme= {
-  Version        : new Version(2014,11,8,114),
+  Version        : new Version(2018,3,7,115),
   Title          : new Title("Core Object Theme Table","coTheme"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(null,'/core/app/coTheme.js',coAppKit.PreLoaded),
   NoImageUrl     : "",
   Icons          : new Object(),
@@ -553,7 +553,8 @@ var coTheme= {
     tbl.UI.ContentBox.Item.Edit=new Object();
     tbl.UI.ContentBox.Item.Edit.Margin=new Margin(0,2,85,0);
     tbl.UI.ContentBox.Item.Edit.Apply=function(itm){
-      this.Margin.enForce(itm.Content.Box);
+      if (itm.Container.offsetWith>300)
+        this.Margin.enForce(itm.Content.Box);
     };
 
     tbl.UI.frameThicknessNormal=7;

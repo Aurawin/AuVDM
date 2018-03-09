@@ -1,8 +1,9 @@
 var coEvents={
-  Version        : new Version(2014,8,22,27),
+  Version        : new Version(2018,3,8,29),
   Title          : new Title("Core Object Events","coEvents"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2011-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   NoActivate     : false,
+  Activate       : true;
   debugToConsole : false,
   Active         : true,
   Capture        : true,
@@ -147,7 +148,7 @@ var coEvents={
         };
 
       };
-      _evt.Free=function(){
+      _evt.Release=_evt.Free=function(){
         var evt=this;
         var lst=evt.List;
         coDOM.removeEvent(evt.Element,evt.Type,evt.Event,evt.Capture);

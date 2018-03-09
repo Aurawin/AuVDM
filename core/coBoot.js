@@ -123,8 +123,12 @@ function Point(x,y){
   };
   return _pt;
 };
-function TouchInfo(){
+function TouchInfo(Owner){
     var ti=this;
+    ti.Owner = (Owner==undefined)? null : Owner;
+    ti.evtStart=null;
+    ti.evtMove=null;
+    ti.evtEnd=null;
     ti.ptStart=new Point();
     ti.dtStart=null;
     ti.ptCurrent=new Point();
@@ -144,6 +148,8 @@ function TouchInfo(){
       ti.ptStart.X=touch.clientX;
       ti.ptStart.Y=touch.clientY;
       ti.Active=true;
+      if (ti.evtMove) ti.evtMove.setActive(true);
+      if (ti.evtEnd) ti.evtEnd.setActive(true);
     };
     ti.Done=function(touch){
       var ti=this;
@@ -158,6 +164,7 @@ function TouchInfo(){
       ti.Active=false;
       ti.ptVector.X=ti.ptEnd.X-ti.ptStart.X;
       ti.ptVector.Y=ti.ptEnd.Y-ti.ptStart.Y;
+      if (ti.evtMove) ti.evtMove.setActive(false);
       if (ti.onDone) ti.onDone();
     };
     ti.Duration=function(){
@@ -176,10 +183,21 @@ function TouchInfo(){
       ti.ptVector.Y=ti.ptCurrent.Y-ti.ptStart.Y;
       if (ti.onChanged) ti.onChanged();
     };
+    ti.Release(){
+      var ti=this;
+      if (ti.evtStart) ti.evtStart.Release();
+      if (ti.evtMove) ti.evtMove.Release();
+      if (ti.evtEnd) ti.evtEnd.Release();
+    };
     return ti;
 };
 function MouseInfo(){
     var mi=this;
+    mi.Owner = (Owner==undefined)? null : Owner;
+    mi.evtDown=null;
+    mi.Owner=null;
+    mi.evtMove=null;
+    mi.evtUp=null;
     mi.ptStart=new Point();
     mi.dtStart=null;
     mi.ptCurrent=new Point();
@@ -199,6 +217,8 @@ function MouseInfo(){
       mi.ptStart.X=e.clientX;
       mi.ptStart.Y=e.clientY;
       mi.Active=true;
+      if (mi.evtMove) mi.evtMove.setActive(true);
+      if (mi.evtEnd) mi.evtEnd.setActive(true);
     };
     mi.Done=function(e){
       var mi=this;
@@ -213,6 +233,7 @@ function MouseInfo(){
       mi.Active=false;
       mi.ptVector.X=mi.ptEnd.X-mi.ptStart.X;
       mi.ptVector.Y=mi.ptEnd.Y-mi.ptStart.Y;
+      if (mi.evtMove) mi.evtMove.setActive(false);
       if (mi.onDone) mi.onDone();
     };
     mi.Duration=function(){
@@ -231,6 +252,13 @@ function MouseInfo(){
       mi.ptVector.X=mi.ptCurrent.X-mi.ptStart.X;
       mi.ptVector.Y=mi.ptCurrent.Y-mi.ptStart.Y;
       if (mi.onChanged) mi.onChanged();
+    };
+    mi.Release=function(){
+      var mi=this;
+      if (mi.evtStart) mi.evtStart.Release();
+      if (mi.evtMove) mi.evtMove.Release();
+      if (mi.evtEnd) mi.evtEnd.Release();
+
     };
     return mi;
 };
@@ -918,9 +946,9 @@ function createParser(){
 };
 
 var coBoot={
-  Version        : new Version(2014,10,28,31),
+  Version        : new Version(2018,3,8,32),
   Title          : new Title("Core Object Boot","coBoot"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ])
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ])
 };
 
 

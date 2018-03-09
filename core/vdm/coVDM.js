@@ -6,9 +6,9 @@ that uses server core objects/commands and services.
 
 */
 var coVDM = {
-  Version               : new Version(2015,8,21,455),
+  Version               : new Version(2018,3,7,457),
   Title                 : new Title("Virtual Desktop","coVDM"),
-  Vendor                : new Vendor("Aurawin", "Copyright (&copy;) 2011-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor                : new Vendor("Aurawin", "Copyright (&copy;) 2011-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header                : coAppKit.Dependencies.Create(null,'/core/vdm/coVDM.js',coAppKit.PreLoaded),
   Usage                 : coAppKit.Units.Create(null,'/core/vdm/coVDM.js',coAppKit.PreLoaded),
   Unit                  : '/core/vdm/coVDM.js',
@@ -372,6 +372,7 @@ var coVDM = {
   onInitialized:function(App){
     var _vdm=coVDM.VDM;
     coVDM.Credentials.Auth=coCookies.getCookie(coNet.fieldAuth);
+    coVDM.Credentials.User=coCookies.getCookie(coNet.fieldAccount);
     coVDM.Credentials.ResourceID=coCookies.getCookieAsInt64(coNet.fieldRCID);
     if (coVDM.Credentials.Auth)
       coAppKit.CredsBooted=true;
@@ -430,6 +431,7 @@ var coVDM = {
         vdm.Display.Update();
         vdm.Cover.style.width=vdm.Container.offsetWidth+"px";
         vdm.Cover.style.height=vdm.Container.offsetHeight+"px";
+        coVDM.Orientation.Current = (vdm.Container.offsetWidth>=vdm.Container.offsetHeight)? coVDM.Orientation.Landscape : coVDM.Orientation.Portrait;
         if (vdm.TopBar.Visible==true){
           vdm.TopBar.Container.style.top = "0px";
           vdm.TopBar.Container.style.left = "0px";
@@ -491,9 +493,11 @@ var coVDM = {
       if (bSave==true) {
         coCookies.setCookie(coNet.fieldRCID,coVDM.Credentials.ResourceID,coVDM.DaysToRememberLogin);
         coCookies.setCookie(coNet.fieldAuth,coVDM.Credentials.Auth,coVDM.DaysToRememberLogin);
+        coCookies.setCookie(coNet.fieldAccount,coVDM.Credentials.User,coVDM.DaysToRememberLogin);
       } else {
         coCookies.setCookieTemp(coNet.fieldRCID,coVDM.Credentials.ResourceID);
         coCookies.setCookieTemp(coNet.fieldAuth,coVDM.Credentials.Auth);
+        coCookies.setCookieTemp(coNet.fieldAccount,coVDM.Credentials.User);
       };
     };
     _vdm.onAuthenticateFailed=function(cmd){

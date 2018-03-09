@@ -16,7 +16,7 @@ Implemented protocols
 */
 var coNet = {
   Protocol                                 : "AuraCore.Net",
-  Version                                  : new Version(2015,8,21,124),
+  Version                                  : new Version(2018,3,7,125),
   Title                                    : new Title("Aurawin Network Framework","coNet"),
   Vendor                                   : new Vendor("Aurawin", "Copyright (&copy;) 2012-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   NoData                                   : null,
@@ -336,6 +336,7 @@ var coNet = {
         cmd.Try+=1;
         cmd.Headers.Update(coNet.fieldNSCore,cmd.NSCore);
         cmd.Headers.Update(coNet.fieldNSCommand,cmd.NSCommand);
+        cmd.Headers.Update(coNet.fieldAccount,cmd.Net.Creds.User);
         cmd.Headers.Update(coNet.fieldAuth,cmd.Net.Creds.Auth);
         cmd.Headers.Update(coNet.fieldRCID,cmd.Net.Creds.ResourceID);
         cmd.Headers.Update(coNet.fieldID,cmd.ID.toString());
@@ -366,6 +367,7 @@ var coNet = {
         cmd.Headers.Update(coNet.fieldNSCore,cmd.NSCore);
         cmd.Headers.Update(coNet.fieldNSCommand,cmd.NSCommand);
         cmd.Headers.Update(coNet.fieldAuth,cmd.Net.Creds.Auth);
+        cmd.Headers.Update(coNet.fieldAccount,cmd.Net.Creds.User);
         cmd.Headers.Update(coNet.fieldRCID,cmd.Net.Creds.ResourceID);
         cmd.Headers.Update(coNet.fieldID,cmd.ID.toString());
         for (var iLcv=0; iLcv<cmd.Headers.length; iLcv++){

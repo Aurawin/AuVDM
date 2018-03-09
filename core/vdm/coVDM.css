@@ -6330,6 +6330,8 @@ div.ContentBoxItem{
   margin-right:4px;
   vertical-align:top;
   border-style:solid;
+  min-height:80px;
+  min-width:200px;
 }
 div.ContentBoxItemTitle{
   text-align:left;

@@ -123,12 +123,17 @@ function Point(x,y){
   };
   return _pt;
 };
-function TouchInfo(){
+function TouchInfo(Owner){
+    if (Owner==undefined) Owner=null;
     var ti=this;
+    ti.Owner=Owner;
     ti.ptStart=new Point();
     ti.dtStart=null;
     ti.ptCurrent=new Point();
     ti.dtCurrent=null;
+    ti.evtStart=null;
+    ti.evtMove=null;
+    ti.evtDone=null;
     ti.ptEnd=new Point();
     ti.dtEnd=null;
     ti.Active=false;
@@ -143,6 +148,9 @@ function TouchInfo(){
       ti.dtEnd=null;
       ti.ptStart.X=touch.clientX;
       ti.ptStart.Y=touch.clientY;
+      if (ti.evtMove) ti.evtMove.setActive(true);
+      if (ti.evtDone) ti.evtDone.setActive(true);
+
       ti.Active=true;
     };
     ti.Done=function(touch){
@@ -158,6 +166,8 @@ function TouchInfo(){
       ti.Active=false;
       ti.ptVector.X=ti.ptEnd.X-ti.ptStart.X;
       ti.ptVector.Y=ti.ptEnd.Y-ti.ptStart.Y;
+      if (ti.evtMove) ti.evtMove.setActive(false);
+      if (ti.evtDone) ti.evtDone.setActive(false);
       if (ti.onDone) ti.onDone();
     };
     ti.Duration=function(){
@@ -178,13 +188,19 @@ function TouchInfo(){
     };
     return ti;
 };
-function MouseInfo(){
+function MouseInfo(Owner){
+    if (Owner==undefined) Owner=null;
     var mi=this;
+    mi.Owner=Owner;
     mi.ptStart=new Point();
     mi.dtStart=null;
     mi.ptCurrent=new Point();
     mi.dtCurrent=null;
     mi.ptEnd=new Point();
+    mi.evtStart=null;
+    mi.evtMove=null;
+    mi.evtDone=null;
+
     mi.dtEnd=null;
     mi.Active=false;
     mi.Down=false;
@@ -199,6 +215,8 @@ function MouseInfo(){
       mi.ptStart.X=e.clientX;
       mi.ptStart.Y=e.clientY;
       mi.Active=true;
+      if (mi.evtMove) mi.evtMove.setActive(true);
+      if (mi.evtDone) mi.evtDone.setActive(true);
     };
     mi.Done=function(e){
       var mi=this;
@@ -213,6 +231,8 @@ function MouseInfo(){
       mi.Active=false;
       mi.ptVector.X=mi.ptEnd.X-mi.ptStart.X;
       mi.ptVector.Y=mi.ptEnd.Y-mi.ptStart.Y;
+      if (mi.evtMove) mi.evtMove.setActive(false);
+      if (mi.evtDone) mi.evtDone.setActive(false);
       if (mi.onDone) mi.onDone();
     };
     mi.Duration=function(){
@@ -918,9 +938,9 @@ function createParser(){
 };
 
 var coBoot={
-  Version        : new Version(2014,10,28,31),
+  Version        : new Version(2018,3,8,34),
   Title          : new Title("Core Object Boot","coBoot"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ])
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ])
 };
 
 

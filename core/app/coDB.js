@@ -1,7 +1,7 @@
 var coDB = {
-  Version        : new Version(2014,10,28,278),
+  Version        : new Version(2018,3,8,279),
   Title          : new Title("Core Object Database API","coDB"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(null,'/core/app/coDB.js',coAppKit.PreLoaded),
   Kind           : null,
   HasNoItems     : false,
@@ -1640,14 +1640,20 @@ var coDB = {
         };
         return null;
       };
-      _col.addItem=function(srcCopy){
+      _col.addItem=function(srcCopy,Insert){
+        if (Insert==undefined) Insert=false;
         if (srcCopy==undefined) srcCopy=null;
         var col=this;
         var itm=col.Fields.Clone();
+        itm.Class="Item";
         itm.Reset()
         if (srcCopy) itm.Assign(srcCopy);
         itm.Verified=true;
-        col.Items.push(itm);
+        if (Insert){
+          col.Items.splice(0,0,itm);
+        } else {
+          col.Items.push(itm);
+        }
         col.Groups.Force(itm);
         if (col.Displays) {
           col.LoadInfo.Items.length=1;

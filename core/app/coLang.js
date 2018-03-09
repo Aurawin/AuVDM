@@ -1,7 +1,7 @@
 var coLang= {
-  Version        : new Version(2014,10,27,298),
+  Version        : new Version(2018,3,8,300),
   Title          : new Title("Core Object Language Table","coLang"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Table          : createLangManifest()
 };
 
@@ -789,6 +789,9 @@ function createLangManifest(){
   _mfst.Apps.CMS.Tools.Items.Add=new Object();
   _mfst.Apps.CMS.Tools.Items.Add.Name="Add";
   _mfst.Apps.CMS.Tools.Items.Add.Hint="Click here to add an item.";
+  _mfst.Apps.CMS.Tools.Items.Insert = new Object();
+  _mfst.Apps.CMS.Tools.Items.Insert.Name="Insert";
+  _mfst.Apps.CMS.Tools.Items.Insert.Hint="Click here to insert an item.";
   _mfst.Apps.CMS.Tools.Items.Delete=new Object();
   _mfst.Apps.CMS.Tools.Items.Delete.Name="Delete";
   _mfst.Apps.CMS.Tools.Items.Delete.Hint="Click here to delete an item.";

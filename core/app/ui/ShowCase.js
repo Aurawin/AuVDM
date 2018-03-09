@@ -1,7 +1,7 @@
 coAppUI.App.Components.ShowCase = {
-  Version        : new Version(2014,10,9,62),
+  Version        : new Version(2018,3,8,69),
   Title          : new Title("Aurawin UI ShowCase","ShowCase"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/ShowCase.js',coAppKit.PreLoaded),
   debugToConsole : true,
 
@@ -21,6 +21,8 @@ coAppUI.App.Components.ShowCase = {
     _vw.autoNameButtons=true;
     _vw.AutoSize=false;
     _vw.toResize=0;
+    _vw.Mouse=new MouseInfo(_vw);
+    _vw.Touch=new TouchInfo(_vw);
     _vw.PageItemPosition=coAppUI.Absolute;
     _vw.PageContentPosition=coAppUI.Absolute;
     _vw.ClientPosition=coAppUI.Relative;
@@ -31,6 +33,91 @@ coAppUI.App.Components.ShowCase = {
     _vw.Client.Owner=_vw;
     _vw.onSelectItem=null;
     _vw.onAutoSize=null;
+    if (coVDM.VDM.Browser.Mouse==true){
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coDragDrop.inf Creating Mouse Events");
+      _vw.Mouse.evtStart=coEvents.Add(_vw.Container,"mousedown",function(e){var vw=_vw; vw.doMouseDown(e);},coEvents.Capture,coEvents.Activate);
+      _vw.Mouse.evtMove=coEvents.Add(_vw.Container,"mousemove",function(e){var vw=_vw; vw.doMouseMove(e);},coEvents.NoCapture,coEvents.NoActivate);
+      _vw.Mouse.evtDone=coEvents.Add(_vw.Container,"mouseup",function(e){var vw=_vw; vw.doMouseUp(e);},coEvents.Capture,coEvents.NoActivate);
+    };
+    _vw.Mouse.onDone=function(){
+       var ti = this;
+       var vw = ti.Owner;
+       if (ti.ptVector.X>50) {
+          vw.Items.selectPrevious();
+       } else if (ti.ptVector.X<-50) {
+         vw.Items.selectNext();
+       }
+    };
+
+    _vw.Touch.evtStart=coEvents.Add(_vw.Container,"touchstart",function(e){var vw=_vw; vw.doTouchStart(e);},coEvents.Capture,coEvents.Activate);
+    _vw.Touch.evtMove=coEvents.Add(_vw.Container,"touchmove",function(e){var vw=_vw; vw.doTouchMove(e);},coEvents.NoCapture,coEvents.NoActivate);
+    _vw.Touch.evtDone=coEvents.Add(_vw.Container,"touchend",function(e){var vw=_vw; vw.doTouchEnd(e);},coEvents.NoCapture,coEvents.NoActivate);
+    _vw.Touch.onDone=function(){
+       var ti = this;
+       var vw = ti.Owner;
+       if (ti.ptVector.X>50) {
+         vw.Items.selectPrevious();
+       } else if (ti.ptVector.X<-50) {
+         vw.Items.selectNext();
+       }
+    };
+    _vw.doMouseDown=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doMouseDown");
+      vw.Mouse.Start(e);
+    };
+    _vw.doMouseMove=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doMouseDown");
+      vw.Mouse.Update(e);
+    };
+    _vw.doMouseUp=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doMouseUp");
+      vw.Mouse.Done(e);
+    };
+    _vw.doTouchStart=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doTouchStart");
+      vw.Touch.Start(coDOM.getLastTouch(e));
+    };
+    _vw.doTouchMove=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doTouchMove");
+      vw.Touch.Update(coDOM.getLastTouch(e));
+    };
+    _vw.doTouchEnd=function(e){
+      if (e==undefined) e=window.event;
+      var vw=this;
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.ShowCase.doTouchEnd");
+      vw.Touch.Done(coDOM.getLastTouch(e));
+    };
+    if (coVDM.VDM.Browser.Mouse==true){
+      if (coDragDrop.debugToConsole==true)
+        coVDM.VDM.Console.Append("coAppUI.Showcase (Activating Mouse Events)");
+      _vw.Mouse.evtStart.setActive(true);
+      _vw.Mouse.evtMove.setActive(false);
+      _vw.Mouse.evtDone.setActive(false);
+
+    };
+    if (coDragDrop.debugToConsole==true)
+      coVDM.VDM.Console.Append("coDragDrop.inf.Show (Activating Touch Events)");
+      _vw.Touch.evtStart.setActive(true);
+      _vw.Touch.evtMove.setActive(false);
+      _vw.Touch.evtDone.setActive(false);
+
     _vw.doTransitionEnd=function(){
       this.Owner.Screen.tmrResize.setActive(true);
     };
@@ -65,6 +152,25 @@ coAppUI.App.Components.ShowCase = {
       var itms=new Array();
       itms.Owner=vw;
       itms.Selected=null;
+      itms.selectNext=function(){
+        var itms=this;
+        var vw=itms.Owner;
+        var idx=itms.indexOf(itms.Selected);
+        var idxMax=itms.length-1;
+        if (idx<idxMax) {
+          idx+=1;
+        }
+        itms[idx].Button.Select();
+      };
+      itms.selectPrevious=function(){
+        var itms=this;
+        var vw=itms.Owner;
+        var idx=itms.indexOf(itms.Selected);
+        if (idx!=0) {
+          idx-=1;
+        };
+        itms[idx].Button.Select();
+      };
       itms.Serialize=function(){
         var itms=this;
         var sResult="";

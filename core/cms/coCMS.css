@@ -24,6 +24,26 @@ div.CMSContent{
   bottom:0px;
   top:0px;
 }
+div.CMSTool{
+  box-shadow: rgba(0,0,0,1) 0px 0px 3px;
+  margin-right: 5px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 4px;
+  cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(79,79,79,.7);
+
+}
+div.CMSTool:hover{
+  box-shadow: rgba(0,0,0,1) 0px 0px 3px;
+  background-color: rgba(00,127,0,.8);
+  border-width: 1px;
+  border-color: rgba(0,0,0,.3);
+  border-style: solid;
+}
 .ace_status-indicator {
     color: gray;
     position: absolute;

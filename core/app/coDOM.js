@@ -1,7 +1,7 @@
 var coDOM={
-  Version         : new Version(2015,5,24,176),
+  Version         : new Version(2018,3,8,179),
   Title           : new Title("Core Object DOM Object","coDOM"),
-  Vendor          : new Vendor("Aurawin", "Copyright (&copy;) 2011-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor          : new Vendor("Aurawin", "Copyright (&copy;) 2011-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
 
   Browser         : null,
   setText         : null,
@@ -111,6 +111,10 @@ var coDOM={
       };
     };
     return null;
+  },
+  getLastTouch:function(e){
+    var ts = (e.targetTouches.length>0) ? e.targetTouches : e.changedTouches;
+    return ts[ts.length-1];
   },
   hasDescendant:function(srcElm,decElm){
     if (srcElm==decElm) return true;

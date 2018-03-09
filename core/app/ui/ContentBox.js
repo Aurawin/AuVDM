@@ -1,7 +1,7 @@
 coAppUI.App.Components.ContentBox = {
-  Version        : new Version(2014,10,16,9),
+  Version        : new Version(2018,3,8,17),
   Title          : new Title("Aurawin Content Box","Content Box"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2013-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2013-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/ContentBox.js',coAppKit.PreLoaded),
   debugToConsole : true,
   Create         : function (sName,sClass,Screen,Slides,Owner,Parent,Align){
@@ -123,14 +123,25 @@ coAppUI.App.Components.ContentBox = {
 
       if (typeof(coCMS)!="undefined") {
         var cmds=coAppUI.App.Components.CMS.createCommands();
+
+        var cmd=cmds.addItem();
+        cmd.MAP.Name.Value=coLang.Table.Apps.CMS.Tools.Items.Insert.Name;
+        cmd.MAP.Hint.Value=coLang.Table.Apps.CMS.Tools.Items.Insert.Hint;
+        cmd.MAP.Method.Value=function(cmd,CMS){
+          var cb=CMS.Owner.Owner;
+          var itm=cb.Items.createItem("","","",null,true);
+          cb.scrollInView(itm);
+        };
+
         var cmd=cmds.addItem();
         cmd.MAP.Name.Value=coLang.Table.Apps.CMS.Tools.Items.Add.Name;
         cmd.MAP.Hint.Value=coLang.Table.Apps.CMS.Tools.Items.Add.Hint;
         cmd.MAP.Method.Value=function(cmd,CMS){
           var cb=CMS.Owner.Owner;
-          var itm=cb.Items.createItem("","","",null);
+          var itm=cb.Items.createItem("","","",null,false);
           cb.scrollInView(itm);
         };
+
         _itms.CMS=coAppUI.App.Components.CMS.createTools(_itms,_itms.Container,_itms.Class,cmds);
 
       };
@@ -143,18 +154,26 @@ coAppUI.App.Components.ContentBox = {
         var itm=s.Owner;
         coDOM.setHTML(itm.Content,"");
       };
-      _itms.createItem=function(Title,Content,srcIcon,rcCMS){
+      _itms.createItem=function(Title,Content,srcIcon,rcCMS,Insert){
+        if (Insert==undefined) Insert=false;
         var itms=this;
         var cb=itms.Owner;
         var _itm=coObject.Create(coObject.relInline,coObject.cpyAsVar,"ContentBoxItem");
-
-
 
         _itm.Owner=itms;
         _itm.Parent=_itms.Container;
         _itm.Container=document.createElement('div');
         _itm.Container.Owner=_itm;
-        _itm.Parent.appendChild(_itm.Container);
+        if (Insert) {
+          if (_itm.Owner.length==0) {
+            _itm.Parent.appendChild(_itm.Container);
+          } else {
+           _itm.Parent.insertBefore(_itm.Container,_itms[0].Container);
+          }
+        } else {
+           _itm.Parent.appendChild(_itm.Container);
+        }
+
         _itm.Container.className=_itm.Class+" "+cb.Class+"Item";
         _itm.Container.style.display="inline-block";
 
@@ -231,7 +250,7 @@ coAppUI.App.Components.ContentBox = {
         };
         if (typeof(coCMS)!="undefined") {
           if (rcCMS==undefined) {
-            rcCMS=cb.CMS.MAP.Items.Value.addItem();
+            rcCMS=cb.CMS.MAP.Items.Value.addItem(null,Insert);
           };
           rcCMS.Display=_itm;
 
@@ -265,8 +284,10 @@ coAppUI.App.Components.ContentBox = {
                 var itm=CMS.Owner;
                 itm.Title.setAttribute("contenteditable","true");
                 var Inst=$(itm.Content).redactor();
+
                 var idxInst=Inst.length-1;
                 itm.Content.Box=$(itm.Content).redactor('core.getBox')[idxInst];
+                itm.Content.Box.style.position="relative";
                 itm.Content.Control=$(itm.Content).redactor('core.getObject');
                 itm.Content.Editor=$(itm.Content).redactor('core.getEditor')[idxInst];
                 itm.Content.Toolbar=$(itm.Content).redactor('core.getToolbar')[idxInst];
@@ -289,7 +310,11 @@ coAppUI.App.Components.ContentBox = {
           _itm.CMS=coAppUI.App.Components.CMS.createTools(_itm,_itm.Container,_itm.Class,cmds);
           _itm.CMS.Data=rcCMS;
         };
-        itms.push(_itm);
+        if(Insert) {
+          itms.splice(0,0,_itm);
+        } else{
+          itms.push(_itm);
+        }
         return _itm;
       };
       _itms.Free=function(){
