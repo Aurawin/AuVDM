@@ -3208,6 +3208,12 @@ div.ThreadViewRefresh{
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(-90deg);
 }
+div.ThreadViewGroupHeaderTopBar{
+    display: block;
+    top:0px;
+    right: 0px;
+    left:0px;
+}
 div.ThreadViewHeader{
   display:block;
   top: 0px;
