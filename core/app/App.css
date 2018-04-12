@@ -1,0 +1,43 @@
+body{
+	width: 100%;
+	height: 100%;
+	display: block;
+	position: absolute;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+div.Console{
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -240px;
+	color: rgba(255,255,255,.8);
+	background-color: rgba(0,0,0,1);
+	display: none;
+	width: 600px;
+	height: 480px;
+	position:absolute;
+}
+
+div.ConsoleClient{
+	display:block;
+	right: 0px;
+	left: 0px;
+	bottom: 0px;
+	top: 0px;
+	position:absolute;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+span.ConsoleEntry{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	margin: 0px;
+	word-wrap: break-word;
+	display:block;
+}
+span.ConsoleEntry:nth-child(even){ background-color: rgba(255,255,255,.2) }
+span.ConsoleEntry:nth-child(odd){ background-color: rgba(255,255,255,.1) }

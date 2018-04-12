@@ -1,5 +1,5 @@
 coAppUI.App.Components.Slides = {
-  Version        : new Version(2018,3,7,90),
+  Version        : new Version(2014,11,6,89),
   Title          : new Title("Aurawin Slides","Slides"),
   Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Slides.js',coAppKit.PreLoaded),
@@ -94,8 +94,7 @@ coAppUI.App.Components.Slides = {
       var xBias=slide.Border.xBias()+slide.Padding.xBias()+slide.Margin.xBias();
       var yBias=slide.Border.yBias()+slide.Padding.yBias()+slide.Margin.yBias();
       p.Width=slide.Parent.clientWidth-xBias;
-      //p.Height=slide.Container.offsetHeight-yBias;
-      p.Height=slide.Height-yBias;
+      p.Height=slide.Container.offsetHeight-yBias;
       for (var iLcv=0; iLcv<lst.length; iLcv++){
         var sLcv=lst[iLcv];
         if (sLcv==slide) break;
@@ -125,8 +124,7 @@ coAppUI.App.Components.Slides = {
       p.Top=0;
       var yBias=slide.Padding.yBias()+slide.Border.yBias()+slide.Margin.yBias();
       var xBias=slide.Padding.xBias()+slide.Border.xBias()+slide.Margin.xBias();
-      //p.Width=slide.Container.offsetWidth-xBias;
-      p.Width=slide.Width-xBias;
+      p.Width=slide.Container.offsetWidth-xBias;
       p.Height=slide.Parent.clientHeight-yBias;
       for (var iLcv=0; iLcv<lst.length; iLcv++){
         var sLcv=lst[iLcv];

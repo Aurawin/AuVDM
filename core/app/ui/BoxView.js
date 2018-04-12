@@ -1,8 +1,8 @@
 coAppUI.App.Components.BoxView = {
-  Version        : new Version(2014,2,27,88),
-  Title          : new Title("Aurawin UI Box View","BoxView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/BoxView.js',coAppKit.PreLoaded),
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
   Create         : function (sName,sClass,Screen,Slides,Owner,Parent,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Client;

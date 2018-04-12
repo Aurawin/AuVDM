@@ -1,0 +1,6881 @@
+Header{
+  content: '/core/vdm/VDM.css'
+}
+{$i FontFace.css}
+html, body {
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  font-size: 9pt;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+}
+div.toolbarGradient{
+
+}
+div.divFormat{
+  position: absolute;
+  visibility: hidden;
+  display: inline-block;
+}
+div.divParse{
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+div.vdmLogin {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  clear: both;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+}
+div.vdm {
+  position: absolute;
+  display:block;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  clear: both;
+  overflow: hidden;
+  z-index: 2000;
+}
+
+div.progressBar{
+  position: absolute;
+  display: block;
+
+  width: 120px;
+  height: 10px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  border-radius: 5px;
+
+  border: 1px solid rgba(255, 255, 255, .49);
+
+  background: -moz-linear-gradient(top, rgba(0,0,73,0.77) 0%, rgba(0,21,117,0.77) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,73,0.77)), color-stop(100%,rgba(0,21,117,0.77)));
+  background: -webkit-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4000049', endColorstr='#c4001575',GradientType=0 );
+
+  box-shadow: 0 0 4px rgba(0,0,73,1);
+  -webkit-box-shadow: 0 0 4px rgba(0,0,73,1);
+}
+div.progressBarFiller{
+  display: block;
+  height: 10px;
+  border-radius: 4px;
+
+  background: -moz-linear-gradient(top, rgba(30,87,153,0.8) 0%, rgba(30,87,153,0.8) 20%, rgba(2,63,142,0.8) 50%, rgba(30,87,153,0.8) 80%, rgba(30,87,153,0.8) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,0.8)), color-stop(20%,rgba(30,87,153,0.8)), color-stop(50%,rgba(2,63,142,0.8)), color-stop(80%,rgba(30,87,153,0.8)), color-stop(100%,rgba(30,87,153,0.8)));
+  background: -webkit-linear-gradient(top, rgba(30,87,153,0.8) 0%,rgba(30,87,153,0.8) 20%,rgba(2,63,142,0.8) 50%,rgba(30,87,153,0.8) 80%,rgba(30,87,153,0.8) 100%);
+  background: -o-linear-gradient(top, rgba(30,87,153,0.8) 0%,rgba(30,87,153,0.8) 20%,rgba(2,63,142,0.8) 50%,rgba(30,87,153,0.8) 80%,rgba(30,87,153,0.8) 100%);
+  background: -ms-linear-gradient(top, rgba(30,87,153,0.8) 0%,rgba(30,87,153,0.8) 20%,rgba(2,63,142,0.8) 50%,rgba(30,87,153,0.8) 80%,rgba(30,87,153,0.8) 100%);
+  background: linear-gradient(to bottom, rgba(30,87,153,0.8) 0%,rgba(30,87,153,0.8) 20%,rgba(2,63,142,0.8) 50%,rgba(30,87,153,0.8) 80%,rgba(30,87,153,0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1e5799', endColorstr='#cc1e5799',GradientType=0 );
+
+}
+div.progressBarFillerError{
+  display: block;
+  height: 10px;
+  border-radius: 4px;
+
+  background: rgb(204,0,0);
+  background: -moz-linear-gradient(top, rgba(204,0,0,1) 0%, rgba(226,30,0,1) 21%, rgba(237,59,0,1) 47%, rgba(226,30,0,1) 72%, rgba(204,0,0,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(204,0,0,1)), color-stop(21%,rgba(226,30,0,1)), color-stop(47%,rgba(237,59,0,1)), color-stop(72%,rgba(226,30,0,1)), color-stop(100%,rgba(204,0,0,1)));
+  background: -webkit-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(226,30,0,1) 21%,rgba(237,59,0,1) 47%,rgba(226,30,0,1) 72%,rgba(204,0,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(226,30,0,1) 21%,rgba(237,59,0,1) 47%,rgba(226,30,0,1) 72%,rgba(204,0,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(204,0,0,1) 0%,rgba(226,30,0,1) 21%,rgba(237,59,0,1) 47%,rgba(226,30,0,1) 72%,rgba(204,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(204,0,0,1) 0%,rgba(226,30,0,1) 21%,rgba(237,59,0,1) 47%,rgba(226,30,0,1) 72%,rgba(204,0,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0000', endColorstr='#cc0000',GradientType=0 );
+
+}
+div.purpleFrame{
+  border-left: 1px solid;
+  border-left-color: #331548;
+  border-top: 1px solid;
+  border-top-color: #331548;
+  border-bottom: 1px solid;
+  border-bottom-color: #23003C;
+  border-right: 1px solid;
+  border-right-color: #23003C;
+}
+
+div.goldFrame{
+  border-left: 1px solid;
+  border-left-color: #E8DD32;
+  border-top: 1px solid;
+  border-top-color: #E8DD32;
+  border-bottom: 1px solid;
+  border-bottom-color: #C9C034;
+  border-right: 1px solid;
+  border-right-color: #C9C034;
+}
+div.ToolWindow{
+  position:absolute;
+  display:none;
+}
+div.blue2Gradient{
+background: rgb(195,195,195);
+background: -moz-linear-gradient(top, rgba(195,195,195,1) 0%, rgba(170,170,170,1) 24%, rgba(147,147,147,1) 50%, rgba(170,170,170,1) 79%, rgba(195,195,195,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(195,195,195,1)), color-stop(24%,rgba(170,170,170,1)), color-stop(50%,rgba(147,147,147,1)), color-stop(79%,rgba(170,170,170,1)), color-stop(100%,rgba(195,195,195,1)));
+background: -webkit-linear-gradient(top, rgba(195,195,195,1) 0%,rgba(170,170,170,1) 24%,rgba(147,147,147,1) 50%,rgba(170,170,170,1) 79%,rgba(195,195,195,1) 100%);
+background: -o-linear-gradient(top, rgba(195,195,195,1) 0%,rgba(170,170,170,1) 24%,rgba(147,147,147,1) 50%,rgba(170,170,170,1) 79%,rgba(195,195,195,1) 100%);
+background: -ms-linear-gradient(top, rgba(195,195,195,1) 0%,rgba(170,170,170,1) 24%,rgba(147,147,147,1) 50%,rgba(170,170,170,1) 79%,rgba(195,195,195,1) 100%);
+background: linear-gradient(top, rgba(195,195,195,1) 0%,rgba(170,170,170,1) 24%,rgba(147,147,147,1) 50%,rgba(170,170,170,1) 79%,rgba(195,195,195,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c3c3c3', endColorstr='#c3c3c3',GradientType=0 );
+}
+div.greyGradient{
+background: rgb(44,44,44);
+background: -moz-linear-gradient(top, rgba(44,44,44,1) 0%, rgba(66,66,66,1) 46%, rgba(43,43,43,1) 76%, rgba(28,28,28,1) 91%, rgba(19,19,19,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(44,44,44,1)), color-stop(46%,rgba(66,66,66,1)), color-stop(76%,rgba(43,43,43,1)), color-stop(91%,rgba(28,28,28,1)), color-stop(100%,rgba(19,19,19,1)));
+background: -webkit-linear-gradient(top, rgba(44,44,44,1) 0%,rgba(66,66,66,1) 46%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -o-linear-gradient(top, rgba(44,44,44,1) 0%,rgba(66,66,66,1) 46%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: -ms-linear-gradient(top, rgba(44,44,44,1) 0%,rgba(66,66,66,1) 46%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+background: linear-gradient(top, rgba(44,44,44,1) 0%,rgba(66,66,66,1) 46%,rgba(43,43,43,1) 76%,rgba(28,28,28,1) 91%,rgba(19,19,19,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c2c2c', endColorstr='#131313',GradientType=0 );
+}
+div.blueGradient{
+background: rgb(174,217,226);
+background: -moz-linear-gradient(top, rgba(174,217,226,1) 0%, rgba(17,121,159,1) 80%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,217,226,1)), color-stop(80%,rgba(17,121,159,1)));
+background: -webkit-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: -o-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: -ms-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aed9e2', endColorstr='#11799f',GradientType=0 );
+}
+div.greenGradient{
+background: rgb(207,234,159);
+background: -moz-linear-gradient(top, rgba(207,234,159,1) 0%, rgba(22,137,16,1) 11%, rgba(16,114,1,1) 50%, rgba(28,112,1,1) 88%, rgba(102,201,82,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,234,159,1)), color-stop(11%,rgba(22,137,16,1)), color-stop(50%,rgba(16,114,1,1)), color-stop(88%,rgba(28,112,1,1)), color-stop(100%,rgba(102,201,82,1)));
+background: -webkit-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+background: -o-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+background: -ms-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+background: linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfea9f', endColorstr='#66c952',GradientType=0 );
+}
+div.redGradient{
+background: rgb(240,183,161);
+background: -moz-linear-gradient(top,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 3%, rgba(117,34,1,1) 36%, rgba(96,24,0,1) 50%, rgba(117,34,1,1) 63%, rgba(117,34,1,1) 96%, rgba(191,110,78,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(3%,rgba(140,51,16,1)), color-stop(36%,rgba(117,34,1,1)), color-stop(50%,rgba(96,24,0,1)), color-stop(63%,rgba(117,34,1,1)), color-stop(96%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+background: -webkit-linear-gradient(top,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 3%,rgba(117,34,1,1) 36%,rgba(96,24,0,1) 50%,rgba(117,34,1,1) 63%,rgba(117,34,1,1) 96%,rgba(191,110,78,1) 100%);
+background: -o-linear-gradient(top,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 3%,rgba(117,34,1,1) 36%,rgba(96,24,0,1) 50%,rgba(117,34,1,1) 63%,rgba(117,34,1,1) 96%,rgba(191,110,78,1) 100%);
+background: -ms-linear-gradient(top,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 3%,rgba(117,34,1,1) 36%,rgba(96,24,0,1) 50%,rgba(117,34,1,1) 63%,rgba(117,34,1,1) 96%,rgba(191,110,78,1) 100%);
+background: linear-gradient(to bottom,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 3%,rgba(117,34,1,1) 36%,rgba(96,24,0,1) 50%,rgba(117,34,1,1) 63%,rgba(117,34,1,1) 96%,rgba(191,110,78,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 );
+}
+div.blackHighlight{
+background: -moz-linear-gradient(top, rgba(77,57,67,0.59) 0%, rgba(40,40,40,0.7) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(77,57,67,0.59)), color-stop(100%,rgba(40,40,40,0.7)));
+background: -webkit-linear-gradient(top, rgba(77,57,67,0.59) 0%,rgba(40,40,40,0.7) 100%);
+background: -o-linear-gradient(top, rgba(77,57,67,0.59) 0%,rgba(40,40,40,0.7) 100%);
+background: -ms-linear-gradient(top, rgba(77,57,67,0.59) 0%,rgba(40,40,40,0.7) 100%);
+background: linear-gradient(to bottom, rgba(77,57,67,0.59) 0%,rgba(40,40,40,0.7) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#964d3943', endColorstr='#b3282828',GradientType=0 );
+}
+div.cvrVDM{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: none;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  top: 0px;
+  left: 0px;
+  background-color: #725e10;
+  opacity: 0.79;
+}
+div.progressIcon{
+  position: relative;
+  visibility: hidden;
+  display:block;
+  width:6px;
+  left: 4px;
+
+  padding-top: 2px;
+  padding-bottom:2px;
+
+  border-radius: 3px;
+  border: 1px solid rgba(191, 182, 41, 1);
+  -webkit-transition: visibility 1s ease-in-out;
+  -moz-transition: visibility 1s ease-in-out;
+  -o-transition: visibility 1s ease-in-out;
+}
+div.progressIconFiller{
+  border-radius: 2px;
+  position: relative;
+  visibility: hidden;
+  display: block;
+
+  background: -moz-linear-gradient(left, rgba(30,87,153,0.8) 0%, rgba(30,87,153,1) 4%, rgba(30,87,153,1) 7%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 93%, rgba(30,87,153,1) 96%, rgba(30,87,153,0.8) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(30,87,153,0.8)), color-stop(4%,rgba(30,87,153,1)), color-stop(7%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(93%,rgba(30,87,153,1)), color-stop(96%,rgba(30,87,153,1)), color-stop(100%,rgba(30,87,153,0.8)));
+  background: -webkit-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+  background: -o-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+  background: -ms-linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+  background: linear-gradient(left, rgba(30,87,153,0.8) 0%,rgba(30,87,153,1) 4%,rgba(30,87,153,1) 7%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 93%,rgba(30,87,153,1) 96%,rgba(30,87,153,0.8) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc1e5799', endColorstr='#cc1e5799',GradientType=1 );
+}
+div.btnAppClose{
+  display: block;
+  position:absolute;
+
+
+  vertical-align:middle;
+  text-align:center;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border: 1px solid rgba(255,255,255,.25);
+  color: rgba(255,255,255,1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+}
+div.btnAppClose:hover{
+  color: rgba(255,255,255,1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  box-shadow: 0px 0px 2px 2px rgba(255,255,255,.5);
+}
+div.vdmTorus{
+  height: 128px;
+  width: 128px;
+  bottom:32px;
+  right:32px;
+  padding: 0px;
+  visibility: visible;
+  position: absolute;
+  display: block;
+  z-index: 50000;
+
+  background: transparent;
+
+  -webkit-transition: visibility 1s ease-in-out;
+  -ms-transition: visibility 1s ease-in-out;
+  -moz-transition: visibility 1s ease-in-out;
+  -o-transition: visibility 1s ease-in-out;
+}
+div.vdmTorusOverlay{
+  background-color: transparent;
+  height: 128px;
+  width: 128px;
+  display: block;
+  visibility: visible;
+
+  background-image:url(/core/vdm/imgs/torus/wheel.png);
+  background-position: center;
+  background-size:contain;
+
+  animation-name: rotateTorus;
+  animation-duration:4s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+  -webkit-animation-name: rotateTorus;
+  -webkit-animation-duration:4s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  -ms-Animation-name: MsRotateTorus;
+  -ms-Animation-duration:4s;
+  -ms-Animation-iteration-count:infinite;
+  -ms-Animation-timing-function:linear;
+
+  -Moz-Animation-name: MozRotateTorus;
+  -Moz-Animation-duration:4s;
+  -Moz-Animation-iteration-count:infinite;
+  -Moz-Animation-timing-function:linear;
+}
+
+
+div.vdmTorusV1{
+  height: 32px;
+  width: 32px;
+  margin-left: -32px;
+  margin-top: -32px;
+  left:50%;
+  top:50%;
+  padding: 0px;
+  visibility: visible;
+  position: absolute;
+  display: block;
+  z-index: 50000;
+  border-radius: 32px;
+  border: 16px solid rgba(7, 7, 79, 0.79);
+  background: transparent;
+
+  box-shadow: 0px 0px 15px rgba(127, 127, 227, .79);
+  -webkit-box-shadow: 0px 0px 15px rgba(127, 127, 227, .79);
+
+  -webkit-transition: visibility 1s ease-in-out;
+  -moz-transition: visibility 1s ease-in-out;
+  -o-transition: visibility 1s ease-in-out;
+
+}
+div.vdmTorusOverlayV1{
+  background-color: transparent;
+  height: 48px;
+  width: 48px;
+  margin-left: -16px;
+  margin-top: -16px;
+  display: block;
+  visibility: visible;
+  border-radius: 32px;
+
+  box-shadow-top: 0px 0px 15px rgba(127, 127, 227, .79);
+  -webkit-box-shadow: 0px 0px 15px rgba(127, 127, 227, .79);
+
+  animation-name: rotateTorus;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+  -webkit-animation-name: rotateTorus;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  border: 8px solid rgba(3, 3, 55, 0.79);
+  border-right-color: transparent;
+  border-left-color:transparent;
+  background: transparent;
+}
+
+@-moz-keyframes MozRotateTorus {
+  from {-moz-transform:scale(1) rotate(0deg);}
+  to {-moz-transform:scale(1) rotate(360deg);}
+}
+
+@-ms-keyframes MsRotateTorus {
+  from {-ms-transform:scale(1) rotate(0deg);}
+  to {-ms-transform:scale(1) rotate(360deg);}
+}
+
+@-webkit-keyframes rotateTorus {
+  from {-webkit-transform:scale(1) rotate(0deg);}
+  to {-webkit-transform:scale(1) rotate(360deg);}
+}
+
+div.Torus{
+  height: 34px;
+  width: 34px;
+  right: 15px;
+  bottom: 15px;
+  padding: 0px;
+  visibility: visible;
+  position: absolute;
+  display: none;
+  z-index: 50000;
+
+  background: transparent;
+
+  -webkit-transition: visibility .5s linear;
+  -ms-transition: visibility .5s linear;
+  -moz-transition: visibility .5s linear;
+  -o-transition: visibility .5s linear;
+
+}
+div.TorusOverlay{
+  height: 34px;
+  width: 34px;
+  display: block;
+  visibility: visible;
+
+  animation-name: rotateTorus;
+  animation-duration:2.5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+  -webkit-animation-name: rotateTorus;
+  -webkit-animation-duration:2.5s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  -ms-animation-name: MsRotateTorus;
+  -ms-animation-duration:2.5s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-timing-function:linear;
+
+  -moz-animation-name: MozRotateTorus;
+  -moz-animation-duration:2.5s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+
+
+  background-image: url(/core/vdm/imgs/torus/wheel.png);
+  background-repeat:no-repeat;
+  background-size: 34px 34px;
+  background-position:center;
+}
+
+div.IconListItemTorus{
+  height: 34px;
+  width: 34px;
+  margin-left: -17px;
+  margin-top:  0px;
+  padding: 0px;
+  visibility: visible;
+
+  position: absolute;
+  display: none;
+  z-index: 50000;
+
+  background: transparent;
+
+  -webkit-transition: visibility .5s linear;
+  -ms-transition: visibility .5s linear;
+  -moz-transition: visibility .5s linear;
+  -o-transition: visibility .5s linear;
+
+}
+div.IconListItemTorusTorusOverlay{
+  height: 34px;
+  width: 34px;
+  display: block;
+  visibility: visible;
+
+  animation-name: rotateTorus;
+  animation-duration:2.5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+  -webkit-animation-name: rotateTorus;
+  -webkit-animation-duration:2.5s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  -ms-animation-name: MsRotateTorus;
+  -ms-animation-duration:2.5s;
+  -ms-animation-iteration-count:infinite;
+  -ms-animation-timing-function:linear;
+
+  -moz-animation-name: MozRotateTorus;
+  -moz-animation-duration:2.5s;
+  -moz-animation-iteration-count:infinite;
+  -moz-animation-timing-function:linear;
+
+
+  background-image: url(/core/vdm/imgs/torus/wheel.png);
+  background-repeat:no-repeat;
+  background-size: 34px 34px;
+  background-position:center;
+}
+
+div.TorusV1{
+  height: 12px;
+  width: 12px;
+  right: 7px;
+  bottom: 7px;
+  padding: 0px;
+  visibility: visible;
+  position: absolute;
+  display: none;
+  z-index: 50000;
+  border-radius: 14px;
+  border: 7px solid rgba(27, 27, 127, .5);
+  background: transparent;
+
+  box-shadow: 0px 0px 10px rgba(127, 127, 227, .79);
+  -webkit-box-shadow: 0px 0px 10px rgba(127, 127, 227, .79);
+
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+
+}
+div.TorusOverlayV1{
+  background-color: transparent;
+  height: 12px;
+  width: 12px;
+  margin-top: -6px;
+  margin-left: -6px;
+  display: block;
+  visibility: visible;
+  border-radius: 12px;
+
+  box-shadow-top: 0px 0px 10px rgba(127, 127, 227, .79);
+  -webkit-box-shadow: 0px 0px 10px rgba(127, 127, 227, .79);
+
+  animation-name: rotateTorus;
+  animation-duration:2s;
+  animation-iteration-count:infinite;
+  animation-timing-function:linear;
+
+  -webkit-animation-name: rotateTorus;
+  -webkit-animation-duration:2s;
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+
+  border: 6px solid rgba(255, 255, 255, 0.4);
+  border-right-color: transparent;
+  border-left-color:transparent;
+  background: transparent;
+}
+
+
+div.msgBoxTitle{
+  height: 32px;
+  margin: 2px;
+  position: absolute;
+  visibility:hidden;
+}
+div.msgBoxMessage{
+  position: absolute;
+  opacity:0.93;
+  border-radius: 4px;
+  border: 2px solid #BFB629;
+  word-wrap: normal;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+div.msgBoxHeaderPanels{
+  height: 60px;
+  position: absolute;
+  visibility:hidden;
+  clear:both;
+  overflow:hidden;
+}
+div.msgBoxImage{
+  height: 60px;
+  width: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  position: absolute;
+}
+div.msgBoxCommands{
+  height: 24px;
+  width: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 2px;
+  padding-left: 2px;
+  position: absolute;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  left: 0px;
+}
+
+div.consoleBoxTitle{
+  height: 32px;
+  margin: 2px;
+  position: absolute;
+  visibility:hidden;
+}
+div.consoleBoxMessage{
+  position: absolute;
+  opacity:0.93;
+  border-radius: 4px;
+  border: 2px solid #BFB629;
+  word-wrap: normal;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+div.consoleBoxHeaderPanels{
+  height: 60px;
+  position: absolute;
+  visibility:hidden;
+  clear:both;
+  overflow:hidden;
+}
+div.consoleBoxImage{
+  height: 60px;
+  width: 60px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  position: absolute;
+}
+div.consoleBoxCommands{
+  height: 24px;
+  width: 30px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-right: 2px;
+  padding-left: 2px;
+  position: absolute;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  left: 0px;
+}
+div.consoleEntry{
+  padding: 0px;
+  visibility: inherit;
+  overflow-x: hidden;
+  display: block;
+}
+div.btnOk{
+  margin-top: 4px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color:white;
+  width: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 18px;
+  background-color:#2054cd;
+  border-radius: 4px;
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-top: 1px solid #B3CD00;
+  border-left: 1px solid #B3CD00;
+  border-right: 1px solid  #B3CD00;
+  border-bottom: 1px solid #B3CD00;
+}
+div.msgBoxFooter{
+  padding-bottom: 2px;
+  padding-top: 2px;
+  position:absolute;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  left: 0px;
+}
+
+div.AuButtonGradientSelected{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+background: rgb(255,215,64);
+background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+
+div.AuButtonGradientDis{
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+
+background: rgb(240,183,161);
+background: -moz-linear-gradient(top, rgba(240,183,161,1) 0%, rgba(140,51,16,1) 11%, rgba(117,34,1,1) 50%, rgba(117,34,1,1) 88%, rgba(191,110,78,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(11%,rgba(140,51,16,1)), color-stop(50%,rgba(117,34,1,1)), color-stop(88%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+background: -webkit-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 11%,rgba(117,34,1,1) 50%,rgba(117,34,1,1) 88%,rgba(191,110,78,1) 100%);
+background: -o-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 11%,rgba(117,34,1,1) 50%,rgba(117,34,1,1) 88%,rgba(191,110,78,1) 100%);
+background: -ms-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 11%,rgba(117,34,1,1) 50%,rgba(117,34,1,1) 88%,rgba(191,110,78,1) 100%);
+background: linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 11%,rgba(117,34,1,1) 50%,rgba(117,34,1,1) 88%,rgba(191,110,78,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 );
+}
+div.AuButtonGradientCol{
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+
+background: rgb(109,127,133);
+background: -moz-linear-gradient(top, rgba(109,127,133,1) 0%, rgba(156,162,178,1) 50%, rgba(109,127,133,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(109,127,133,1)), color-stop(50%,rgba(156,162,178,1)), color-stop(100%,rgba(109,127,133,1)));
+background: -webkit-linear-gradient(top, rgba(109,127,133,1) 0%,rgba(156,162,178,1) 50%,rgba(109,127,133,1) 100%);
+background: -o-linear-gradient(top, rgba(109,127,133,1) 0%,rgba(156,162,178,1) 50%,rgba(109,127,133,1) 100%);
+background: -ms-linear-gradient(top, rgba(109,127,133,1) 0%,rgba(156,162,178,1) 50%,rgba(109,127,133,1) 100%);
+background: linear-gradient(to bottom, rgba(109,127,133,1) 0%,rgba(156,162,178,1) 50%,rgba(109,127,133,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6d7f85', endColorstr='#6d7f85',GradientType=0 );
+
+}
+div.AuButtonGradientSelectedCol{
+  color: #EFEED7;
+  text-shadow: rgba(0, 0, 0, 1) 0.1em 0.1em 0.2em;
+
+background: rgb(174,217,226);
+background: -moz-linear-gradient(top, rgba(174,217,226,1) 0%, rgba(17,121,159,1) 80%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,217,226,1)), color-stop(80%,rgba(17,121,159,1)));
+background: -webkit-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: -o-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: -ms-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+background: linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aed9e2', endColorstr='#11799f',GradientType=0 );
+}
+div.AuButtonGradient{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+background: rgb(255,215,64);
+background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+
+div.ApSnClBtn{
+  top: 5px;
+  right: 4px;
+  float: right;
+  z-index: 2;
+  display:block;
+  position:absolute;
+}
+
+div.AuButton{
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 21px;
+
+  border: 1px solid rgba(232,221,50,1);
+  border-left-color: rgba(232,221,50,1);
+  border-top-color: rgba(232,221,50,1);
+  border-bottom-color:rgba(114,114,21,1);
+  border-right-color:rgba(114,114,21,1);
+
+  -moz-box-shadow: 0 0 1px 1px rgba(232,221,50,1);
+  -webkit-box-shadow: 0 0 1px 1px rgba(232,221,50,1);
+  box-shadow: 0px 0px 1px 1px rgba(232,221,50,1);
+
+  visibility: hidden;
+
+  z-index: 1000;
+}
+div.AuButtonCol{
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 24px;
+  position: absolute;
+
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: rgba(175,189,194,1);
+  border-top-color: rgba(175,189,194,1);
+  border-bottom-color:rgba(35,74,86,1);
+  border-right-color:rgba(35,74,86,1);
+
+  -moz-box-shadow: 0 0 1px 1px rgba(86,96,100,1);
+  -webkit-box-shadow: 0 0 1px 1px rgba(86,96,100,1);
+  box-shadow: 0px 0px 1px 1px rgba(86,96,100,1);
+
+  z-index: 1000;
+}
+div.AuButtonSelected{
+  top: 1px;
+  left: 1px;
+
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 21px;
+
+  border: 1px solid rgba(114,114,21,1);
+  border-left-color: rgba(114,114,21,1);
+  border-top-color: rgba(114,114,21,1);
+  border-bottom-color:rgba(232,221,50,1);
+  border-right-color:rgba(232,221,50,1);
+
+  -moz-box-shadow: 0 0 1px 1px rgba(232,221,50,1);
+  -webkit-box-shadow: 0 0 1px 1px rgba(232,221,50,1);
+  box-shadow: 0px 0px 1px 1px rgba(232,221,50,1);
+  z-index: 1000;
+}
+div.AuButtonSelectedCol{
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 24px;
+  position: absolute;
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+
+  -moz-box-shadow: 0 0 2px 2px rgba(125, 185, 232, 1);
+  -webkit-box-shadow: 0 0 2px 2px rgba(125, 185, 232, 1);
+  box-shadow: 0px 0px 2px 2px rgba(125, 185, 232, 1);
+
+  border: 1px solid rgba(117,143,177,1);
+
+  border-top-color: rgba(52, 64, 87, 1);
+  border-left-color: rgba(52, 64, 87, 1);
+  border-bottom-color: rgba(117,143,177,1);
+  border-right-color: rgba(117,143,177,1);
+  z-index: 1000;
+}
+
+div.AuButtonDis{
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 24px;
+  position: absolute;
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: rgba(232,100,50,.79);
+  border-top-color: rgba(232,100,50,.79);
+  border-bottom-color:rgba(232,221,50,.79);
+  border-right-color:rgba(232,221,50,.79);
+
+  -moz-box-shadow: 0 0 1px 1px rgba(232,100,50,.79);
+  -webkit-box-shadow: 0 0 1px 1px rgba(232,100,50,.79);
+  box-shadow: 0px 0px 1px 1px rgba(232,100,50,.79);
+  z-index: 1000;
+}
+div.AuButtonSelectedDis{
+  top: 1px;
+  left: 1px;
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  height: 24px;
+  position: absolute;
+  border-top-left-radius : 0px;
+  border-top-right-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+
+  -moz-box-shadow: 0 0 2px 2px rgba(125, 185, 232, 1);
+  -webkit-box-shadow: 0 0 2px 2px rgba(125, 185, 232, 1);
+  box-shadow: 0px 0px 2px 2px rgba(125, 185, 232, 1);
+
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: rgba(166, 131, 0, 1);
+  border-top-color: rgba(166, 131, 0, 1);
+  border-bottom-color:rgba(232,221,50,.79);
+  border-right-color:rgba(232,221,50,.79);
+  z-index: 1000;
+}
+
+div.AuButtonBtnBdr{
+  position: relative;
+  display: inline-block;
+
+  top:0px;
+  left:0px;
+  width: 60px;
+  height: 60px;
+
+  border-top-right-radius : 0px;
+  border-top-left-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: rgba(166, 131, 0, 1);
+  border-top-color: rgba(232,221,50,.79);
+  border-bottom-color:rgba(177, 131, 48, 1);
+  border-right-color:rgba(177, 131, 48, 1);
+}
+div.AuButtonBdrCol{
+  position: relative;
+  display: inline-block;
+
+  top:0px;
+  left:0px;
+  margin: 0px;
+
+  height: 22px;
+
+  border-top-right-radius : 0px;
+  border-top-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+  border-bottom-left-radius : 0px;
+
+  border: 1px solid rgba(49, 149, 49, 1);
+
+  border-left-color: rgba(34, 100, 34, 1);
+  border-top-color: rgba(34, 100, 34, 1);
+  border-bottom-color: rgba(49, 149, 49, 1);
+  border-right-color: rgba(49, 149, 49, 1);
+}
+div.AuButtonBdrSelected{
+  position: relative;
+  display: inline-block;
+
+  top:0px;
+  left:0px;
+  width: 59px;
+  height: 59px;
+
+  border-top-right-radius : 0px;
+  border-top-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+  border-bottom-left-radius : 0px;
+
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: rgba(177, 131, 48, 1);
+  border-top-color: rgba(232,221,50,.79);
+  border-bottom-color:rgba(177, 131, 48, 1);
+  border-right-color:rgba(177, 131, 48, 1);
+}
+div.AuButtonBdrSelectedDis{
+  position: relative;
+  display: inline-block;
+
+  top:0px;
+  left:0px;
+  height: 22px;
+  border-top-right-radius : 0px;
+  border-top-left-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-left-color: transparent;
+  border-top-color: rgba(232,221,50,.79);
+  border-bottom-color:rgba(177, 131, 48, 1);
+  border-right-color:rgba(177, 131, 48, 1);
+}
+div.AuButtonBdrSelectedCol{
+  position: relative;
+  display: inline-block;
+
+  top:0px;
+  left:0px;
+  height: 22px;
+  border-top-right-radius : 0px;
+  border-top-left-radius : 0px;
+  border-bottom-left-radius : 0px;
+  border-bottom-right-radius : 18px;
+  border: 1px solid;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-top-color: rgba(117,143,177,1);
+  border-left-color: rgba(117,143,177,1);
+  border-bottom-color:rgba(52, 64, 87, 1);
+  border-right-color:rgba(52, 64, 87, 1);
+}
+div.AuButtonIcon{
+  position: relative;
+  display: inline-block;
+
+  padding: 0px;
+  margin: 0px;
+
+  top: 3px;
+  left: 3px;
+  width: 52px;
+  height: 52px;
+
+  background-image: url(/core/vdm/imgs/icns/lgo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 48px 48px;
+}
+div.AuButtonIconCol{
+  position: relative;
+  display: inline-block;
+
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+
+  margin: 0px;
+  padding-left: 7px;
+  padding-right: 13px;
+
+  line-height: 22px;
+
+  top: 0px;
+  left: 0px;
+}
+div.AuButtonIconSelectedDis{
+  position: relative;
+  display: inline-block;
+
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+
+  line-height: 22px;
+
+  top: 0px;
+  left: 0px;
+  height: 18px;
+}
+div.AuButtonIconDis{
+  position: relative;
+  display: inline-block;
+
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 0px;
+
+  line-height: 22px;
+
+  top: 0px;
+  left: 0px;
+  height: 18px;
+}
+div.AuButtonIconSelected{
+  position: relative;
+  display: inline-block;
+
+  padding: 0px;
+  margin: 0px;
+
+  top: 3px;
+  left: 3px;
+  width: 52px;
+  height: 52px;
+
+  background-image: url(/core/vdm/imgs/icns/lgo.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 48px 48px;
+}
+div.AuButtonIconSelectedCol{
+  position: relative;
+  display: inline-block;
+
+  text-align: center;
+  font-weight: bold;
+  vertical-align: middle;
+
+  padding-left: 7px;
+  padding-right: 13px;
+
+  margin: 0px;
+
+  line-height: 22px;
+
+  top: 0px;
+  left: 0px;
+}
+
+div.TrayClock {
+  POSITION: absolute;
+  TEXT-ALIGN: right;
+  MARGIN: 0px;
+  PADDING-RIGHT: 4px;
+  FONT-SIZE: 8pt;
+  OVERFLOW: hidden;
+  TOP: 0px;
+  LEFT: 0px
+}
+div.Notify {
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 100%;
+  CLEAR: both;
+  TOP: 0px;
+  PADDING-TOP: 0px;
+  LEFT: 0px
+}
+div.Notify-Icon {
+  BACKGROUND-IMAGE: url(/core/vdm/imgs/icns/alrt/inf.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 32px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: no-repeat;
+  BACKGROUND-POSITION: center 50%;
+  HEIGHT: 100%;
+  TOP: 0px;
+  PADDING-TOP: 0px;
+  LEFT: 0px
+}
+div.Notify-Number {
+	POSITION: absolute; TEXT-ALIGN: center; MARGIN: 0px; WIDTH: 64px; BACKGROUND-REPEAT: repeat; HEIGHT: 100%; TOP: 0px; FONT-WEIGHT: bold; LEFT: 32px
+}
+div.TopBarGradient{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 215, 64, 1)), color-stop(24%,rgba(191, 161, 48, 1)), color-stop(50%,rgba(166, 131, 0, 1)), color-stop(79%,rgba(191, 161, 48, 1)), color-stop(100%,rgba(255, 215, 64, 1)));
+  background: -webkit-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+  background: linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+
+}
+div.TopBar {
+  position: absolute;
+  display: block;
+  PADDING-BOTTOM: 0px;
+  LINE-HEIGHT: 28px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  PADDING-RIGHT: 0px;
+  HEIGHT: 28px;
+  VISIBILITY: hidden;
+  CLEAR: both;
+  VERTICAL-ALIGN: middle;
+  OVERFLOW: hidden;
+  TOP: 0px;
+  PADDING-TOP: 0px;
+  LEFT: 0px
+}
+div.WorkSpace {
+  padding: 0px;
+  position: absolute;
+  margin: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.WorkSpaceClient {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  clear: both;
+  overflow: hidden;
+}
+div.Container {
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 100%;
+  PADDING-RIGHT: 0px;
+  BACKGROUND: white;
+  HEIGHT: 100%;
+  CLEAR: both;
+  OVERFLOW: hidden;
+  PADDING-TOP: 0px
+}
+div.SystemScreen {
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.msgBox{
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.consoleBox{
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.Resources{
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.ApplicationsScreen {
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+  background-image:url('/core/vdm/imgs/slds/pvmt.png');
+}
+
+div.PlacesScreen {
+  position:absolute;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.AlertsScreen {
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  width: 420px;
+  height: 340px;
+  min-width: 120px;
+  min-height: 120px;
+  visibility: hidden;
+  clear: both;
+  overflow: hidden;
+}
+div.bdrTopLeft {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  border-top-left-radius: 4px;
+
+  top: 0px;
+  left: 0px;
+  width: 5px;
+  height: 5px;
+  cursor: nw-resize
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+
+}
+div.bdrTop {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  height: 5px;
+  top: 0px;
+  cursor: row-resize;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrTopRight {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  border-top-right-radius: 4px;
+  cursor: ne-resize;
+
+  width: 5px;
+  height: 5px;
+  top: 0px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrRight {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  cursor: col-resize;
+  width: 5px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrLeft {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  cursor: col-resize;
+  width: 5px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrBottomRight {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  cursor: se-resize;
+  width: 5px;
+  height: 5px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrBottomLeft {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  cursor: sw-resize;
+  width: 5px;
+  height: 5px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrBottom {
+  position: absolute;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+
+  cursor: row-resize;
+
+  height: 5px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.ToolWindowBoxShadow,
+div.screenBoxShadow {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-box-shadow: rgba(0,0,0,.4) 0px 0px 4px 4px;
+  -webkit-box-shadow: rgba(0,0,0,.4) 0px 0px 4px 4px;
+  box-shadow: rgba(0,0,0,.4) 0px 0px 4px 4px;
+}
+div.bdrFrame {
+  position: absolute;
+  display:block;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  right:0px;
+  bottom:0px;
+}
+div.bdrFilm{
+  background-color:rgba(255,255,255,.27);
+}
+
+div.bdrImageViewer{
+  border: 1px solid rgba(232,221,50,.79);
+
+  border-radius: 4px;
+
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+
+}
+div.bdrMovieViewer{
+  border: 1px solid rgba(232,221,50,.79);
+
+  border-radius: 4px;
+
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+
+}
+div.bdrPDFViewer{
+  border: 1px solid rgba(232,221,50,.79);
+
+  border-radius: 4px;
+
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+
+}
+div.ImageViewerImage{
+  position: absolute;
+  border: 0px;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+}
+object.ImageViewer{
+  position: absolute;
+  border: 0px;
+  visibility: visible;
+  opacity: 0;
+  visibility: hidden;
+}
+div.pnlImageViewerImage{
+  position: absolute;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  overflow: hidden;
+}
+div.MovieViewer {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 640px;
+  height: 480px;
+  min-width: 300px;
+  min-height: 300px;
+  visibility: hidden;
+}
+div.pnlMovieViewerMovie{
+  position: absolute;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+
+  overflow: hidden;
+}
+video.pnlMovieViewerMovie{
+  position: absolute;
+  padding-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-left: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+
+  overflow: hidden;
+}
+div.bdrContainer {
+  position: absolute;
+  display:block;
+  padding: 0px;
+  margin: 0px;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+div.bdrClient {
+  position: absolute;
+  display:block;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  padding: 0px;
+  margin: 0px;
+}
+div.bdrTitleBar {
+  POSITION: absolute;
+  PADDING: 0px;
+  BORDER: 0px;
+  background:transparent;
+  MARGIN: 0px;
+  WIDTH: 100%;
+  HEIGHT: 22px;
+  TOP: 0px;
+  LEFT: 0px
+}
+div.bdrTitleLeft {
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  width: 8px;
+  height: 22px;
+  top: 0px;
+  left: 0px
+}
+div.bdrCaption {
+  position: absolute;
+  padding-left: 8px;
+  padding-right: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+
+  top: 0px;
+  left: 0px;
+  height: 25px;
+  line-height: 22px;
+  vertical-align: middle;
+  text-align: left;
+
+  background: transparent;
+  overflow: hidden;
+  font-weight: bold;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+div.bdrTitleBarFilm{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.bdrTitleRight {
+  background: transparent;
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  width: 8px;
+  height: 22px;
+  top: 0px;
+}
+
+input.NavText{
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 137px;
+}
+
+div.NavGradient{
+  color: rgba(255, 255, 255, 1);
+  background-color: rgb(43,43,43);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+
+div.NavGradient1{
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 0px 0px 1px rgba(138, 139, 139, 1);
+
+  background: rgb(96,96,96);
+  background: -moz-linear-gradient(top, rgba(96,96,96,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(96,96,96,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,96,96,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(100%,rgba(96,96,96,1)));
+  background: -webkit-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -o-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -ms-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: linear-gradient(to bottom, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=0 );
+
+}
+div.NavGradient2{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.Nav{
+  padding:0px;
+  margin:0px;
+  top: 0px;
+  border: 0px solid rgba(200,200,200,.1);
+  border-top-width: 1px;
+  left:0px;
+  height:24px;
+  white-space: nowrap;
+  position: absolute;
+  vertical-align:middle;
+  visibility: hidden;
+  overflow: hidden;
+  position:absolute;
+  text-align:left;
+}
+img.NavHome{
+  height:32px;
+  width: 32px;
+  border-width: 1px;
+  visibility: hidden;
+  float: left;
+  display: inline-block;
+}
+div.NavText{
+  float: left;
+  visibility: hidden;
+  display: inline-block;
+}
+div.NavLabel{
+  visibility: hidden;
+  display: inline-block;
+
+  border-style:solid;
+  border-color: rgba(255,255,255,.17);
+  border-right-width: 0px;
+  border-left-width: 0px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+span.NavLabel{
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align:baseline;
+  text-align:center;
+  display:inline-block;
+  line-height: 22px;
+  min-width: 40px;
+}
+div.NavMenuButton{
+  top:0px;
+  left:0px;
+
+  border: 1px solid rgba(255, 255, 255, .22);
+
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  text-align:center;
+  visibility:hidden;
+  display:inline-block;
+  white-space:nowrap;
+}
+div.NavButton:hover,
+div.NavMenuButton:hover{
+  color: rgba(255, 255, 255, 1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+  border-color: rgba(255,255,255,.2);
+  background-color:rgba(107,107,107,1);
+}
+span.NavMenuLabel{
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align:center;
+  display:inline-block;
+  white-space: nowrap;
+  line-height: 22px;
+  text-decoration: overline;
+}
+span.NavButtonLabel{
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 2px;
+  padding-right: 2px;
+  vertical-align:baseline;
+  text-align:center;
+  display:inline-block;
+  line-height: 22px;
+  min-width: 40px;
+}
+div.NavCombo{
+  border:0px;
+  padding:0px;
+  margin:0px;
+  top:0px;
+
+  text-align:center;
+  display:inline-block;
+  visibility:hidden;
+}
+hr.NavMenuItemSep{
+  padding-top: 0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  padding-right:0px;
+  margin: 0;
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+  background-image:    -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+  background-image:     -ms-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+  background-image:      -o-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,0.25), rgba(255,255,255,0));
+}
+select.NavCombo{
+  top:-1px;
+  left: 0px;
+  border:0px;
+  padding:0px;
+  margin:0px;
+  position: relative;
+  text-align:center;
+  display:inline-block;
+  visibility:hidden;
+}
+div.NavButtonCover{
+  display: none;
+  visibility: hidden;
+  top: 2px;
+  position: absolute;
+}
+div.NavConfirm{
+  top:1px;
+  padding-left: 4px;
+  margin-right: 4px;
+  display:inline-block;
+  white-space: nowrap;
+  visibility:hidden;
+}
+div.NavConfirmCancel{
+  top:0px;
+  margin-left: 4px;
+  margin-right: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color:#892d0e;
+
+  border: 1px solid rgba(255,255,255,.5);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-radius: 4px;
+  text-align : center;
+  display:inline-block;
+  visibility:hidden;
+}
+span.NavConfirmCancel{
+  margin-left: 4px;
+  margin-right: 4px;
+  color: white;
+  text-align:center;
+  display:block;
+  visibility:hidden;
+}
+span.NavConfirmOK{
+  margin-left: 4px;
+  margin-right: 4px;
+  color:white;
+  text-align:center;
+  display:block;
+  visibility:hidden;
+}
+div.NavConfirmOK{
+  top:0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  background-color:#2054cd;
+
+  border: 1px solid rgba(255,255,255,.5);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  border-radius: 4px;
+  text-align : center;
+  display : inline-block;
+  visibility : hidden;
+}
+
+div.NavChildren{
+  vertical-align:top;
+
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  float: left;
+  display: inline-block;
+  white-space: nowrap;
+}
+div.NavGroup{
+  top:0px;
+  left:0px;
+  vertical-align:top;
+  height:22px;
+  line-height:24px;
+
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  left: 0px;
+
+  clear:none;
+  visibility: hidden;
+  display:inline-block;
+  white-space: nowrap;
+}
+div.NavButton{
+  top:0px;
+
+
+  height:24px;
+  margin: 0px;
+  padding: 0px;
+
+  text-align:center;
+  color: rgba(255, 255, 255, .79);
+  border: 1px solid rgba(255,255,255,.17);
+  border-left-width: 1px ;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-right-width: 1px;
+
+  visibility:hidden;
+  display:inline-block;
+  white-space: nowrap;
+}
+div.NavButton.Gold{
+  top:0px;
+  left:0px;
+  height:24px;
+  margin: 0px;
+  padding: 0px;
+  float: left;
+  vertical-align:middle;
+  text-align:center;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-left-color: #e8dd32;
+  border-top-color: #e8dd32;
+  border-bottom-color:#c9c034;
+  border-right-color:#c9c034;
+  visibility:hidden;
+  display:inline-block;
+  white-space: nowrap;
+}
+div.AppMenuMenuItem{
+  line-height: 20px;
+  vertical-align: middle;
+  padding:0px;
+  margin:0px;
+  text-align: center;
+  display:block;
+}
+div.NavSlideChild{
+  top:0px;
+  left:0px;
+  height:0px;
+  width: 0px;
+  padding: 0px;
+  margin : 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.NavMenu{
+  border-left: 1px solid rgba(255,255,255,.1);
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-right: 1px solid rgba(255,255,255,.15);
+  border-bottom: 1px solid rgba(255,255,255,.15);
+
+  padding: 4px;
+  background-color:rgb(37,37,37);
+
+  color: rgba(255, 255, 255, 1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  overflow: hidden;
+
+  border-top-left-radius:2px;
+  border-top-right-radius:2px;
+
+  text-align:left;
+  vertical-align:middle;
+  visibility: hidden;
+  position:absolute;
+
+  max-height: 250px;
+  max-width: 250px;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+div.NavSlide{
+  padding: 0px;
+  margin : 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.MenuSelectionGradient {
+  border-radius: 1px;
+  color: rgba(255, 255, 255, 1);
+  background-color:rgba(107,107,107,1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  border: 1px solid rgba(255, 255, 255, .1);
+
+}
+div.NavMenuItem{
+  padding: 0px;
+  margin : 0px;
+  visibility: hidden;
+  display:block;
+}
+span.NavMenuItem{
+  padding: 4px;
+  margin : 0px;
+  visibility: hidden;
+  text-align : left;
+  vertical-align:top;
+  display:block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+span.NavMenuItemSelected{
+  padding: 3px;
+  margin : 0px;
+  visibility: hidden;
+  text-align : left;
+  vertical-align:top;
+  display:block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+div.AppGroupsSlide{
+  top:0px;
+  left:0px;
+  height:0px;
+  width: 0px;
+  padding: 0px;
+  margin : 0px;
+  visibility: hidden;
+  position:absolute;
+}
+div.KPList{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListTitle{
+  background-repeat: repeat-x;
+  background-size: contain;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListTitleGutter{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListTitleName{
+  padding: 0px;
+  margin: 0px;
+  border-left: 1px solid;
+  border-left-color: #e8dd32;
+  visibility: hidden;
+  position: absolute;
+}
+span.KPListTitleName{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+}
+div.KPListTitleValue{
+  padding: 0px;
+  border-left: 1px solid;
+  border-left-color: #e8dd32;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+span.KPListTitleValue{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+}
+div.KPListTitleCMD{
+  padding: 0px;
+  margin: 0px;
+  width: 80px;
+  border-left: 1px solid;
+  border-left-color: #e8dd32;
+  visibility: hidden;
+  position: absolute;
+}
+span.KPListTitleCMD{
+  padding: 0px;
+  margin: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility:hidden;
+}
+div.KPListPrompt{
+
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+input.KPListPromptNewName{
+  border: 1px solid #785A00;
+  position:absolute;
+  background:transparent;
+}
+input.KPListPromptNewValue{
+  border: 1px solid #785A00;
+  position:absolute;
+  background:transparent;
+}
+select.KPListPromptOptions{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListPromptOptions{
+  padding: 0px;
+  margin: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListPromptOK{
+  padding: 0px;
+  margin:0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  position: absolute;
+}
+span.KPListPromptOK{
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+}
+span.KPListPromptCancel{
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+}
+div.KPListPromptCancel{
+  text-align:center;
+  padding: 0px;
+  margin:0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListItems{
+  margin:0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+}
+div.KPListItem{
+  margin:0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+div.KPListItem:hover{
+
+}
+div.KPListItem:focus{
+
+}
+span.KPListItemName{
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  position:absolute;
+}
+div.KPListItemName{
+  margin:0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+  overflow:hidden;
+}
+span.KPListItemValue{
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  position:absolute;
+  text-overflow:ellipsis;
+}
+div.KPListItemValue{
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+  overflow:hidden;
+}
+div.KPListItemCommand{
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+  text-align:center;
+  vertical-align:middle;
+  border-radius: 4px;
+  color: white;
+  background-color: #2054cd;
+}
+div.KPListItemCommandChecked{
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  position: absolute;
+  text-align:center;
+  vertical-align:middle;
+  border-radius: 4px;
+  background-color: #892d0e;
+  color: #f7f7f7;
+  font-style: italic;
+}
+span.KPListItemCommand{
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+}
+
+div.IconListTabs{
+  display: block;
+  padding-top: 0px;
+  padding-left: 7px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  margin-top: 6px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+}
+
+div.IconListTab{
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 2px;
+
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  border: 1px solid rgba(255,255,255,.27);
+}
+div.IconListTab:hover{
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+  box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+}
+div.IconListTabSelected{
+  display: inline-block;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 7px;
+  padding-right: 7px;
+
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 2px;
+
+  line-height: 18px;
+  vertical-align: middle;
+  text-align: center;
+
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  border: 1px solid rgba(255,255,255,.27);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+div.IconListTabSelected:hover{
+  -moz-box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+  -webkit-box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+  box-shadow: 0px 0px 1px 1px rgba(255,255,255,.5);
+}
+div.IconListTabGradient {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 1px rgba(0,0,0, 1);
+
+  background: rgb(96,96,96);
+  background: -moz-linear-gradient(top, rgba(96,96,96,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(96,96,96,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,96,96,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(100%,rgba(96,96,96,1)));
+  background: -webkit-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -o-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -ms-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: linear-gradient(to bottom, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=0 );
+}
+div.IconListTabGradientSelected {
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 1px rgba(0,0,0, 1);
+
+background: rgb(125,185,232);
+background: -moz-linear-gradient(top, rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(49%,rgba(32,124,202,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(30,87,153,1)));
+background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+background: -o-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+background: -ms-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+background: linear-gradient(to bottom, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );
+}
+
+div.ilvTaskItem{
+  white-space: nowrap;
+
+  display: none;
+  margin-top:2px;
+  margin-bottom: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  border: 1px solid rgba(255, 255, 255, .27);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 1px;
+
+}
+div.ilvTaskWindow{
+  display: none;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+div.ilvTaskCollection{
+  display: none;
+  top: 0px;
+  left: 0px;
+  right:0px;
+  overflow: hidden;
+  margin-right: 0px;
+  padding-bottom: 0px;
+}
+div.ilvTaskItemIcon{
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+
+  position: relative;
+
+  background-size:contain;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-position: center;
+}
+div.ilvTaskItemBtn{
+  top: 0px;
+  right: 0px;
+  float: right;
+  position: relative;
+}
+div.ilvTaskItemInfo{
+  top: 0px;
+  left: 70px;
+  empty-cells: show;
+  vertical-align: top;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+}
+div.ilvTaskItemInfoName{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 0.2em rgba(79, 79, 79, .7), 0 0 0.2em rgba(79, 79, 79, .7);
+
+  font-size: 125%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  padding-right: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+div.ilvTaskItemInfoDscrptn{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 0.2em rgba(79, 79, 79, .7), 0 0 0.2em rgba(79, 79, 79, .7);
+
+  font-size: 80%;
+  margin-top: 4px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: left;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+  white-space: normal;
+}
+div.ilvTaskItemInfoStatus{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 0.2em rgba(79, 79, 79, .7), 0 0 0.2em rgba(79, 79, 79, .7);
+
+
+  font-size: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: left;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  overflow: hidden;
+  white-space: normal;
+}
+div.ilvTaskGroup{
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 17px;
+  overflow: hidden;
+  text-overflow:ellipsis;
+
+  border-radius: 4px;
+  border-left: 1px solid;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-right: 1px solid;
+  border-left-color: #E8DD32;
+  border-top-color: #E8DD32;
+  border-bottom-color: #C9C034;
+  border-right-color: #C9C034;
+
+  color: rgba(0, 0, 0, 1);
+  text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.ilvTaskGroups{
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 4px;
+  margin-right: 4px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  width: 80px;
+  height: 100%;
+}
+div.sldBackground{
+  background-color: rgba(43,43,43,1);
+  color: rgba(255,255,255,1);
+  background-image: url(/core/vdm/imgs/slds/rough.png);
+  background-repeat: repeat;
+}
+div.IconList{
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border: 1px solid rgba(255,255,255,.37);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+  visibility: hidden;
+  position: absolute;
+}
+div.IconListWindow{
+
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-bottom: 2px;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  color: rgba(0,0,0,1);
+
+  border: 1px solid rgba(255,255,255,.37);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 1px;
+
+  visibility: hidden;
+  position: absolute;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+}
+div.IconListTitle{
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  text-overflow:ellipsis;
+  position: absolute;
+}
+div.IconListTitleCaption{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 0.2em rgba(79, 79, 79, .7), 0 0 0.2em rgba(79, 79, 79, .7);
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 0px;
+  padding-left: 8px;
+  font-weight:bold;
+  font-size:10pt;
+  line-height: 20px;
+  text-align:left;
+  vertical-align:middle;
+  overflow: hidden;
+  white-space: nowrap;
+  visibility: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+div.IconListTitleDecore{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  padding-left: 0px;
+
+  overflow: hidden;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  display: block;
+}
+div.TextBkgnd {
+  border-radius: 7px;
+}
+div.TextShadow{
+  text-shadow: rgba(255, 255, 255, .79) 0.1em 0.1em 0.2em, rgba(255, 255, 255, .79) -.1em -.1em .2em;
+}
+
+div.IconListTitleDescription{
+  color: rgba(255,255,255,1);
+  text-shadow: 0 0 0.2em rgba(79, 79, 79, .7), 0 0 0.2em rgba(79, 79, 79, .7);
+
+  left:0px;
+  right:0px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-right: 4px;
+  padding-left: 4px;
+
+  line-height: 20px;
+  text-align:center;
+  white-space: nowrap;
+  vertical-align:middle;
+
+  overflow: hidden;
+  visibility: hidden;
+  display: block;
+  text-overflow: ellipsis;
+}
+div.IconListItem,
+div.IconListItemSelected{
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  margin-left: 2px;
+  margin-right: 2px;
+
+  padding-left: 2px;
+  padding-right: 2px;
+
+  visibility: hidden;
+  display: inline-block;
+}
+div.IconListItem:hover,
+div.IconListItemSelected:hover{
+  border-radius: 2px;
+
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right:1px;
+
+  border: 1px solid rgba(255, 255, 255, .27);
+  background-color: rgba(68,79,83,1);
+}
+div.IconListItemPicture{
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right:1px;
+
+  padding-left: 2px;
+  padding-right: 2px;
+
+  visibility: hidden;
+  display: inline-block;
+
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, .27);
+  background-color: rgba(255,255,255,.14);
+}
+div.IconListItemPicture:hover{
+
+  margin-top: 1px;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  margin-right:1px;
+
+  border-radius: 7px;
+  border: 1px solid rgba(255, 255, 255, .27);
+  background-color: rgba(68,79,83,1);
+}
+
+div.IconListItemWrap{
+  margin: 0px;
+  padding: 0px;
+  visibility: hidden;
+  text-align:center;
+  vertical-align:middle;
+  display: inline-block;
+}
+
+div.IconListItemIcon{
+  margin: 2px auto;
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  text-align:center;
+  background-image : url(/core/vdm/imgs/apps/ico.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  vertical-align:middle;
+  display: block;
+}
+div.IconListItemDecore{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-right: 2px;
+  padding-left: 2px;
+  text-align:center;
+  white-space: nowrap;
+  min-width: 88px;
+  vertical-align:bottom;
+  display: inline-block;
+}
+div.IconListItemCaption{
+  margin-top: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  line-height: 18px;
+  background-color:#ab942a;
+  border-radius: 2px;
+  text-align:center;
+  vertical-align:middle;
+  text-overflow:ellipsis;
+  overflow: hidden;
+  display: block;
+  cursor: default;
+
+color: rgba(0, 0, 0, 1);
+text-shadow: 0em 0em 1em rgba(255, 235, 115, 1), -.2em -.2em 1em rgba(255, 235, 115, 1);
+
+background: #FFD740;
+background: -moz-linear-gradient(top, rgba(255, 215, 64, 1) 0%, rgba(191, 161, 48, 1) 24%, rgba(166, 131, 0, 1) 50%, rgba(191, 161, 48, 1) 79%, rgba(255, 215, 64, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 215, 64, 1)), color-stop(24%,rgba(191, 161, 48, 1)), color-stop(50%,rgba(166, 131, 0, 1)), color-stop(79%,rgba(191, 161, 48, 1)), color-stop(100%,rgba(255, 215, 64, 1)));
+background: -webkit-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: -o-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: -ms-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+
+}
+div.ListView{
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  display: block;
+}
+
+div.ListViewHeaderGradient{
+  color: rgba(255, 255, 255, 1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  border: 0px solid rgba(255,255,255,.17);
+  border-left-width: 0px ;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+
+  background: rgb(43,43,43);
+}
+
+div.ListViewHeaderGradient1{
+  color: rgba(255, 255, 255, .79);
+
+  border: 0px solid rgba(255,255,255,.17);
+  border-left-width: 0px ;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+
+  background: rgb(96,96,96);
+  background: -moz-linear-gradient(top, rgba(96,96,96,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(96,96,96,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(96,96,96,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(100%,rgba(96,96,96,1)));
+  background: -webkit-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -o-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -ms-linear-gradient(top, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: linear-gradient(to bottom, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=0 );
+
+}
+
+
+div.ListViewHeader{
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  height: 24px;
+  position: absolute;
+  display:block;
+  white-space: nowrap;
+  text-align: left;
+}
+div.ListViewHeaderItem{
+  margin: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  height: 22px;
+  min-width: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 22px;
+  text-align:left;
+  text-overflow: ellipsis;
+  vertical-align:middle;
+
+  border: 1px solid rgba(255,255,255,.17);
+
+  border-left-width:0px;
+  border-right-width:1px;
+  border-top-width:1px;
+  border-bottom-width:1px;
+
+  display : inline-block;
+}
+div.ListViewCmdHeaderItem{
+  margin: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  height: 22px;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 22px;
+  text-align:center;
+  vertical-align:middle;
+  border: 0px solid rgba(255,255,255,.17);
+  border-left-width:0px;
+  border-right-width:1px;
+  border-top-width:1px;
+  border-bottom-width:1px;
+
+
+  position: absolute;
+  display : none;
+}
+div.ListViewItems{
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 2px;
+  margin-left: 2px;
+
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(0,0,0,0);
+
+  border: 1px solid rgba(255,255,255,.1);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 1px;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  display:block;
+  position: absolute;
+
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+  outline:none;
+}
+
+div.ListViewItem{
+  margin: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  display:block;
+  text-align:left;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+div.ListViewItem:hover,div.ListViewItem:active{
+  box-shadow: 0px 0px 2px rgba(255,255,255,1);
+}
+div.ListViewItem:nth-of-type(even){
+  background-color:rgba(255,255,255,.03);
+}
+div.ListViewItem:nth-of-type(odd){
+  background-color:rgba(255,255,255,.07);
+}
+div.ListViewItemFocused,
+div.ListViewItemSelection{
+  display:block;
+  overflow:hidden;
+  background-color:rgba(77,77,77,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,.79);
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-radius: 1px;
+  color: #EFEED7;
+  text-align:left;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+
+div.ListViewItemCommand{
+  float: right;
+  border-radius: 4px;
+  color: white;
+  background-color: #2054cd;
+  display:inline-block;
+  right:4px;
+  min-width:70px;
+}
+div.ListViewItemCommandChecked{
+  border-radius: 4px;
+  background-color: #892d0e;
+  color: #f7f7f7;
+  font-style: italic;
+  display:inline-block;
+  right:4px;
+  min-width:70px;
+}
+div.ListViewItemCaption{
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  text-align:left;
+}
+div.ListViewSubItem{
+  margin: 0px;
+  padding: 0px;
+  white-space: nowrap;
+  overflow: hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  text-align:left;
+  position:absolute;
+  padding-left:2px;
+}
+div.ThreadView{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  visibility: hidden;
+  position: absolute;
+  display: block;
+  background-color: rgba(255,255,255,1);
+}
+div.ThreadViewRefresh{
+  display:inline-block;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:5px;
+  padding-right:5px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(-90deg);
+}
+div.ThreadViewGroupHeaderTopBar{
+    display: block;
+    top:0px;
+    right: 0px;
+    left:0px;
+}
+div.ThreadViewHeader{
+  display:block;
+  top: 0px;
+  left: 0px;
+  right:0px;
+}
+nav.ThreadViewHeaderCommands{
+  display:block;
+}
+ul.ThreadViewPages{
+  text-align: right;
+  display: inline-block;
+  top: 0px;
+  right:0px;
+  vertical-align:top;
+  margin:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left:5px;
+  padding-right:5px;
+  position:absolute;
+
+}
+li.ThreadViewPage{
+  display: inline;
+  padding-left:2px;
+  padding-right:2px;
+  vertical-align:top;
+}
+div.pnlToolbar{
+  margin-top: 4px;
+  margin-bottom: 4px;
+  height: 22px;
+  padding: 0px;
+  visibility: hidden;
+  display: block;
+}
+div.pnlBackground{
+  background-color: rgba(0,0,0,.79);
+  color: rgba(255,255,255,1);
+}
+div.pnlClient{
+  color: rgba(255,255,255,1);
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  visibility: hidden;
+  display: block;
+  position: absolute;
+}
+div.pnlSolid{
+  background-color: rgba(214,214,214,1);
+  color: rgba(0,0,0,1);
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  visibility: hidden;
+  display: block;
+}
+div.pnlTextClient{
+  margin-top: 4px;
+  margin-left: 2px;
+  margin-bottom: 4px;
+  margin-right: 2px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  visibility: hidden;
+  display: block;
+  background-color: rgba(214,214,214,1);
+  border: 1px solid rgba(191,182,41,1);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 4px;
+
+}
+div.pnlClientForList{
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  padding-right: 0px;
+  visibility: hidden;
+  display: block;
+}
+div.sldClientBackup{
+  color: rgba(0,0,0,1);
+  background-color: rgba(214,214,214,1);
+}
+div.sldClient{
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  visibility: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  position: absolute;
+  display: block;
+}
+div.msgBoxClient{
+  padding: 0px;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  display: block;
+}
+div.consoleBoxClient{
+  padding: 0px;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: absolute;
+  display: block;
+}
+
+div.VScroll{
+  display: block;
+  position: absolute;
+  padding: 0px;
+  top: 0px;
+  right: 4px;
+  margin: 0px;
+  width: 8px;
+  height: 80px;
+  visibility:hidden;
+
+  border-radius: 5px;
+  border: 1px solid rgba(246, 227, 82, 1);
+
+  background: -moz-linear-gradient(top, rgba(0,0,73,0.77) 0%, rgba(0,21,117,0.77) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,73,0.77)), color-stop(100%,rgba(0,21,117,0.77)));
+  background: -webkit-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  background: linear-gradient(top, rgba(0,0,73,0.77) 0%,rgba(0,21,117,0.77) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c4000049', endColorstr='#c4001575',GradientType=0 );
+
+  box-shadow: 0 0 15px rgba(0,0,73,1);
+  -webkit-box-shadow: 0 0 15px rgba(0,0,73,1);
+
+}
+div.VScrollBtn{
+  display: block;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  position: absolute;
+  top: 0px;
+  left: 2px;
+  border-radius: 4px;
+
+  background: rgb(191,161,48);
+  background: -moz-linear-gradient(top, rgba(191,161,48,1) 0%, rgba(255,215,64,1) 3%, rgba(191,161,48,1) 50%, rgba(255,215,64,1) 97%, rgba(166,131,0,1) 99%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(191,161,48,1)), color-stop(3%,rgba(255,215,64,1)), color-stop(50%,rgba(191,161,48,1)), color-stop(97%,rgba(255,215,64,1)), color-stop(99%,rgba(166,131,0,1)));
+  background: -webkit-linear-gradient(top, rgba(191,161,48,1) 0%,rgba(255,215,64,1) 3%,rgba(191,161,48,1) 50%,rgba(255,215,64,1) 97%,rgba(166,131,0,1) 99%);
+  background: -o-linear-gradient(top, rgba(191,161,48,1) 0%,rgba(255,215,64,1) 3%,rgba(191,161,48,1) 50%,rgba(255,215,64,1) 97%,rgba(166,131,0,1) 99%);
+  background: -ms-linear-gradient(top, rgba(191,161,48,1) 0%,rgba(255,215,64,1) 3%,rgba(191,161,48,1) 50%,rgba(255,215,64,1) 97%,rgba(166,131,0,1) 99%);
+  background: linear-gradient(top, rgba(191,161,48,1) 0%,rgba(255,215,64,1) 3%,rgba(191,161,48,1) 50%,rgba(255,215,64,1) 97%,rgba(166,131,0,1) 99%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bfa130', endColorstr='#a68300',GradientType=0 );
+
+  width: 4px;
+  height: 32px;
+}
+div.VScrollBtnBlue{
+  border: 1px solid rgba(18, 14, 56, 1);
+  box-shadow: 0 0 5px rgba(18, 14, 56, 1);
+  -webkit-box-shadow: 0 0 5px rgba(18, 14, 56, 1);
+
+  background: rgb(42,98,140);
+  background: -moz-linear-gradient(top, rgba(42,98,140,1) 0%, rgba(12,106,178,1) 8%, rgba(62,150,212,1) 43%, rgba(62,150,212,1) 51%, rgba(62,150,212,1) 59%, rgba(12,106,178,1) 92%, rgba(42,98,140,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(42,98,140,1)), color-stop(8%,rgba(12,106,178,1)), color-stop(43%,rgba(62,150,212,1)), color-stop(51%,rgba(62,150,212,1)), color-stop(59%,rgba(62,150,212,1)), color-stop(92%,rgba(12,106,178,1)), color-stop(100%,rgba(42,98,140,1)));
+  background: -webkit-linear-gradient(top, rgba(42,98,140,1) 0%,rgba(12,106,178,1) 8%,rgba(62,150,212,1) 43%,rgba(62,150,212,1) 51%,rgba(62,150,212,1) 59%,rgba(12,106,178,1) 92%,rgba(42,98,140,1) 100%);
+  background: -o-linear-gradient(top, rgba(42,98,140,1) 0%,rgba(12,106,178,1) 8%,rgba(62,150,212,1) 43%,rgba(62,150,212,1) 51%,rgba(62,150,212,1) 59%,rgba(12,106,178,1) 92%,rgba(42,98,140,1) 100%);
+  background: -ms-linear-gradient(top, rgba(42,98,140,1) 0%,rgba(12,106,178,1) 8%,rgba(62,150,212,1) 43%,rgba(62,150,212,1) 51%,rgba(62,150,212,1) 59%,rgba(12,106,178,1) 92%,rgba(42,98,140,1) 100%);
+  background: linear-gradient(top, rgba(42,98,140,1) 0%,rgba(12,106,178,1) 8%,rgba(62,150,212,1) 43%,rgba(62,150,212,1) 51%,rgba(62,150,212,1) 59%,rgba(12,106,178,1) 92%,rgba(42,98,140,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2a628c', endColorstr='#2a628c',GradientType=0 );
+
+}
+
+div.shdTopLeft {
+  background-image: url(imgs/bdrs/thin/gld/tl.png);
+  background-repeat: no-repeat;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  top: 0px;
+  left: 0px;
+  width: 8px;
+  height: 8px;
+  cursor: nw-resize
+}
+div.shdTop {
+  background-image: url(imgs/bdrs/thin/gld/tp.png);
+  background-repeat: repeat-x;
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  width: 8px;
+  height: 8px;
+  top: 0px;
+}
+div.shdTopRight {
+  background-image: url(imgs/bdrs/thin/gld/tr.png);
+  background-repeat: repeat-x;
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  width: 8px;
+  height: 8px;
+  top: 0px;
+}
+div.shdRight {
+  background-image: url(imgs/bdrs/thin/gld/r.png);
+  background-repeat: repeat-y;
+  position: absolute;
+  padding: 0px;
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+  width: 8px;
+  height: 8px;
+}
+div.shdLeft {
+  background-image: url(imgs/bdrs/thin/gld/l.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  BORDER-RIGHT-WIDTH: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 8px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: repeat-y;
+  BORDER-TOP-WIDTH: 0px;
+  BORDER-BOTTOM-WIDTH: 0px;
+  HEIGHT: 8px;
+  BORDER-LEFT-WIDTH: 0px;
+  PADDING-TOP: 0px
+}
+div.shdBottomRight {
+  BACKGROUND-IMAGE: url(imgs/bdrs/thin/gld/br.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  BORDER-RIGHT-WIDTH: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 8px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: no-repeat;
+  BORDER-TOP-WIDTH: 0px;
+  BORDER-BOTTOM-WIDTH: 0px;
+  HEIGHT: 8px;
+  BORDER-LEFT-WIDTH: 0px;
+  PADDING-TOP: 0px
+}
+div.shdBottomLeft {
+  BACKGROUND-IMAGE: url(imgs/bdrs/thin/gld/bl.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  BORDER-RIGHT-WIDTH: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 8px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: no-repeat;
+  BORDER-TOP-WIDTH: 0px;
+  BORDER-BOTTOM-WIDTH: 0px;
+  HEIGHT: 8px;
+  BORDER-LEFT-WIDTH: 0px;
+  PADDING-TOP: 0px
+}
+div.shdBottom {
+  BACKGROUND-IMAGE: url(imgs/bdrs/thin/gld/bt.png);
+  POSITION: absolute;
+  PADDING-BOTTOM: 0px;
+  BORDER-RIGHT-WIDTH: 0px;
+  MARGIN: 0px;
+  PADDING-LEFT: 0px;
+  WIDTH: 8px;
+  PADDING-RIGHT: 0px;
+  BACKGROUND-REPEAT: repeat-x;
+  BORDER-TOP-WIDTH: 0px;
+  BORDER-BOTTOM-WIDTH: 0px;
+  HEIGHT: 8px;
+  BORDER-LEFT-WIDTH: 0px;
+  PADDING-TOP: 0px
+}
+div.mdlFrame {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  display: none;
+  visibility: hidden;
+  top: 0px;
+  left: 0px
+}
+div.shdContainer {
+  background-image: url(imgs/bkds/pix/gld.png);
+  background-repeat: repeat;
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+div.shdClient {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+}
+input {
+  margin: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  width: 200px;
+  border: 1px solid rgba(255,255,255,.17);
+  border-radius: 4px;
+
+  background-color: transparent;
+  display: inline;
+  height: 20px;
+  font-size:11pt;
+}
+input:-webkit-autofill{
+  background-color: transparent !important;
+}
+input:focus {
+  border: 1px solid rgba(0,0,0,.77) !important;
+  border-radius: 4px;
+}
+input:hover {
+  border: 1px solid rgba(255,255,255,.79);
+  border-radius: 4px;
+}
+input.back{
+  margin: 2px;
+  padding: 2px;
+  visibility: hidden;
+  border: 1px solid #785A00;
+  border-radius: 4px;
+  background:transparent;
+  display: inline;
+  height: 18px;
+}
+input.back:focus{
+  border: 1px solid #98AB0E;
+}
+input.back:hover{
+  border: 1px solid #B3CD00;
+}
+textarea.pnlMemo{
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top:4px;
+  margin-left:4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  color: rgba(0,0,0,1);
+  background-color: rgba(214,214,214,1);
+  border: 1px solid rgba(191, 182, 41, 1);
+
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 4px;
+
+  position: absolute;
+}
+input.pnlFieldValue{
+  cursor: text;
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+
+  color: rgba(255,255,255,1);
+  background-color:rgba(0,0,0,.4);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  height: 22px;
+  width: 200px;
+
+  margin-left: 4px;
+  margin-right: 4px;
+  margin-top:0px;
+  margin-left:0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  border: 1px solid rgba(255, 255, 255, .5);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 4px;
+
+  font-size: 11pt;
+}
+select.pnlFieldValue{
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+
+  color: rgba(0,0,0,1);
+
+  height: 22px;
+  width: 200px;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top:0px;
+  margin-left:0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  background-color: rgba(214,214,214,1);
+  border: 1px solid rgba(191, 182, 41, 1);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-radius: 4px;
+}
+
+div.pnlFields{
+  margin-top: 2px;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  position: absolute;
+}
+
+div.pnlField{
+  padding-top: 1px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 1px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  visibility: hidden;
+  text-align:center;
+  vertical-align:middle;
+  position: absolute;
+}
+div.pnlFieldLabel{
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+
+  visibility: hidden;
+  text-align:right;
+  width: 100px;
+
+  white-space: nowrap;
+  vertical-align: middle;
+}
+div.pnlFieldValue{
+  margin: 0px;
+  border : 0px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  visibility: hidden;
+  max-width: 190px;
+  text-align:right;
+  line-height: 22px;
+  height: 28px;
+  position: absolute;
+  vertical-align:middle;
+  white-space: nowrap;
+}
+div.pnlFieldItems{
+  display: block;
+
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  visibility: hidden;
+  height: 28px;
+  left: 0px;
+  text-align: left;
+}
+div.FieldPanels{
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+
+
+  color: rgba(0,0,0,1);
+  background-color: rgba(214,214,214,1);
+
+  border: 1px solid rgba(191,182,41,1);
+  border-radius: 4px;
+
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+
+  white-space: nowrap;
+  visibility: hidden;
+  position: absolute;
+}
+div.TransparentPanels{
+  margin-top: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 1px;
+
+  padding-top: 1px;
+  padding-left: 1px;
+  padding-right: 1px;
+  padding-bottom: 1px;
+
+
+
+  border: 1px solid rgba(191,182,41,1);
+  border-radius: 4px;
+
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+
+  white-space: nowrap;
+  visibility: hidden;
+  position: absolute;
+}
+div.pnlLabeledText{
+  position: absolute;
+  padding-top: 4px;
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-bottom: 4px;
+  padding: 0px;
+  margin: 0px;
+  height: 32px;
+}
+input.pnlLabeledTextValue{
+  height: 24px;
+  padding: 0px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-top: 2px;
+  margin-right: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+}
+div.pnlLabeledTextItems{
+  height: 24px;
+  margin: 2px;
+  padding: 2px;
+}
+div.pnlCollection{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  text-align:center;
+  width: 260px;
+  min-width: 260px;
+  vertical-align:middle;
+  visibility: hidden;
+  display: block;
+}
+div.pnlCollectionFields{
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  border-radius: 7px;
+  visibility: hidden;
+  display: inline-block;
+  position: absolute;
+
+  border: 1px solid rgba(255, 255, 255, .27);
+
+  background-color: #444F53;
+
+}
+div.pnlCollectionFields2{
+background: rgb(76,76,76);
+background: -moz-linear-gradient(top, rgba(76,76,76,.5) 0%, rgba(89,89,89,.5) 12%, rgba(71,71,71,.5) 39%, rgba(73,73,73,.5) 77%, rgba(43,43,43,.5) 91%, rgba(19,19,19,.5) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(76,76,76,.5)), color-stop(12%,rgba(89,89,89,.5)), color-stop(39%,rgba(71,71,71,.5)), color-stop(77%,rgba(73,73,73,.5)), color-stop(91%,rgba(43,43,43,.5)), color-stop(100%,rgba(19,19,19,.5)));
+background: -webkit-linear-gradient(top, rgba(76,76,76,.5) 0%,rgba(89,89,89,.5) 12%,rgba(71,71,71,.5) 39%,rgba(73,73,73,.5) 77%,rgba(43,43,43,.5) 91%,rgba(19,19,19,.5) 100%);
+background: -o-linear-gradient(top, rgba(76,76,76,.5) 0%,rgba(89,89,89,.5) 12%,rgba(71,71,71,.5) 39%,rgba(73,73,73,.5) 77%,rgba(43,43,43,.5) 91%,rgba(19,19,19,.5) 100%);
+background: -ms-linear-gradient(top, rgba(76,76,76,.5) 0%,rgba(89,89,89,.5) 12%,rgba(71,71,71,.5) 39%,rgba(73,73,73,.5) 77%,rgba(43,43,43,.5) 91%,rgba(19,19,19,.5) 100%);
+background: linear-gradient(to bottom, rgba(76,76,76,.5) 0%,rgba(89,89,89,.5) 12%,rgba(71,71,71,.5) 39%,rgba(73,73,73,.5) 77%,rgba(43,43,43,.5) 91%,rgba(19,19,19,.5) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
+}
+div.pnlCaption{
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+  text-align: center;
+  font-weight: bold;
+
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  visibility: hidden;
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  vertical-align: middle;
+}
+div.pnlCaptionItems{
+  margin: 0px;
+  padding: 0px;
+  text-align:center;
+  vertical-align:middle;
+  visibility: hidden;
+  display: inline-block;
+}
+div.pnlCaptionLabel{
+  margin: 0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-weight: bold;
+  text-align:center;
+  white-space: nowrap;
+  vertical-align:middle;
+  visibility: hidden;
+  display: inline-block;
+}
+div.TreeView{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  min-width: 100px;
+  position: absolute;
+  display: inline-block;
+  visibility:hidden;
+
+}
+div.TVItems{
+  color: rgba(255,255,255,1);
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  display: block;
+  visibility:hidden;
+  position: absolute;
+
+  top:0px;
+  left:0px;
+  right: 0px;
+  bottom:0px;
+
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+div.TVItem{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  white-space: nowrap;
+  display: block;
+  vertical-align: top;
+  visibility:visible;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+div.TVItemNotify{
+  margin-top:3px;
+  padding-left:3px;
+  padding-right:5px;
+  padding-bottom:2px;
+  border-radius: 4px;
+  display:none;
+  visibility:visible;
+  font-weight:bold;
+  position:absolute;
+  right: 4px;
+  background-color:rgba(77,77,207,1);
+  line-height:17px;
+  vertical-align:middle;
+  text-align:center;
+  min-width:15px;
+  float:right;
+}
+div.TVItemSel{
+  background:rgba(77,77,77,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,.79);
+
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  white-space: nowrap;
+  display: block;
+  vertical-align: top;
+  visibility:visible;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+div.TVItemIndc8r{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  display: inline-block;
+  visibility:visible;
+  width:22px;
+  height:22px;
+}
+div.TVItemExp{
+  background-image:url(/core/vdm/imgs/icns/arw/blu/d.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVItemCol{
+  background-image:url(/core/vdm/imgs/icns/arw/blu/r.png);
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVHeaderGradient {
+color: rgba(0, 0, 0, 1);
+text-shadow: rgba(255, 235, 115, 1) 0em 0em 1em, rgba(255, 235, 115, 1) -.2em -.2em 1em;
+background: #FFD740;
+background: -moz-linear-gradient(top, rgba(255, 215, 64, 1) 0%, rgba(191, 161, 48, 1) 24%, rgba(166, 131, 0, 1) 50%, rgba(191, 161, 48, 1) 79%, rgba(255, 215, 64, 1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255, 215, 64, 1)), color-stop(24%,rgba(191, 161, 48, 1)), color-stop(50%,rgba(166, 131, 0, 1)), color-stop(79%,rgba(191, 161, 48, 1)), color-stop(100%,rgba(255, 215, 64, 1)));
+background: -webkit-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: -o-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: -ms-linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+background: linear-gradient(top, rgba(255, 215, 64, 1) 0%,rgba(191, 161, 48, 1) 24%,rgba(166, 131, 0, 1) 50%,rgba(191, 161, 48, 1) 79%,rgba(255, 215, 64, 1) 100%);
+}
+div.TVItemCaptn{
+  margin-top: 0px;
+  margin-left:2px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  vertical-align: top;
+  line-height: 22px;
+  display: inline-block;
+  visibility:visible;
+}
+div.TVItemCaptnSel{
+  margin-top: 0px;
+  margin-left:2px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  vertical-align: top;
+  line-height: 22px;
+  display: inline-block;
+  visibility:visible;
+}
+div.TVSubItems{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  vertical-align: top;
+  display: none;
+  visibility:visible;
+}
+div.TVEditor{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+
+  padding-top: 4px;
+  padding-left:4px;
+  padding-right:4px;
+  padding-bottom:4px;
+
+  vertical-align: top;
+  display: block;
+  visibility:hidden;
+  position:absolute;
+
+  color: rgba(0, 0, 0, 1);
+  text-shadow:
+    rgba(255, 235, 115, .5) -2px -2px 1em,
+    rgba(255, 235, 115, .5) 0em 0em 1em
+  ;
+
+
+  border-left: 1px solid #E8DD32;
+  border-top: 1px solid #E8DD32;
+  border-right: 1px solid #E8DD32;
+  border-bottom: 1px solid #E8DD32;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+
+}
+div.TVCMDICO{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  display: inline-block;
+  visibility:hidden;
+  width:28px;
+  height:28px;
+}
+div.TVCMDAddICO{
+  background-image:url(/core/vdm/imgs/btns/fldr/new.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVCMDDelICO{
+  background-image:url(/core/vdm/imgs/btns/fldr/del.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVCMDRenICO{
+  background-image:url(/core/vdm/imgs/btns/fldr/ren.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVCMDEtsICO{
+  background-image:url(/core/vdm/imgs/btns/trash.png);
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+div.TVCMDCPTN{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:4px;
+  padding-right:4px;
+  padding-bottom:0px;
+  vertical-align: top;
+  line-height: 28px;
+  display: inline-block;
+  visibility:hidden;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
+input.TVINPUT{
+  display: none;
+  visibility: hidden;
+  background-color: rgba(0,0,0,1);
+  color: rgba(255,255,255,1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+div.TVCMD{
+  display: none;
+  visibility: hidden;
+  white-space:nowrap;
+}
+div.SplitterGradient{
+  background: rgb(43,43,43);
+}
+div.SplitterGradient1{
+  background: rgb(96,96,96);
+  background: -moz-linear-gradient(left, rgba(96,96,96,1) 0%, rgba(13,13,13,1) 46%, rgba(1,1,1,1) 50%, rgba(10,10,10,1) 53%, rgba(96,96,96,1) 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(96,96,96,1)), color-stop(46%,rgba(13,13,13,1)), color-stop(50%,rgba(1,1,1,1)), color-stop(53%,rgba(10,10,10,1)), color-stop(100%,rgba(96,96,96,1)));
+  background: -webkit-linear-gradient(left, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -o-linear-gradient(left, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: -ms-linear-gradient(left, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  background: linear-gradient(to right, rgba(96,96,96,1) 0%,rgba(13,13,13,1) 46%,rgba(1,1,1,1) 50%,rgba(10,10,10,1) 53%,rgba(96,96,96,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#606060', endColorstr='#606060',GradientType=1 );
+}
+div.Splitter{
+  margin-top: 0px;
+  margin-left:0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  width: 5px;
+  min-width: 5px;
+  max-width: 5px;
+
+  position: absolute;
+  display: inline-block;
+  visibility:hidden;
+
+  border: 1px solid rgba(255,255,255,.07);
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+div.buttonGradient{
+  color: rgba(0, 0, 0, 1);
+  text-shadow: 0em 0em 1em rgba(255, 235, 115, 1), -.2em -.2em 1em rgba(255, 235, 115, 1);
+
+  vertical-align:middle;
+  text-align:center;
+
+  background: rgb(255,215,64);
+  background: -moz-linear-gradient(top, rgba(255,215,64,1) 0%, rgba(191,161,48,1) 24%, rgba(166,131,0,1) 50%, rgba(191,161,48,1) 79%, rgba(255,215,64,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,215,64,1)), color-stop(24%,rgba(191,161,48,1)), color-stop(50%,rgba(166,131,0,1)), color-stop(79%,rgba(191,161,48,1)), color-stop(100%,rgba(255,215,64,1)));
+  background: -webkit-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -o-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  background: linear-gradient(top, rgba(255,215,64,1) 0%,rgba(191,161,48,1) 24%,rgba(166,131,0,1) 50%,rgba(191,161,48,1) 79%,rgba(255,215,64,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd740', endColorstr='#ffd740',GradientType=0 );
+}
+div.buttonGradient:hover{
+  color: rgba(255, 255, 255, 1);
+  text-shadow:
+    0px 0px 1px rgba(0, 0, 0, .5),
+    0px 2px 1px rgba(0, 0, 0, .5),
+    0px -2px 1px rgba(0, 0, 0, .5),
+    2px 0px 1px rgba(0, 0, 0, .5),
+    2px 2px 1px rgba(0, 0, 0, .5),
+    2px -2px 1px rgba(0, 0, 0, .5),
+    -2px 0px 1px rgba(0, 0, 0, .5),
+    -2px 2px 1px rgba(0, 0, 0, .5),
+    -2px -2px 1px rgba(0, 0, 0, .5);
+
+  background: rgb(125,185,232);
+  background: -moz-linear-gradient(top, rgba(125,185,232,1) 0%, rgba(32,124,202,1) 49%, rgba(41,137,216,1) 50%, rgba(30,87,153,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,185,232,1)), color-stop(49%,rgba(32,124,202,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(100%,rgba(30,87,153,1)));
+  background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: -o-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: -ms-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  background: linear-gradient(to bottom, rgba(125,185,232,1) 0%,rgba(32,124,202,1) 49%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );
+
+}
+div.buttonGradient:active{
+  color: rgba(255, 255, 255, 1);
+  text-shadow:
+    0px 0px 1px rgba(0, 0, 0, .5),
+    0px 2px 1px rgba(0, 0, 0, .5),
+    0px -2px 1px rgba(0, 0, 0, .5),
+    2px 0px 1px rgba(0, 0, 0, .5),
+    2px 2px 1px rgba(0, 0, 0, .5),
+    2px -2px 1px rgba(0, 0, 0, .5),
+    -2px 0px 1px rgba(0, 0, 0, .5),
+    -2px 2px 1px rgba(0, 0, 0, .5),
+    -2px -2px 1px rgba(0, 0, 0, .5);
+
+  background: rgb(30,87,153);
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+
+}
+div.buttonGradientSEL{
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 127, .25);
+  background: #1E5799;
+  background: -moz-linear-gradient(top, rgba(30, 87, 153, 1) 0%, rgba(41, 137, 216, 1) 50%, rgba(32, 124, 202, 1) 51%, rgba(125, 185, 232, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30, 87, 153, 1)), color-stop(50%,rgba(41, 137, 216, 1)), color-stop(51%,rgba(32, 124, 202, 1)), color-stop(100%,rgba(125, 185, 232, 1)));
+  background: -webkit-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+  background: -o-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+  background: linear-gradient(top, rgba(30, 87, 153, 1) 0%,rgba(41, 137, 216, 1) 50%,rgba(32, 124, 202, 1) 51%,rgba(125, 185, 232, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+}
+div.TabsBar{
+  position: absolute;
+  display: block;
+  height: 25px;
+  overflow:hidden;
+
+  border: none;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+}
+div.TabsBarGradient{
+
+}
+div.TabsBarTabs{
+  display: block;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-left: 0px;
+  padding-right: 2px;
+}
+
+div.TabsBarTab{
+  display: inline-block;
+  height: 23px;
+  min-width: 50px;
+
+  margin-left: 2px;
+  margin-right: 0px;
+
+  padding-left: 0px;
+  padding-right: 0px;
+
+  text-align: left;
+  white-space: nowrap;
+
+  color:rgba(255,255,255,1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+  background-color: rgba(27,27,27,.5);
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+div.TabsBarTabSel{
+  display: inline-block;
+  height: 23px;
+  min-width: 50px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 2px;
+  margin-right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+  color:rgba(255,255,255,1);
+  background-color: rgba(97,97,97,.5);
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-top-width: 1px;
+  border-bottom-width: 0px;
+  border-right-width: 1px;
+  border-left-width: 1px;
+}
+
+
+div.TabsBarTab:hover{
+  color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255,255,255,.47);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+
+  background-color: rgba(107,107,107,.5);
+}
+div.TabsBarTabSel:hover{
+  color: rgba(255, 255, 255, 1);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  background-color: rgba(107,107,107,.5);
+
+  border: 1px solid rgba(255,255,255,.7));
+
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 0px;
+
+}
+div.TabsBarTabDeco{
+  display: inline-block;
+  height: 22px;
+  padding-right:0px;
+  padding-left:0px;
+  margin: 0px;
+  text-align: left;
+}
+div.TabsBarTabIcon{
+  display: inline-block;
+  padding-left:2px;
+  padding-right:2px;
+  background-position: center;
+  background-size: 22px 22px;
+  background-repeat: no-repeat;
+  line-height: 22px;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  position: relative;
+}
+div.TabsBarTabClose{
+  display: inline-block;
+  padding-left:2px;
+  padding-right:2px;
+  line-height: 20px;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  position: relative;
+
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  text-shadow: 0em 0em 0.2em rgba(0,0,0,.5), 0em 0em 0.2em rgba(0,0,0,.5),0em 0em 0.2em rgba(0,0,0,.5);
+
+  border-top-right-radius: 8px;
+  border: 0px solid rgba(232,221,50,.79);
+  border-left-width: 0px;
+  border-top-width: 0px;
+  border-bottom-width:0px;
+  border-right-width:0px;
+
+  background: rgb(240,183,161);
+  background: -moz-linear-gradient(top, rgba(240,183,161,1) 0%, rgba(140,51,16,1) 35%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 65%, rgba(191,110,78,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(35%,rgba(140,51,16,1)), color-stop(50%,rgba(140,51,16,1)), color-stop(65%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+  background: -webkit-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: -o-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: -ms-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 );
+
+}
+div.TabsBarTabClose:hover{
+  color: rgba(255,255,255,.79);
+  -moz-box-shadow: 0 0 2px 2px rgba(232,221,50,1);
+  -webkit-box-shadow: 0 0 2px 2px rgba(232,221,50,1);
+  box-shadow: 0px 0px 2px 2px rgba(232,221,50,1);
+}
+div.TabsBarTabCap{
+  display: inline-block;
+  line-height: 22px;
+  vertical-align: middle;
+  padding-left: 2px;
+  padding-right: 7px;
+  margin: 0px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+div.TabsBarSep{
+  display: table-cell;
+  width: 1px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+div.TabsBarSepNurl{
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  height: 23px;
+  width: 0px;
+  border-left: 1px solid rgba(114, 97, 7, 1);
+  border-right: 1px solid rgba(114, 97, 7, .5);
+}
+div.Toolbar{
+  position: absolute;
+  display: block;
+  height: 52px;
+  visibility: hidden;
+  overflow: hidden;
+
+  border: none;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+div.imageToolbar{
+  position: absolute;
+  display: block;
+  height: 80px;
+  visibility: hidden;
+  overflow: hidden;
+
+  z-index: 2;
+
+  border-radius: 8px;
+
+  border: 1px solid rgba(114, 97, 7, 1);
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  -moz-box-shadow: 0 0 5px 5px rgba(21,8,115,.14);
+  -webkit-box-shadow: 0 0 5px 5px rgba(21,8,115,.14);
+  box-shadow: 0 0 5px 5px rgba(21,8,115,.2);
+
+}
+div.ToolbarBtns{
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 2px;
+  overflow: hidden;
+  display: inline-block;
+}
+div.imageToolbarBtns{
+  padding-top: 1px;
+  padding-bottom: 2px;
+  padding-left: 1px;
+  padding-right: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: inline-block;
+}
+div.ToolbarBtn{
+  display: inline-block;
+  vertical-align: top;
+  min-width: 32px;
+
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+
+  color: rgba(255,255,255,1);
+  background-color: rgba(27,27,27,.5);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid rgba(255,255,255,.1);
+
+  transition:background-color 50ms linear 50ms;
+  -webkit-transition:background-color 50ms linear 50ms;
+}
+div.imageToolbarBtn{
+  display: inline-block;
+  vertical-align: top;
+  min-width: 32px;
+
+  margin-left: 0px;
+  margin-right: 0px;
+
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,127,.25);
+
+}
+div.ToolbarBtnDown{
+  display: inline-block;
+  vertical-align: top;
+  min-width: 32px;
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,127,.25);
+
+  background-color:rgba(57,57,57,.5);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+  color: rgba(255,255,255,1);
+
+  transition:background-color 50ms linear 50ms;
+  -webkit-transition:background-color 50ms linear 50ms;
+}
+div.imageToolbarBtnDown{
+  display: inline-block;
+  vertical-align: top;
+  min-width: 32px;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,127,.25);
+
+background: rgb(30,87,153);
+background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 50%, rgba(32,124,202,1) 51%, rgba(125,185,232,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1)));
+background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+background: -o-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+background: -ms-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+background: linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+
+}
+div.ToolbarBtn:hover,div.ToolbarBtnDown:hover{
+  border: 1px solid rgba(255,255,255,.3);
+
+  color: rgba(255,255,255,1);
+  background-color:rgba(107,107,107,.5);
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+
+}
+div.imageToolbarBtn:hover,div.imageToolbarBtnDown:hover{
+  color: rgba(255, 255, 255, 1);
+  text-shadow: rgba(138, 139, 139, 1) 0em 0em 1em, rgba(138, 139, 139, 1) -.2em -.2em 1em;
+
+  border: 1px solid rgba(0,0,127,1);
+
+  background: rgb(174,217,226);
+  background: -moz-linear-gradient(top, rgba(174,217,226,1) 0%, rgba(17,121,159,1) 80%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(174,217,226,1)), color-stop(80%,rgba(17,121,159,1)));
+  background: -webkit-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+  background: -o-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+  background: -ms-linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+  background: linear-gradient(top, rgba(174,217,226,1) 0%,rgba(17,121,159,1) 80%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aed9e2', endColorstr='#11799f',GradientType=0 );
+
+}
+div.ToolbarBtnDeco{
+  display: inline-block;
+  text-align: center;
+  padding-left:2px;
+  padding-right:2px;
+}
+div.imageToolbarBtnDeco{
+  display: inline-block;
+  text-align: center;
+}
+div.ToolbarBtnIcon{
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32px;
+  position: relative;
+}
+div.imageToolbarBtnIcon{
+  display: inline-block;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 32px;
+  position: relative;
+}
+div.ToolbarBtnCap{
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+div.imageToolbarBtnCap{
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 1px;
+  padding-bottom: 2px;
+}
+div.ToolbarSep{
+  display: inline-block;
+  vertical-align: top;
+  width: 1px;
+  height: 45px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.imageToolbarSep{
+  display: inline-block;
+  vertical-align: top;
+  width: 1px;
+  height: 45px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.ToolbarSepNurl{
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 0px;
+  border-left: 1px solid rgba(114, 97, 7, 1);
+  border-right: 1px solid rgba(114, 97, 7, .5);
+}
+div.imageToolbarSepNurl{
+  display: block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 0px;
+  border-left: 1px solid rgba(114, 97, 7, 1);
+  border-right: 1px solid rgba(114, 97, 7, .5);
+}
+div.ToolbarTxtWBtn{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+div.imageToolbarTxtWBtn{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+select.ToolbarSelect{
+  display: inline-block;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  width: 140px;
+  font-size: 11pt;
+}
+
+input.ToolbarTxtWBtnText{
+  display: inline-block;
+  margin-top: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 20px;
+  color:rgba(0,0,0,1);
+  text-shadow: 0px 0px 1px rgba(255,255,255,.79);
+}
+input.ToolbarTxtWBtnText::-moz-placeholder{
+  padding-left: 4px;
+  line-height:17px;
+  vertical-align:middle;
+  text-align:left;
+  font-size:10pt;
+  font-weight:bold;
+  color: rgba(0,0,0,.79);
+  text-shadow: 0px 0px 1px rgba(255,255,255,.79);
+}
+input.ToolbarTxtWBtnText::-ms-input-placeholder {
+  padding-left: 4px;
+  line-height:17px;
+  vertical-align:middle;
+  text-align:left;
+  font-size:10pt;
+  font-weight:bold;
+  color: rgba(0,0,0,.79);
+  text-shadow: 0px 0px 1px rgba(255,255,255,.79);
+}
+input.ToolbarTxtWBtnText::-webkit-input-placeholder{
+  padding-left: 4px;
+  line-height:17px;
+  vertical-align:middle;
+  text-align:left;
+  font-size:10pt;
+  font-weight:bold;
+  color: rgba(0,0,0,.79);
+  text-shadow: 0px 0px 1px rgba(255,255,255,.79);
+}
+div.ToolbarSwth{
+  display: inline-block;
+  margin-top: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
+  margin-bottom: 0px;
+}
+div.ToolbarSwthDeco{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.ToolbarSwthCap{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.ToolbarSwthTrack{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition:background-color 250ms linear 250ms;
+  -webkit-transition:background-color 250ms linear 250ms;
+}
+div.ToolbarSwthNurl{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  transition:float 500s linear 500ms, background-color 250ms linear 250ms;
+  -webkit-transition:float 500s linear 500ms, background-color 250ms linear 250ms;
+}
+div.ToolbarTxt{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  vertical-align:top;
+}
+div.ToolbarTxtDeco{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+input.ToolbarTxt{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.ToolbarTxtCap{
+  display: inline-block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+div.Uploader{
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  height: 280px;
+  width: 300px;
+  z-index: 1;
+  overflow: hidden;
+
+  padding-left:0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-top: 1px solid rgba(191, 182, 41, 1);
+  border-left: 1px solid rgba(191, 182, 41, 1);
+  border-right: 1px solid rgba(191, 182, 41, 1);
+  border-bottom: 1px solid rgba(191, 182, 41, 1);
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+}
+div.UploaderClient{
+  display: block;
+  visibility: hidden;
+  overflow:hidden;
+}
+div.UploaderList{
+  border-radius: 4px;
+  display: block;
+  visibility: hidden;
+  overflow:hidden;
+}
+div.UploaderCaption{
+  display: block;
+  position: absolute;
+  visibility: hidden;
+  top: 0px;
+  width: 100%;
+  line-height: 58px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 10pt;
+  font-style: italic;
+}
+div.UploaderFile{
+  margin: 1px;
+  display: block;
+  height: 58px;
+}
+div.UploaderFile:nth-of-type(even){
+  background-color:rgba(255,255,255,.10);
+}
+div.UploaderFile:nth-of-type(odd){
+  background-color:rgba(255,255,255,.20);
+}
+div.UploaderFileSel{
+  margin: 1px;
+  display: block;
+  height: 58px;
+  border-radius: 4px;
+  background-color: rgba(109,92,13,.79);
+}
+div.UploaderFileDeco{
+  padding: 2px;
+  height: 54px;
+  white-space: nowrap;
+  display: block;
+}
+div.UploaderFileIcon{
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 48px 48px;
+  height: 48px;
+  width: 60px;
+  margin-top: 2px;
+  margin-bottom:2px;
+  display: inline-block;
+}
+div.UploaderFileStats{
+  height: 54px;
+  width: 210px;
+  display: inline-block;
+  vertical-align: top;
+}
+div.UploaderFileStatsName{
+  line-height: 18px;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: bold;
+  padding-top: 2px;
+  padding-bottom:2px;
+  max-width: 200px;
+}
+div.UploaderFileStatsDest{
+  line-height: 14px;
+  display: block;
+}
+div.UploaderFileStatsDestName{
+  line-height:14px;
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+}
+div.UploaderFileStatsDestVal{
+  line-height:14px;
+  display: inline;
+  width: 120px;
+  overflow: hidden;
+  padding-left: 4px;
+  text-overflow: ellipsis;
+}
+div.UploaderFileStatsSize{
+  line-height: 14px;
+  display: block;
+}
+div.UploaderFileStatsSizeName{
+  line-height:14px;
+  display: inline-block;
+  width: 60px;
+  text-align: right;
+}
+div.UploaderFileStatsSizeVal{
+  line-height:14px;
+  display: inline-block;
+  width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 4px;
+}
+div.UploaderFileButton{
+  display: inline-block;
+  width: 20px;
+  position:relative;
+  right: 2px;
+  top: 2px;
+  float: right;
+}
+div.UploaderFileClose{
+  font-weight: bold;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  text-shadow: 0em 0em 0.2em rgba(0,0,0,.5), 0em 0em 0.2em rgba(0,0,0,.5),0em 0em 0.2em rgba(0,0,0,.5);
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+
+  vertical-align: top;
+  border-radius:2px;
+
+  -moz-box-shadow: 0 0 2px 2px rgba(232,221,50,.5);
+  -webkit-box-shadow: 0 0 2px 2px rgba(232,221,50,.5);
+  box-shadow: 0 0 2px 2px rgba(232,221,50,.5);
+
+  border-left-color: rgba(232,221,50,.79);
+  border-top-color: rgba(232,221,50,.79);
+  border-bottom-color:rgba(232,221,50,.79);
+  border-right-color:rgba(232,221,50,.79);
+
+  background: rgb(240,183,161);
+  background: -moz-linear-gradient(top, rgba(240,183,161,1) 0%, rgba(140,51,16,1) 35%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 65%, rgba(191,110,78,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(240,183,161,1)), color-stop(35%,rgba(140,51,16,1)), color-stop(50%,rgba(140,51,16,1)), color-stop(65%,rgba(117,34,1,1)), color-stop(100%,rgba(191,110,78,1)));
+  background: -webkit-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: -o-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: -ms-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  background: linear-gradient(top, rgba(240,183,161,1) 0%,rgba(140,51,16,1) 35%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 65%,rgba(191,110,78,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=0 );
+}
+
+div.UploaderFileClose:hover{
+  color: rgba(255,255,255,.79);
+  -moz-box-shadow: 0 0 4px 4px rgba(232,221,50,1);
+  -webkit-box-shadow: 0 0 4px 4px rgba(232,221,50,1);
+  box-shadow: 0px 0px 4px 4px rgba(232,221,50,1);
+}
+
+div.dndInfo{
+  display: none;
+  visibility: hidden;
+  color: rgba(255,255,255,1);
+  text-shadow: rgba(0, 0, 0, 0.79) 0.1em 0.1em 0.2em;
+  position: absolute;
+  height: 37px;
+  border: 1px solid rgba(0,0,0,1);
+  border-radius: 2px;
+  box-shadow: 0px 0px 2px 2px rgba(0,0,0,.5);
+
+  background: -moz-linear-gradient(top, rgba(149,149,149,0.97) 0%, rgba(56,56,56,0.97) 17%, rgba(13,13,13,0.97) 46%, rgba(1,1,1,0.97) 50%, rgba(78,78,78,0.97) 76%, rgba(27,27,27,0.97) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(149,149,149,0.97)), color-stop(17%,rgba(56,56,56,0.97)), color-stop(46%,rgba(13,13,13,0.97)), color-stop(50%,rgba(1,1,1,0.97)), color-stop(76%,rgba(78,78,78,0.97)), color-stop(100%,rgba(27,27,27,0.97)));
+  background: -webkit-linear-gradient(top, rgba(149,149,149,0.97) 0%,rgba(56,56,56,0.97) 17%,rgba(13,13,13,0.97) 46%,rgba(1,1,1,0.97) 50%,rgba(78,78,78,0.97) 76%,rgba(27,27,27,0.97) 100%);
+  background: -o-linear-gradient(top, rgba(149,149,149,0.97) 0%,rgba(56,56,56,0.97) 17%,rgba(13,13,13,0.97) 46%,rgba(1,1,1,0.97) 50%,rgba(78,78,78,0.97) 76%,rgba(27,27,27,0.97) 100%);
+  background: -ms-linear-gradient(top, rgba(149,149,149,0.97) 0%,rgba(56,56,56,0.97) 17%,rgba(13,13,13,0.97) 46%,rgba(1,1,1,0.97) 50%,rgba(78,78,78,0.97) 76%,rgba(27,27,27,0.97) 100%);
+  background: linear-gradient(top, rgba(149,149,149,0.97) 0%,rgba(56,56,56,0.97) 17%,rgba(13,13,13,0.97) 46%,rgba(1,1,1,0.97) 50%,rgba(78,78,78,0.97) 76%,rgba(27,27,27,0.97) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7959595', endColorstr='#f71b1b1b',GradientType=0 );
+}
+div.dndInfoClient{
+  display: block;
+  visibility: hidden;
+  height: 36px;
+  padding-top: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  white-space: nowrap;
+}
+div.dndInfoIco{
+  vertical-align: top;
+  display: inline-block;
+  visibility: hidden;
+  height: 36px;
+  width: 36px;
+
+  background-position: center;
+  background-size: 32px 32px;
+  background-repeat: no-repeat;
+
+}
+div.dndInfoWrapper{
+  display: inline-block;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  vertical-align:top;
+  height: 30px;
+  visibility: hidden;
+}
+div.dndInfoBlurb{
+  display: block;
+  visibility: hidden;
+  line-height: 15px;
+  text-align: left;
+  min-width: 120px;
+  max-width: 220px;
+  font-size: 9pt;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+div.dndInfoStatus{
+  display: block;
+  visibility: hidden;
+  line-height: 15px;
+  text-align: left;
+  min-width: 120px;
+  max-width: 220px;
+  font-size: 9pt;
+
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+div.pnlFieldIconList{
+  display: inline-block;
+  text-align: left;
+  height: 20px;
+
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(214, 214, 214, 1);
+
+  padding-top:0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom:0px;
+
+  margin-top: 0px;
+  margin-bottom:0px;
+  margin-left: 0px;
+  margin-right:0px;
+
+  border: 1px solid rgba(191, 182, 41, 1);
+  border-radius: 4px;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+div.pnlIconListItem{
+  display: inline-block;
+  margin-left:2px;
+  margin-top: 1px;
+  margin-bottom:1px;
+  margin-right:2px;
+  padding-top:0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom:0px;
+  line-height: 20px;
+
+}
+div.pnlIconListItemSEL{
+  display: inline-block;
+  margin-left:2px;
+  margin-top: 1px;
+  margin-bottom:1px;
+  margin-right:2px;
+  padding-top:0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom:0px;
+  line-height: 20px;
+
+  border-radius: 2px;
+
+  background: #7DB9E8;
+  background: -moz-linear-gradient(top, rgba(125, 185, 232, 1) 0%, rgba(32, 124, 202, 1) 49%, rgba(41, 137, 216, 1) 50%, rgba(30, 87, 153, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125, 185, 232, 1)), color-stop(49%,rgba(32, 124, 202, 1)), color-stop(50%,rgba(41, 137, 216, 1)), color-stop(100%,rgba(30, 87, 153, 1)));
+  background: -webkit-linear-gradient(top, rgba(125, 185, 232, 1) 0%,rgba(32, 124, 202, 1) 49%,rgba(41, 137, 216, 1) 50%,rgba(30, 87, 153, 1) 100%);
+  background: -o-linear-gradient(top, rgba(125, 185, 232, 1) 0%,rgba(32, 124, 202, 1) 49%,rgba(41, 137, 216, 1) 50%,rgba(30, 87, 153, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(125, 185, 232, 1) 0%,rgba(32, 124, 202, 1) 49%,rgba(41, 137, 216, 1) 50%,rgba(30, 87, 153, 1) 100%);
+  background: linear-gradient(top, rgba(125, 185, 232, 1) 0%,rgba(32, 124, 202, 1) 49%,rgba(41, 137, 216, 1) 50%,rgba(30, 87, 153, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7db9e8', endColorstr='#1e5799',GradientType=0 );
+
+}
+div.pnlIconListItemICON{
+  display: table-cell;
+  height:18px;
+  width: 18px;
+
+  margin-left:2px;
+  margin-top: 2px;
+  margin-bottom:2px;
+  margin-right:2px;
+
+  padding-top:0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom:0px;
+
+  background-size: 16px 16px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+div.pnlIconListItemCPTN{
+  display: table-cell;
+
+  line-height:18px;
+  vertical-align: middle;
+  text-align: left;
+
+  margin-left:0px;
+  margin-top: 0px;
+  margin-bottom:0px;
+  margin-right:0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+div.pnlIconListItemCPTNSEL{
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+
+  display: table-cell;
+
+  line-height:18px;
+  vertical-align: middle;
+  text-align: left;
+
+  margin-left:0px;
+  margin-top: 0px;
+  margin-bottom:0px;
+  margin-right:0px;
+
+  padding-top:0px;
+  padding-bottom:0px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+iframe.PDFVieweriFrame{
+  -webkit-text-size-adjust: auto;
+  -webkit-touch-callout: auto;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+}
+div.PDFReader{
+  position:absolute;
+  display:block;
+  -webkit-text-size-adjust: auto;
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+}
+embed.PDFViewer{
+  -webkit-text-size-adjust: auto;
+  -webkit-touch-callout: auto;
+  -webkit-user-select: auto;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
+}
+
+div.ImageViewer {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 640px;
+  height: 480px;
+
+  min-width: 300px;
+  min-height: 300px;
+  visibility: hidden;
+}
+div.PDFViewer {
+  position: absolute;
+  padding: 0px;
+  margin: 0px;
+  width: 640px;
+  height: 480px;
+
+  min-width: 300px;
+  min-height: 300px;
+  visibility: hidden;
+}
+textarea {
+  font-family: Tahoma, Verdana, Sans;
+
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 2px;
+  visibility: hidden;
+  resize: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  display: block;
+  position: absolute;
+  border-color: #BFB629;
+  background-color: #dece97;
+  word-wrap: normal;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  border-bottom-width: 2px;
+}
+select{
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+
+  width: 200px;
+
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top:0px;
+  margin-left:0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  border: 1px solid #785A00;
+  border-radius: 4px;
+  border-color: #BFB629;
+
+  background-color: rgba(200,200,200,0.25);
+  color: rgba(0,0,0,1);
+
+
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+option,
+option:hover
+{
+  background-color: rgba(200,200,200,0.25);
+  color: rgba(0,0,0,1);
+}
+div.statusBox{
+  display: none;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background:transparent;
+  padding: 0px;
+  margin: 0px;
+  z-index: 17;
+  visibility: visible;
+}
+div.statusMessage{
+  display: inline-block;
+  visibility: visible;
+  margin: 0px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  line-height:21px;
+  text-align: left;
+  vertical-align: baseline;
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .27);
+  background: rgba(7, 7, 79, 0.79);
+  box-shadow: 0px 0px 15px rgba(127, 127, 227, .79);
+  -webkit-box-shadow: 0px 0px 15px rgba(127, 127, 227, .79);
+}
+div.MultiView{
+  border-left: 2px solid #E8DD32;
+  border-top: 2px solid #E8DD32;
+  border-bottom: 2px solid #C9C034;
+  border-right: 2px solid #C9C034;
+  border-top-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+div.PageView{
+  display: block;
+  position:absolute;
+}
+div.PageViewContent{
+  display: block;
+}
+div.PageViewClient{
+  position:absolute;
+  display: block;
+  top: 0px;
+  bottom:0px;
+  left: 0px;
+  right:0px;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+div.FilmStrip{
+  display:block;
+  position:absolute;
+  overflow: hidden;
+}
+div.FilmStripClient{
+  display:block;
+  position: absolute;
+  top:0px;
+  left:0px;
+
+  overflow: hidden;
+  white-space:nowrap;
+  vertical-align:top;
+}
+div.FilmStripFrames{
+  display:inline-block;
+  white-space:nowrap;
+  vertical-align:top;
+}
+div.FilmFrame{
+  display:inline-block;
+  background-size:contain;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+div.FilmFrameGlyph{
+  background-size: cover;
+  position:relative;
+  display: inline-block;
+}
+div.IconListItemIndic8r{
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  height: 20px;
+  line-height:20px;
+  vertical-align: middle;
+  background-color: rgba(17,127,7,1);
+  color: rgba(255,255,255,1);
+  text-shadow: 1px 1px 1px rgba(0,0,0,1);
+  font-weight:bold;
+}
+div.IconListItemIndic8rLabel{
+  display: inline;
+  visibility: visible;
+  padding-left: 7px;
+  padding-right:7px;
+}
+div.Image{
+  background-repeat: no-repeat;
+  position: absolute;
+  display: block;
+  background-size: contain;
+  background-position:center;
+}
+div.Label{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-repeat:no-repeat;
+  position: absolute;
+  display: block;
+  background-size: contain;
+  background-position: center;
+}
+div.Glyph{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-repeat:no-repeat;
+  position: absolute;
+  display: block;
+  background-size: contain;
+  background-position: center;
+}
+iframe.iFrame{
+  display: block;
+  position: absolute;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+
+  width:100%;
+  height:100%;
+}
+body.iFrame{
+  display: block;
+  position: absolute;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.iFrame{
+  display: block;
+  position: absolute;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+  width:100%;
+  height:100%;
+}
+iframe.Elements{
+  display: block;
+  position: absolute;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+div.Elements{
+  display: block;
+  position: absolute;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top: 0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+div.ElementsList{
+  display: block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+
+  border: 0px solid rgba(0,0,0,0);
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.Element{
+  position: relative;
+  display: inline-block;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.ElementSubItems{
+  position: relative;
+  display: block;
+  border: 0px solid rgba(0,0,0,0);
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  top: 0px;
+  left:0px;
+
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.ElementSubItem{
+  position: absolute;
+  display: block;
+
+  overflow: hidden;
+
+  background-position:center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:4px;
+  margin-left:4px;
+  margin-right:4px;
+  margin-bottom:4px;
+
+  top: 0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+div.ElementSubItemCaption{
+  position: relative;
+  top: 50%;
+  vertical-align: middle;
+  line-height:22px;
+  margin-top: -11px;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow:hidden;
+}
+img.ElementSubItemGlyph{
+  display:block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  visibility:hidden;
+  opacity: 0;
+  z-index:-1;
+  -webkit-transition: opacity ease-in-out 1s;
+  -moz-transition: opacity ease-in-out 1s;
+  -o-transition: opacity ease-in-out 1s;
+  transition: opacity ease-in-out 1s;
+}
+div.ElementSubItemControlsbtnTop{
+  display:block;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+
+  margin-left:-15px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/up.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnRotateLeft{
+  display:block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/reload.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-bottom-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+div.ElementSubItemControlsbtnRemove{
+  display:block;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 30px;
+  height: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/remove.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-top-right-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnAdd{
+  display:block;
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/add.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-top-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnRotateRight{
+  display:block;
+  position: absolute;
+  top: 0px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/reload.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-bottom-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnBottom{
+  display:block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  height: 30px;
+  width: 30px;
+
+  margin-left:-15px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/down.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnLeft{
+  display:block;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  height: 30px;
+  width: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:-15px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/left.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+}
+div.ElementSubItemControlsbtnRight{
+  display:block;
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  height: 30px;
+  width: 30px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:-25px;
+  margin-bottom:0px;
+
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+  background-image:url(/core/vdm/imgs/msks/right.png);
+  background-color:rgba(0,0,0,.57);
+
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  -webkit-transition: display 1s ease-in-out;
+  -moz-transition: display 1s ease-in-out;
+  -o-transition: display 1s ease-in-out;
+  transition: display 1s ease-in-out;
+
+}
+div.ElementSubItemControlsbtnAdd:hover,
+div.ElementSubItemControlsbtnRemove:hover,
+div.ElementSubItemControlsbtnRotateRight:hover,
+div.ElementSubItemControlsbtnRotateLeft:hover,
+div.ElementSubItemControlsbtnTop:hover,
+div.ElementSubItemControlsbtnBottom:hover,
+div.ElementSubItemControlsbtnLeft:hover,
+div.ElementSubItemControlsbtnRight:hover{
+  background-color:rgba(30,87,153,1);
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+}
+div.BoxView{
+  position:absolute;
+  display: block;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+  overflow:hidden;
+}
+div.BoxViewWrap{
+  position:absolute;
+  display: block;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.BoxViewClient{
+  display: block;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.BoxViewNav{
+  display: inline-block;
+  position: absolute;
+
+  right:21px;
+  line-height: 34px;
+  text-align: center;
+  z-index: 2;
+  padding-left: 8px;
+  padding-right:8px;
+
+  background-color: rgba(57, 57, 57, .7);
+
+  font-weight:bold;
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),0px 1px 2px rgba(0, 0, 0, 1),1px 0px 2px rgba(0, 0, 0, 1),1px 1px 2px rgba(0, 0, 0, 1);
+}
+div.BoxViewNavItem{
+  display:inline-block;
+  margin-top:1px;
+  margin-left:1px;
+  margin-right:1px;
+  margin-bottom:1px;
+
+  padding-top:1px;
+  padding-left:4px;
+  padding-right:4px;
+  padding-bottom:4px;
+
+  border-left:1px solid rgba(255,255,255,.2);
+  border-right:1px solid rgba(255,255,255,.2);
+
+  line-height:34px;
+}
+div.BoxViewNavItem:hover{
+  text-decoration:underline;
+}
+div.BoxViewNavItemSelected{
+  display:inline-block;
+  margin-top:1px;
+  margin-left:1px;
+  margin-right:1px;
+  margin-bottom:1px;
+
+  padding-top:1px;
+  padding-left:4px;
+  padding-right:4px;
+  padding-bottom:4px;
+
+  border-left:1px solid rgba(255,255,255,.2);
+  border-right:1px solid rgba(255,255,255,.2);
+
+  line-height:34px;
+
+  background: rgb(207,234,159);
+  background: -moz-linear-gradient(top, rgba(207,234,159,1) 0%, rgba(22,137,16,1) 11%, rgba(16,114,1,1) 50%, rgba(28,112,1,1) 88%, rgba(102,201,82,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(207,234,159,1)), color-stop(11%,rgba(22,137,16,1)), color-stop(50%,rgba(16,114,1,1)), color-stop(88%,rgba(28,112,1,1)), color-stop(100%,rgba(102,201,82,1)));
+  background: -webkit-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+  background: -o-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+  background: -ms-linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+  background: linear-gradient(top, rgba(207,234,159,1) 0%,rgba(22,137,16,1) 11%,rgba(16,114,1,1) 50%,rgba(28,112,1,1) 88%,rgba(102,201,82,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cfea9f', endColorstr='#66c952',GradientType=0 );
+}
+div.BoxViewBox{
+  display: block;
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  vertical-align: middle;
+  text-align:center;
+
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+}
+div.BoxViewBoxWrap{
+  display: block;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.BoxViewBoxShell{
+  position:relative;
+  display: block;
+
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.BoxViewBoxTitle{
+  display: block;
+
+  padding-left:17px;
+  padding-right:17px;
+
+  padding-top:10px;
+  padding-bottom:10px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+
+
+  color: rgba(255,255,255,1);
+  background-color:rgba(57, 57, 57, .7);
+
+  font-size: 14pt;
+
+  font-weight:bold;
+
+  text-shadow: 0px 0px 2px rgba(0, 0, 0, 1),0px 1px 2px rgba(0, 0, 0, 1),1px 0px 2px rgba(0, 0, 0, 1),1px 1px 2px rgba(0, 0, 0, 1);
+  text-align: right;
+}
+div.BoxViewBoxClient{
+  position:relative;
+  display:block;
+  background-color:rgba(57, 57, 57, .7);
+
+  display: block;
+  padding-top:0px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+
+  margin-top:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+}
+div.BoxViewLogo{
+  display:inline-block;
+  position: absolute;
+  top:0px;
+  left:0px;
+  z-index:-1;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+}
+div.CheckBox{
+  height: 32px;
+  position: absolute;
+  display:block;
+}
+input.CheckBox{
+  visibility:visible;
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  position: absolute;
+  margin-left:4px;
+}
+div.CheckBoxLabel{
+  font-size:9pt;
+
+  padding-left: 4px;
+
+  visibility:visible;
+  height:30px;
+  line-height:30px;
+  vertical-align:middle;
+  text-align:left;
+  position: absolute;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color:transparent;
+  border:0px solid transparent;
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  -webkit-box-shadow: 0 0 0px rgba(0,0,0,0);
+}
+div.CheckBoxLabel:focus {
+  border: 0px solid rgba(0,0,0,0);
+  border-radius: 0px;
+}
+div.CheckBoxLabel:hover {
+  border: 0px solid rgba(0,0,0,0);
+  border-radius: 0px;
+}
+
+div.ShowCaseClient{
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  height: 100%;
+  transition: left 1s ease-in-out;
+  -webkit-transition: left 1s ease-in-out;
+  -moz-transition: left 1s ease-in-out;
+  -o-transition: left 1s ease-in-out;
+}
+div.ShowCaseButtons{
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  z-index:1;
+}
+div.ShowCaseButtonList{
+  display: block;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom:4px;
+  white-space: nowrap;
+}
+div.ShowCaseButton{
+  display: inline-block;
+  border-radius: 1px;
+  border: 1px solid rgba(255,255,255,.17);
+  background-color:rgba(0,0,0,.3);
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 1px rgba(0,0,0,1);
+
+  font-weight: bold;
+  margin-right:2px;
+  min-width: 22px;
+  min-height: 22px;
+  padding-left: 4px;
+  padding-right:4px;
+
+
+  text-align: center;
+  line-height: 22px;
+  vertical-align: middle;
+}
+div.ShowCaseButtonSelected:hover,div.ShowCaseButtonSelected:active,div.ShowCaseButton:active,div.ShowCaseButton:hover{
+  background-color:rgba(22,137,16,.8);
+  border-radius: 2px;
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+}
+div.ShowCaseButtonSelected{
+  background-color:rgba(0,0,0,.70);
+  display: inline-block;
+  padding-left: 4px;
+  padding-right: 4px;
+  border: 1px solid rgba(255,255,255,.17);
+
+  font-weight: bold;
+  margin-right:2px;
+  min-width: 22px;
+  min-height: 22px;
+  text-align: center;
+  line-height: 22px;
+  vertical-align: middle;
+
+  border-radius: 2px;
+  color: #EFEED7;
+  text-shadow: rgba(7, 7, 79, 0.79) 0.1em 0.1em 0.2em;
+}
+div.ShowCaseItem{
+  display: inline-block;
+  vertical-align: top;
+}
+div.ShowCaseItemClient{
+  position: relative;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+
+}
+div.ShowCaseItemContent{
+  color: rgba(255,255,255,1);
+  text-shadow:
+    0px 0px 1px rgba(0, 0, 0, 1),
+    0px 1px 1px rgba(0, 0, 0, 1),
+    1px 0px 1px rgba(0, 0, 0, 1);
+
+  white-space:normal;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  right:0px;
+  position:relative;
+
+  padding-top:10px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom:10px;
+}
+label.ShowCaseButtonListLabel{
+  display:block;
+  line-height:20px;
+  height:22px;
+  font-weight:bold;
+  text-align:center;
+  background-color: rgba(0,0,0,.3);
+  color: rgba(255,255,255,1);
+  text-shadow: 0px 0px 1px rgba(0,0,0,1);
+}
+div.AppIconsSlideWindow{
+  box-shadow: rgba(0,0,0,1) 0px 0px 5px;
+  background-color:rgba(0,0,0,.4);
+}
+div.AppIconsSlideilvTaskWindow{
+  box-shadow: rgba(0,0,0,1) 0px 0px 5px;
+}
+div.ContentBox{
+  display:block;
+  position:absolute;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  text-shadow:none;
+  color:rgba(0,0,0,1);
+}
+div.ContentBoxItems{
+  display:inline-block;
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left:4px;
+  padding-right:4px;
+  white-space:normal;
+}
+div.ContentBoxItem{
+  padding-top:4px;
+  padding-bottom:4px;
+  padding-left:4px;
+  padding-right:4px;
+
+  margin-top:4px;
+  margin-bottom:4px;
+  margin-left:4px;
+  margin-right:4px;
+  vertical-align:top;
+  border-style:solid;
+  min-height:80px;
+  min-width:200px;
+}
+div.ContentBoxItemTitle{
+  text-align:left;
+  display:block;
+  position:relative;
+  height:28px;
+  padding-left:7px;
+  font-size:14px;
+  line-height:25px;
+  vertical-align:middle;
+  font-weight:bold;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  overflow:hidden;
+}
+div.ContentBoxItemIcon{
+  display:block;
+  position:relative;
+  float:right;
+  top:-17px;
+  right:-17px;
+}
+div.ContentBoxItemContent{
+  display:block;
+  position:relative;
+}
+div.ContentBoxItemTitleDecoTop,
+div.ContentBoxItemDecoBottom{
+  display: block;
+  position:relative;
+}
+body.PrintWindow{
+  padding: 0px;
+  margin: 0px;
+  top:0px;
+  left:0px;
+  font-family: Ubuntu,DejaVu Sans,Nimbus Sans L,Tahoma,Verdana,Sans;
+  clear: both;
+  font-size: 9pt;
+  overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+}
+img.PrintWindow{
+  padding: 0px;
+  margin: 0px;
+  top:0px;
+  left:0px;
+  bottom:0px;
+  right:0px;
+  width:100%;
+  height:100%;
+}
+input.ListViewEditor{
+  display:none;
+  position:absolute;
+  z-index:1;
+  border-color:rgba(0,0,0,.7);
+  line-height:20px;
+  vertical-align:middle;
+  background-color:rgba(255,255,255,1);
+}
+div.ThreadViewGroups{
+  display:block;
+  position:absolute;
+  top:50px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+}
+
+div.ThreadViewGroups:focus{
+  outline: none;
+}
+div.ThreadViewGroup{
+  display:block;
+}
+div.ThreadViewGroup:focus{
+  outline:none;
+}
+div.ThreadViewGroupHeader{
+  display: block;
+  font-weight:bold;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  right:0px;
+  left:0px;
+}
+div.ThreadViewGroupWrapper{
+  display: block;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+div.ThreadViewGroupNotice{
+  display: block;
+  text-align: center;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+div.ThreadViewItems{
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  margin-top:2px;
+  margin-bottom:2px;
+  border: 1px solid rgba(0,0,127,.4);
+  outline: none !important;
+}
+div.ThreadViewItems:empty{
+  border:none;
+  margin-top:0px;
+  margin-bottom:1px;
+  padding-top:0px;
+  padding-bottom:0px;
+}
+div.ThreadViewItem{
+  display: block;
+  background-color: rgba(255,255,255,1);
+  color: rgba(0, 0, 0, 1);
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+  border-left: 3px solid transparent;
+  border-right: 0px solid transparent;
+  z-index: 1;
+
+  outline-style: none;
+}
+div.ThreadViewItem:focus{
+  outline: none;
+}
+div.ThreadViewItemClient{
+  display: block;
+  border: 1px solid rgba(0,0,0,.2);
+  border-right-width: 1px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+div.ThreadViewItemHeader{
+  display: block;
+  position:relative;
+  left:1px;
+  right:0px;
+  height: 42px;
+  font-size:12px;
+}
+div.ThreadViewItemLabel{
+  display: block;
+  position:absolute;
+  left: 1px;
+  top: 1px;
+  right: 127px;
+}
+div.ThreadViewItemLabelSubject{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: rgba(0,0,0,0);
+  padding-left: 2px;
+  line-height:18px;
+}
+div.ThreadViewItemLabelName{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  white-space:nowrap;
+  font-size:14px;
+  border-left-style: solid;
+  border-left-width: 5px;
+  border-left-color: rgba(70,70,70,.7);
+  padding-left: 2px;
+  line-height: 22px;
+}
+div.ThreadViewItemStamp{
+
+  display: block;
+  position:absolute;
+
+  top: 1px;
+  right: 4px;
+
+  min-width:120px;
+  max-width:120px;
+  width:120px;
+
+  height:40px;
+
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left:0px;
+  padding-right: 0px;
+
+}
+div.ThreadViewItemStampLabel{
+  text-align: right;
+  vertical-align: middle;
+
+  display:block;
+  line-height: 16px;
+  height:16px;
+
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  font-size: 11px;
+}
+div.ThreadViewItemStampTools{
+  display:block;
+  line-height: 16px;
+  height:24px;
+  text-align: right;
+
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  padding-bottom:0px;
+
+  margin-left:2px;
+  margin-right:2px;
+  margin-top:0px;
+  margin-bottom:0px;
+
+  white-space:nowrap;
+}
+div.ThreadViewItemLines{
+  display: block;
+  border-radius: 0px;
+
+  padding-top: 2px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  margin-top: 0px;
+  margin-bottom: 2px;
+  margin-left: 5px;
+  margin-right: 0px;
+
+  font-size: 11px;
+  line-height: 13px;
+}
+div.ThreadViewItemLine1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  white-space: nowrap;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+
+}
+div.ThreadViewItemLine2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  white-space: nowrap;
+}
+div.ThreadViewThread{
+  display: block;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  padding-left:10px;
+  padding-right:0px;
+  padding-bottom:0px;
+  padding-top:0px;
+}
+div.ThreadViewThread:not(:empty){
+  border-left: rgba(0,0,0,.1) solid 7px;
+  padding-left: 0px;
+  margin-left:0px;
+}
+div.clientImageViewer{
+  background-color:rgba(0,0,0,.79);
+}
+div.ViewerFilmStripFrameGlyph{
+  background-position:center;
+  background-size:contain;
+  background-repeat:no-repeat;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: center;
+  color: rgba(255,255,255,.4);
+  text-shadow: rgba(0,0,0,1) 0PX 0PX 2px;
+  vertical-align: bottom;
+}
+
+div.ViewerFilmStrip{
+  top:0px;
+  left:0px;
+  right:0px;
+  height: 100px;
+  -webkit-overflow-scrolling: touch !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  z-index: 1;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+
+  background: rgba(245,246,246,.5);
+  background: -moz-linear-gradient(top, rgba(245,246,246,.5) 0%, rgba(219,220,226,.5) 21%, rgba(184,186,198,.5) 49%, rgba(221,223,227,.5) 80%, rgba(245,246,246,.5) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(245,246,246,.5)), color-stop(21%,rgba(219,220,226,.5)), color-stop(49%,rgba(184,186,198,.5)), color-stop(80%,rgba(221,223,227,.5)), color-stop(100%,rgba(245,246,246,.5)));
+  background: -webkit-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: -o-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: -ms-linear-gradient(top, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  background: linear-gradient(to bottom, rgba(245,246,246,.5) 0%,rgba(219,220,226,.5) 21%,rgba(184,186,198,.5) 49%,rgba(221,223,227,.5) 80%,rgba(245,246,246,.5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', endColorstr='#f5f6f6',GradientType=0 );
+
+  box-shadow: inset 0 0 2px rgba(0,0,0,.7);
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,.7);
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 4px rgba(20, 12, 12, .3);
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+html,body{
+  scrollbar-arrow-color:rgba(203,203,203,1);
+  scrollbar-face-color:rgba(47,47,47,1);
+  scrollbar-track-color:rgba(43,43,43,1);
+  scrollbar-highlight-color:rgba(79,79,79,1);
+  scrollbar-shadow-color:rgba(203,203,203,1);
+  scrollbar-3dlight-color:rgba(203,203,203,1);
+  scrollbar-darkshadow-color:rgba(247,247,247,1);
+}
+div.redactor_RichEdit{
+  background:none;
+
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+
+  position:absolute;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  top:0px;
+  left:0px;
+  right:0px;
+  bottom:0px;
+}
+.redactor_box ::selection ,
+.redactor_RichEdit ::selection {
+  background:rgba(217,217,217,1) !important;
+}
+div.RosterViewItems{
+  display:block;
+  position:absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+   -webkit-overflow-scrolling: touch !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+div.RosterViewItem{
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #EFEED7;
+  text-shadow: rgba(0,0,0,1) 1PX -1PX 2PX, rgba(0,0,0,1) 1px 1px 2px;
+}
+div.RosterViewItem:nth-of-type(even){
+  background-color:rgba(255,255,255,.03);
+}
+div.RosterViewItem:nth-of-type(odd){
+  background-color:rgba(255,255,255,.07);
+}
+div.RosterViewItemTitle{
+  font-weight:bold;
+  padding-left:4px;
+  padding-right:4px;
+  padding-top:2px;
+  padding-bottom:2px;
+}
+span.RosterViewItemFamilyName{
+  padding-left:2px;
+  padding-right:0px;
+}
+span.RosterViewItemSepName{
+  padding-left:0px;
+  padding-right:3px;
+}
+span.RosterViewItemFirstName{
+  padding-left:2px;
+  padding-right:2px;
+}
+span.RosterViewItemMiddleName{
+  padding-left:2px;
+  padding-right:2px;
+}
+div.RosterViewItemWrapper{
+  padding-left: 4px;
+  padding-right:4px;
+  height: 60px;
+}
+div.RosterViewItemAvatar{
+  margin-left:0px;
+  margin-top:1px;
+  margin-right:2px;
+  height:48px;
+  width:48px;
+  background-size:contain;
+  backgorund-repeat:no-repeat;
+  float:left;
+  border:1px solid rgba(255,255,255,.27);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+}
+div.RosterViewItemEmail1,
+div.RosterViewItemEmail2,
+div.RosterViewItemEmail3 {
+  font-size:12px;
+  line-height:18px;
+  vertical-align:middle;
+  margin-left:57px;
+  margin-right:0px;
+  padding-left:2px;
+  padding-right:2px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+span.RosterViewItemMiddleName:empty,
+div.RosterViewItemEmail1:empty,
+div.RosterViewItemEmail2:empty,
+div.RosterViewItemEmail3:empty
+{
+  display:none;
+}
+div.RosterViewItemEmail1:hover,
+div.RosterViewItemEmail2:hover,
+div.RosterViewItemEmail3:hover {
+  border-radius: 1px;
+  background-color:rgba(77,77,77,1);
+  box-shadow: 0px 0px 2px rgba(255,255,255,.79);
+}
+div.CMSTools{
+  display: inline-block;
+  padding: 4px;
+}
+div.CMSTools[cms="disabled"]{
+  display:none !important;
+}
+div.CMSTool {
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-size:contain;
+  padding:4px;
+  cursor:pointer;
+}
+div.CMSTool:hover{
+  text-decoration:underline;
+}
+div.ContentBoxItemCMSTools{
+  display:block;
+}
+div.ContentBoxItemTitle[contenteditable="true"]{
+  border:1px dashed rgba(0,0,255,.5);
+  outline:none;
+
+  margin-top:1px;
+  margin-left:1px;
+  margin-bottom:1px;
+  margin-right:85px;
+
+  padding-left:7px;
+  line-height:27px;
+  vertical-align:middle;
+}
+div.ContentBoxItemsCMSTools{
+  display:block;
+  background-color:rgba(255,255,255,.7);
+}
+.redactor-editor{
+  -webkit-user-select: elements !important;
+  -khtml-user-select: auto !important;
+  -moz-user-select: elements !important;
+  -ms-user-select: element !important;
+  -o-user-select: auto !important;
+  user-select: elements !important;
+}
+.redactor-toolbar:after{
+  display:none !important;
+}
+#redactor-modal-box{
+ z-index: 140000;
+}
+div {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  cursor: default;
+}

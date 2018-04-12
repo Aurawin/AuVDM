@@ -19,28 +19,7 @@ coVDM.App.Components.WorkSpace = {
     _ws.Client=document.createElement('div');
     _ws.Container.appendChild(_ws.Client);
     _ws.Client.className="WorkSpaceClient";
-    /*
-    _ws.Button=null;
-    coEvents.Add(
-      _ws.Container,
-      "scroll",
-      function() {
-        _ws.Container.scrollTop=0;
-      },
-      coEvents.Capture,
-      coEvents.Active
-    );
-    coEvents.Add(
-      _ws.Client,
-      "scroll",
-      function() {
-        _ws.Client.scrollTop=0;
-      },
-      coEvents.Capture,
-      coEvents.Active
-    );
 
-    */
     _ws.Size= new Size(_ws.Client.offsetWidth,_ws.Client.offsetHeight);
     _ws.setSize=function(){
       coAppUI.App.Components.vScroll.HideAll();

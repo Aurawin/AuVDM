@@ -1,7 +1,7 @@
 coAppUI.App.Components.TreeView = {
-  Version        : new Version(2014,9,3,62),
+  Version        : new Version(2016,9,24,63),
   Title          : new Title("Aurawin Tree View","TreeView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/TreeView.js',coAppKit.PreLoaded),
   debugToConsole : false,
   Create         : function(sName,sClass,Screen,Slides,Owner,Parent,Align){
@@ -20,7 +20,9 @@ coAppUI.App.Components.TreeView = {
     _tv.onItemSelected=null;
     _tv.onItemExpanded=null;
     _tv.onItemCollapsed=null;
+    _tv.onItemArchived=null;
     _tv.onEmptyFolder=null;
+
     _tv.onLoaded=null;
     _tv.lockSelection=false;
     _tv.doItemSelected=null;
@@ -211,6 +213,7 @@ coAppUI.App.Components.TreeView = {
         ed.btnAdd.Hide();
         ed.btnDelete.Hide();
         ed.btnRename.Hide();
+        ed.btnArchive.Hide();
         ed.btnEmptyFolder.Hide();
         ed.Input.Hide();
         ed.Visible=false;
@@ -250,6 +253,9 @@ coAppUI.App.Components.TreeView = {
         if (ed.showEmptyFolder==true){
           ed.btnEmptyFolder.Show();
         };
+        if (ed.showArchive==true){
+          ed.btnArchive.Show();
+        };
         ed.Visible=true;
         ed.setPosition();
         if (coVDM.VDM.Browser.Mouse==true)
@@ -271,6 +277,7 @@ coAppUI.App.Components.TreeView = {
       _ed.btnAdd=_ed.createButton(coLang.Table.Buttons.New,"TVCMDAddICO","TVCMDCPTN");
       _ed.btnDelete=_ed.createButton(coLang.Table.Buttons.Delete,"TVCMDDelICO","TVCMDCPTN");
       _ed.btnRename=_ed.createButton(coLang.Table.Buttons.Rename,"TVCMDRenICO","TVCMDCPTN");
+      _ed.btnArchive=_ed.createButton(coLang.Table.Buttons.Archive,"TVCMDArchICO","TVCMDCPTN");
       _ed.btnEmptyFolder=_ed.createButton(coLang.Table.Buttons.Clear,"TVCMDEtsICO","TVCMDCPTN");
       _ed.Input=_ed.createInput();
       _ed.btnAdd.onExecute=function(cmd){
@@ -340,6 +347,13 @@ coAppUI.App.Components.TreeView = {
         ed.btnAdd.Hide();
         ed.btnEmptyFolder.Hide();
         ed.Input.Show();
+      };
+      _ed.btnArchive.onExecute=function(cmd){
+        var ed=cmd.Owner;
+        var tv=ed.TreeView;
+        ed.Hide();
+        if (tv.onItemArchived)
+          tv.onItemArchived(tv.Selected);
       };
       _ed.btnEmptyFolder.onExecute=function(cmd){
         var ed=cmd.Owner;

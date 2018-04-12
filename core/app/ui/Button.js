@@ -1,9 +1,8 @@
 coAppUI.App.Components.Button = {
-  Version        : new Version(2014,3,16,37),
-  Title          : new Title("Aurawin UI Button","Button"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Button.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   Create         : function(aOwner,aParent,sName,sClass,sCaption){
     if (sName==undefined) sName="";
     if (sClass==undefined) sClass="";

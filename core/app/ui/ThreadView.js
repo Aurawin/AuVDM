@@ -1,7 +1,7 @@
 coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
-  Version        : new Version(2018,3,17,143),
+  Version        : new Version(2015,8,12,142),
   Title          : new Title("Aurawin Thread View","ThreadView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
+  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
   Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/ThreadView.js',coAppKit.PreLoaded),
   debugToConsole : true,
   SelectNext     : true,
@@ -323,13 +323,8 @@ coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
         gp.Container.className=gp.Class+" "+ vw.Class+gp.Class;
         gp.Container.tabIndex=0;
         gp.Container.Owner=gp;
-        
-        gp.TopBar=document.createElement('div');
-        gp.Container.appendChild(gp.TopBar);
-        gp.TopBar.className="ThreadViewGroupHeaderTopBar "+vw.Class+"ThreadViewGroupHeaderTopBar";
-        
         gp.Header=document.createElement('div');
-        gp.TopBar.appendChild(gp.Header);
+        gp.Container.appendChild(gp.Header);
         gp.Header.className="ThreadViewGroupHeader "+vw.Class+"ThreadViewGroupHeader";
         gp.Symbol=document.createElement('span');
         gp.Header.appendChild(gp.Symbol);
@@ -390,6 +385,20 @@ coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
             coEvents.NoCapture,
             coEvents.Active
           );
+          /*
+          itms.evtBlur=coEvents.Add(
+            itms.Container,
+            "blur",
+            function(e){
+              var itms=this.Owner;
+              var gp=itms.Owner;
+              var gps=gp.Owner;
+              gps.Focused=null;
+            },
+            coEvents.NoCapture,
+            coEvents.Active
+          );
+          */
           itms.Clear=function(){
             var itms=this;
             var vw=itms.View;
@@ -424,10 +433,7 @@ coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
           gp.evtDOMSubtreeModified.Free();
           gp.evtKeyDown.Free();
           gp.Items.Free();
-          gp.Header.removeChild(gp.Symbol);
-          gp.Header.removeChild(gp.Caption);
-          gp.TopBar.removeChild(gp.Header);
-          gp.Container.removeChild(gp.TopBar);
+          gp.Container.removeChild(gp.Header);
           gp.Container.removeChild(gp.Wrapper);
           gp.Parent.removeChild(gp.Container);
 
@@ -547,7 +553,7 @@ coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
           if (gps.Top!=gp) {
             vw.evtDOMSubtreeModified.setActive(false);
             if (gps.Top) {
-              gps.Top.TopBar.appendChild(gps.Top.Header);
+              gps.Top.Container.insertBefore(gps.Top.Header,gps.Top.Container.firstChild);
             };
             gps.Top=gp;
             vw.Header.Container.appendChild(gp.Header);
