@@ -1,9 +1,13 @@
-coAppUI.App.Components.KPList = {
-  Version        : new Version(2014,8,22,6),
-  Title          : new Title("Aurawin Key Pair List","KPList"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/KPList.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.KPList = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function(sName,sCaption,Screen,Slides,Owner,Parent,Columns,onAddItem,onDeleteItem,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Client;
     var _kpl=Slides.createSlide(sCaption,sName,Screen,Owner,Parent,Align);

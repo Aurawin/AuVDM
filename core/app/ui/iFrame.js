@@ -1,9 +1,14 @@
-coAppUI.App.Components.iFrame = {
-  Version        : new Version(2014,10,7,25),
-  Title          : new Title("Aurawin UI iFrame","iFrame"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/iFrame.js',coAppKit.PreLoaded),
+UI.iFrame = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(sName,sClass,Screen,Slides,Owner,Parent,Align) {
     var _vw=Slides.createSlide(sName,sClass+" Elements",Screen,Owner,Parent,Align);
     _vw.Container.className="iFrame "+sClass;

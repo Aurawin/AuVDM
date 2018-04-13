@@ -38,7 +38,7 @@ const  UI={
   TreeViews      : new Array(),
 
 
-  Controls 	     : Objects.createNew("Controls"),
+  Controls 	     : List.createArray(),
 
   init: function(){
   	this.Initialized=true;

@@ -1,9 +1,14 @@
-coAppUI.App.Components.NetSelect = {
-  Version        : new Version(2014,3,16,34),
-  Title          : new Title("Aurawin Network Selector","NetSelect"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/NetSelect.js',coAppKit.PreLoaded),
+UI.NetSelect = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function (Groups,sName,sClass,Screen,Slides,Owner,Parent,Align){
     var sc=Screen;
     nSel=Slides.createSlide(sName,"sldClient",Screen,Owner,Parent,Align);

@@ -1,10 +1,14 @@
 
-coAppUI.App.Components.Glyph = {
-  Version        : new Version(2013,5,18,24),
-  Title          : new Title("Aurawin UI Glyph","Glyph"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2013.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Glyph.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.Glyph = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function(aOwner,aParent,sName,sClass,sCaption,sGlyph){
     if (sName==undefined) sName="";
     if (sClass==undefined) sClass="";

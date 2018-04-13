@@ -1,10 +1,16 @@
-coAppUI.App.Components.vScroll = {
-  Version        : new Version(2014,2,25,95),
-  Title          : new Title("Aurawin UI Vertical Scroll","vScroll"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/vScroll.js',coAppKit.PreLoaded),
+UI.vScroll = {
+  Unit           : '',
+  Loaded         : true,
   debugToConsole : false,
+  Initialized    : false,
+  debugToConsole : true,
+  Compiled       : false,
   List           : new Array(),
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
+
   HideAll        : function(exScroll){
     for (var iLcv=0; iLcv<this.List.length; iLcv++) {
       var sc=this.List[iLcv];

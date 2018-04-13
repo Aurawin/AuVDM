@@ -1,9 +1,14 @@
-coAppUI.App.Components.TreeView = {
-  Version        : new Version(2016,9,24,63),
-  Title          : new Title("Aurawin Tree View","TreeView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2016.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/TreeView.js',coAppKit.PreLoaded),
+UI.TreeView = {
+  Unit           : '',
+  Loaded         : true,
   debugToConsole : false,
+  Initialized    : false,
+  debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(sName,sClass,Screen,Slides,Owner,Parent,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Client;
     var _tv=Slides.createSlide(sName,sClass,Screen,Owner,Parent,Align);

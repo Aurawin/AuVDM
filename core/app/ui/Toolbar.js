@@ -1,9 +1,14 @@
-coAppUI.App.Components.Toolbar = {
-  Version        : new Version(2014,10,23,13),
-  Title          : new Title("Aurawin Toolbar","Toolbar"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Tolbar.js',coAppKit.PreLoaded),
+UI.Toolbar = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function (sName,sClass,Screen,Slides,Owner,Parent,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Top;
     var _tb=Slides.createSlide(sName,sClass,Screen,Owner,Parent,Align);

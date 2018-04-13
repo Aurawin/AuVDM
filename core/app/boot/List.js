@@ -612,6 +612,9 @@ var List= {
       let idx = a.indexOf(src);
       if (idx>-1) a.splice(idx,1);
     }
+    a.Add=function(src){
+      this.push(src);
+    }
     return a;
   }
 };

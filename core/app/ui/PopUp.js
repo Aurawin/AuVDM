@@ -1,9 +1,14 @@
-coAppUI.App.Components.PopUp = {
-  Version        : new Version(2014,8,13,1),
-  Title          : new Title("Aurawin Pop Up","PopUp"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/PopUp.js',coAppKit.PreLoaded),
+UI.PopUp = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(sName,sClass,Screen,Owner){
     var pu=coObject.Create(coObject.relInline,coObject.cpyAsVar,"PopUp");
     pu.Parent=coVDM.VDM.WorkSpace.Client;

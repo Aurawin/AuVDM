@@ -35,6 +35,7 @@ const AppKit = {
   CredsChecked   : false,
   CredsRejected  : false,
   SystemBooted   : false,
+
   Console        : null,
   maxAppLoadCount : 2,
 
@@ -44,9 +45,114 @@ const AppKit = {
   
   Timers         : Timers.createList(500),
   Scripts        : List.createArray(),
+  StyleSheets    : List.createArray(),
 
   init           : function(){
     this.Apps=this.createApps();
+    this.Timers.ScriptsTimer=this.createScriptsTimer();
+    this.Timers.StyleSheetsTimer=this.createStyleSheetsTimer();
+    
+  },
+  createScriptsTimer: function(){
+    let lst = this.Timers;
+    let st=AppKit.Timers.createItem(AppKit.CheckForLoad2,lst);
+    st.AutoReset=true;
+    st.FirstDelay=AppKit.CheckForLoad1;
+    st.setActive(true);
+    st.onExecute=function(){
+      let lst=this.Owner;
+      let scripts = DOM.getAllScripts();
+      let uncompiled=false;
+      let script = null;
+      let iInitialized=0;
+      let unloaded = List.createArray();
+      unloaded.Assign(AppKit.Scripts);
+
+      for (let iLcv=0; iLcv<scripts.length; iLcv++){
+        script=scripts[iLcv];
+        if (script.Compiled){
+          if  (script.Initialized!=true){
+            try {
+              AppKit.Scripts.Add(script);
+              script.init();
+              unloaded.Remove(script);
+            } catch (err) {
+              uncompiled=true;
+              unloaded.push(script);
+              AppKit.logConsoleMessage("Appkit script method (init) : "+script.Unit+" "+err.message);
+            }
+          } else {
+            unloaded.Remove(script);
+            iInitialized+=1;
+          }
+        } else {
+          uncompiled=true;
+          unloaded.push(script);
+        }
+      }        
+      if (unloaded.length>0) {
+        if (uncompiled || (DateTime.secondsBetween(DateTime.Now(),this.Activated)>10)){
+          for (let iLcv=0; iLcv<unloaded.length; iLcv++){
+            if (!unloaded[iLcv].loadFailedAlerted){
+              unloaded[iLcv].loadFailedAlerted=true;
+              AppKit.logConsoleMessage("AppKit script method unable to load: "+unloaded[iLcv].Unit);
+            }
+          }
+          lst.ScriptsTimer.setActive(false);
+        }
+      } else if (iInitialized==scripts.length)  {
+        AppKit.ScriptsLoaded=true;
+        lst.ScriptsTimer.setActive(false);
+      }
+
+    };
+    return st;
+  },
+  createStyleSheetsTimer: function(){
+    let lst = this.Timers;
+    let st=AppKit.Timers.createItem(AppKit.CheckForLoad2,lst);
+    st.AutoReset=true;
+    st.FirstDelay=AppKit.CheckForLoad1;
+    st.setActive(true);
+    st.onExecute=function(){
+      let lst=this.Owner;
+      let sheets = DOM.getAllStyleSheets();
+      let sheet = null;
+      let iInitialized=0;
+      let uncompiled=false;
+      let unloaded = List.createArray();
+      unloaded.Assign(AppKit.StyleSheets);
+
+      for (let iLcv=0; iLcv<sheets.length; iLcv++){
+        sheet=sheets[iLcv];
+        
+        if  (sheet.Initialized!=true){
+            AppKit.StyleSheets.Add(sheet);
+            sheet.Initialized=true;
+            unloaded.Remove(sheet);
+          
+        } else {
+          unloaded.Remove(sheet);
+          iInitialized+=1;
+        }
+          
+      }        
+      if (unloaded.length>0) {
+        if (uncompiled || (DateTime.secondsBetween(DateTime.Now(),this.Activated)>10)){
+          for (let iLcv=0; iLcv<unloaded.length; iLcv++){
+            if (!unloaded[iLcv].loadFailedAlerted){
+              unloaded[iLcv].loadFailedAlerted=true;
+              AppKit.logConsoleMessage("AppKit stylesheet unable to load: "+unloaded[iLcv].src);
+            }
+          }
+          lst.StyleSheetsTimer.setActive(false);
+        }
+      } else if (iInitialized==sheets.length)  {
+        lst.StyleSheetsTimer.setActive(false);
+      }
+
+    };
+    return st;
   },
   processStyleSheets : function(){
     var ss=document.styleSheets;
@@ -126,24 +232,21 @@ const AppKit = {
     app.onCacheDownloading=null;
     app.Scripts=List.createArray();
     app.StyleSheets=List.createArray();
-
-    for (iLcv=0; iLcv<scripts.length; iLcv++){
+    let sc = null;
+    for (let iLcv=0; iLcv<scripts.length; iLcv++){
       sc = Scripts.createScript(scripts[iLcv].src, scripts[iLcv].name);
       app.Scripts.push(sc);
     }
     Scripts.addScripts(app.Scripts);
 
+    for (iLcv=0; iLcv<css.length; iLcv++){
+      sc = StyleSheets.createSheet(css[iLcv].src, css[iLcv].name);
+      app.StyleSheets.push(sc);
+    }
+    StyleSheets.addSheets(app.StyleSheets);
+
     app.onInitialized=(onInitialized==undefined)? null : onInitialized;
-    for (var iLcv=0; iLcv<Uses.length; iLcv++) {
-      if (Uses[iLcv]!=undefined) {
-        var use=app.createUse(Uses[iLcv]);
-        app.Uses.push(use);
-      };
-    };
-    for (var iLcv=0; iLcv<Dependencies.length; iLcv++) {
-      if (Dependencies[iLcv]!=undefined)
-        app.createDependency(Dependencies[iLcv],false);
-    };
+
     app.Free=function(){
       var app=this;
       var idx=AppKit.Apps.indexOf(app);
@@ -414,52 +517,7 @@ const AppKit = {
       };
     };
 
-    lst.ScriptsTimer=AppKit.Timers.createItem(AppKit.CheckForLoad2,lst);
-    lst.ScriptsTimer.AutoReset=true;
-    lst.ScriptsTimer.FirstDelay=AppKit.CheckForLoad1;
-    lst.ScriptsTimer.setActive(true);
-    lst.ScriptsTimer.onExecute=function(){
-      let lst=this.Owner;
-      let scripts = DOM.getAllScripts();
-      let uncompiled=false;
-      let script = null;
-      let iInitialized=0;
-      let unloaded = List.createArray();
-      unloaded.Assign(AppKit.Scripts);
 
-      for (iLcv=0; iLcv<scripts.length; iLcv++){
-        script=scripts[iLcv];
-        if (script.Compiled){
-          if  (script.Initialized!=true){
-            try {
-              script.init();
-              AppKit.Scripts.push(script);
-              unloaded.Remove(script);
-            } catch (err) {
-              AppKit.logConsoleMessage("Script method (init) : "+script.Unit+" "+err.message);
-            }
-          } else {
-            unloaded.Remove(script);
-            iInitialized+=1;
-          }
-        } else {
-          uncompiled=true;
-          unloaded.push(script);
-        }
-      }        
-      if (unloaded.length>0) {
-        if (uncompiled || (DateTime.secondsBetween(DateTime.Now(),this.Activated)>10)){
-          for (iLcv=0; iLcv<unloaded.length; iLcv++){
-            AppKit.logConsoleMessage("Script method (init) unable to execute: "+unloaded[iLcv].Unit);
-          }
-          lst.ScriptsTimer.setActive(false);
-        }
-      } else if (iInitialized==scripts.length)  {
-        AppKit.ScriptsLoaded=true;
-        lst.ScriptsTimer.setActive(false);
-      }
-
-    };
 
 
     lst.ResourcesTimer=AppKit.Timers.createItem(AppKit.CheckForLoad2,lst);
@@ -573,110 +631,7 @@ const AppKit = {
         };
       };
 
-      for (var iLcv=0; iLcv<units.length; iLcv++) {
-        var use=units[iLcv];
-        if (use.Requested==false) {
-            use.Requested=true;
-            if ((use.PreLoaded==false) && (use.Loaded==false) ){
-              switch (use.Kind) {
-                  case (AppKit.ukJavaScript) : {
-                    DOM.loadScript(
-                      use,
-                      use.Source,
-                      function(){
-                        var use=this.Owner;
-                        use.Loaded=true;
-                      },
-                      function(){
-                        var use=this.Owner;
-                        use.Failed=true;
-                        this.Failed=true;
-                        console.log("AppKit.Unit("+use.Source+") failed to load JavaScript.");
-                      }
-                    );
-                    break;
-                  }
-                  case (AppKit.ukStyleSheet) : {
-                    DOM.loadStyle(
-                      use,
-                      use.Source,
-                      function(){
-                        var use=this.Owner;
-                        use.Loaded=true;
-                      },
-                      function(){
-                        var use=this.Owner;
-                        use.Failed=true;
-                        this.Failed=true;
-                        console.log("AppKit.Unit("+use.Source+") failed to load style sheet.");
-                      }
-                    );
-                    break;
-                  }
-              };
-            } else {
-              use.Loaded=true;
-            };
-        } else if ( (use.Loaded==false) && (use.App) && (use.Kind==AppKit.ukJavaScript) ) {
-          AppKit.Units.setLoaded(use.App,use.Source);
-        };
-      };
-      for (var iLcv=0; iLcv<deps.length; iLcv++) {
-        var dep=deps[iLcv];
-        if (dep.App) {
-          if ( (dep.App.Initialized==false) && (dep.App.deferInit) && (dep.App.deferInit(dep.App)==true) ){
-            dep.App.Initialized=true;
-            if (dep.App.onInitDeferred)
-              dep.App.onInitDeferred(dep.App);
-          };
-          if ( (dep.App.Initialized==true) ){
-            if ( dep.Requested==false ) {
-              dep.Requested=true;
-              if ((dep.PreLoaded==false) && (dep.Loaded==false) ){
-                switch (dep.Kind) {
-                  case (AppKit.ukJavaScript) : {
-                        DOM.loadScript(
-                          dep,
-                          dep.Source,
-                          function(){
-                            var dep=this.Owner;
-                            dep.Loaded=true;
-                            AppKit.Units.setLoaded(dep.App,dep.Source);
-                          },
-                          function(){
-                            var dep=this.Owner;
-                            dep.Failed=true;
-                            this.Failed=true;
-                            console.log("AppKit.Dependency("+dep.Source+") failed to load JavaScript.");
-                          }
-                        );
-                    break;
-                  };
-                  case (AppKit.ukStyleSheet) : {
-                    DOM.loadStyle(
-                      dep,
-                      dep.Source,
-                      function(){
-                        var dep=this.Owner;
-                        dep.Loaded=true;
-                      },
-                      function(){
-                        var dep=this.Owner;
-                        dep.Failed=true;
-                        this.Failed=true;
-                        console.log("AppKit.Dependency("+dep.Source+") failed to load style sheet.");
-                      }
-                    );
-                    break;
-                  };
-                };
-              } else {
-                dep.Loaded=true;
-              };
-            };
-          };
-        };
-      };
+      
       var iLoadCount=0;
       for (var iLcv=0; iLcv<apps.length; iLcv++){
         var app=apps[iLcv];

@@ -1,8 +1,13 @@
-coAppUI.App.Components.Button = {
+UI.Button = {
   Unit           : '',
   Loaded         : true,
   debugToConsole : false,
   Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(aOwner,aParent,sName,sClass,sCaption){
     if (sName==undefined) sName="";
     if (sClass==undefined) sClass="";

@@ -1,15 +1,22 @@
-coAppUI.ThreadView=coAppUI.App.Components.ThreadView = {
-  Version        : new Version(2015,8,12,142),
-  Title          : new Title("Aurawin Thread View","ThreadView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/ThreadView.js',coAppKit.PreLoaded),
+UI.ThreadView = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+
   SelectNext     : true,
   SelectNone     : false,
   SkipThreads    : true,
   SkipGroup      : true,
   WhithinGroup   : false,
   WhithinThread  : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
+
   Create         : function(Slides,Owner,Frame,Client,sName,sClass,Align,vScroll){
     var vw=Slides.createSlide(sName,"ThreadView",Owner,Frame,Client,Align);
     vw.UIC=this;

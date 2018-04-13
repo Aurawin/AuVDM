@@ -1,9 +1,13 @@
-coAppUI.App.Components.DropFiles = {
-  Version        : new Version(2014,10,23,24),
-  Title          : new Title("Aurawin Drop Files","DropFiles"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/DropFiles.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.DropFiles = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function (sName,sClass,sCaption,Screen,Slides,Owner,Parent,Align){
     if (sCaption==undefined) sCaption=coLang.Table.DragDrop.Files.Dropbox;
     if (Align==undefined) Align=coAppUI.Alignment.Center;
@@ -687,4 +691,4 @@ coAppUI.App.Components.DropFiles = {
     _df.inputForm=_df.createInputForm();
     return _df;
   }
-}
+};

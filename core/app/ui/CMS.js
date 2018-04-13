@@ -1,13 +1,17 @@
-coAppUI.App.Components.CMS = {
-  Version        : new Version(2014,10,24,8),
-  Title          : new Title("Aurawin UI CMS","CMS"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/CMS.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.CMS = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
   uriAce             : '/core/vdm/editor/ace/ace.js',
 
   aceLoaded      : false,
   Aces           : new Array(),
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   checkForAce:function(){
     if (this.aceLoaded!=true){
       coDOM.loadScript(

@@ -1,9 +1,13 @@
-coAppUI.App.Components.ContentBox = {
-  Version        : new Version(2014,10,16,9),
-  Title          : new Title("Aurawin Content Box","Content Box"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2013-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/ContentBox.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.ContentBox = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function (sName,sClass,Screen,Slides,Owner,Parent,Align){
     var sc=Screen;
     var cb=Slides.createSlide(sName,sClass,Screen,Owner,Parent,Align);

@@ -1,9 +1,14 @@
-coAppUI.App.Components.BoxView = {
+UI.BoxView = {
   Unit           : '',
   Loaded         : true,
   debugToConsole : false,
   Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function (sName,sClass,Screen,Slides,Owner,Parent,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Client;
     var _vw=Slides.createSlide(sName,sClass+" BoxView",Screen,Owner,Parent,Align);
@@ -435,4 +440,4 @@ coAppUI.App.Components.BoxView = {
     _vw.Boxes=_vw._createBoxes();
     return _vw;
   }
-}
+};

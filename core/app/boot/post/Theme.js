@@ -600,6 +600,12 @@ const Theme= {
     tbl.UI.FilmStrip.Slide.Color=new RGBA(100,100,100,.5)
     tbl.UI.FilmStrip.Slide.transitionScrollDelay=500;
 
+    tbl.UI.ListItem=new Object();
+    tbl.UI.ListItem.Alternate=new Object();
+    tbl.UI.ListItem.Alternate.Odd =  "rgba(255,255,255,0.2)";
+    tbl.UI.ListItem.Alternate.Even  = "rgba(250,250,250,0.1)";
+  
+
     tbl.UI.Nav=new Object();
     tbl.UI.Nav.fontSize=12;
     tbl.UI.Nav.Menu=new Object();

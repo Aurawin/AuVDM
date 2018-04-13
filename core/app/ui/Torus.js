@@ -1,9 +1,14 @@
-coAppUI.App.Components.Torus = {
-  Version        : new Version(2014,9,3,18),
-  Title          : new Title("Aurawin UI Torus","Torus"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Torus.js',coAppKit.PreLoaded),
+UI.Torus = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(aFrame,Owner,Parent,Mode){
     if (Mode==undefined) Mode="block";
     var _tr=coObject.Create();

@@ -1,13 +1,18 @@
-coAppUI.App.Components.IconListView = {
-  Version        : new Version(2014,9,3,65),
-  Title          : new Title("Aurawin Icon List View","IconListView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/IconListView.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.IconListView = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+
   executeDelay   : 500,
   loadPause      : 500,
   maxProcessLoad : 2,
   maxCacheItems  : 5,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function(sName,sCaption,Screen,Slides,Owner,Parent,Align){
     if (Align==undefined) Align=coAppUI.Alignment.Client;
 

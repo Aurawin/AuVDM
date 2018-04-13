@@ -1,9 +1,13 @@
-VDM.App.Components.Browser = {
-  Version        : new Version(2013,12,11,37),
-  Title          : new Title("VDM Core Browser","Browser"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2013.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(VDM.App,'/core/vdm/Browser.js',AppKit.PreLoaded),
+VDM.Browser = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+  init: function(){
+    this.Initialized=true;
+  },
   VDM            : null,
   Create : function(vdm){
     var wb=coDOM.createBrowser();

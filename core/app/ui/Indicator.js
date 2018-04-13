@@ -1,9 +1,13 @@
-coAppUI.App.Components.Indicator = {
-  Version        : new Version(2014,3,8,9),
-  Title          : new Title("Aurawin UI Indicator","Indicator"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Indicator.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.Indicator = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+  init:function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);  
+  },
   Create         : function (sName,sClass,Owner,Parent) {
     var itm=coObject.Create(coObject.relInline,coObject.cpyAsVar,sClass);
     itm.Owner=Owner;

@@ -1,9 +1,11 @@
-coAppUI.App.Components.RichEdit = {
-  Version        : new Version(2015,3,3,57),
-  Title          : new Title("Aurawin UI Rich Edit","RichEdit"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2013-2015.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/RichEdit.js',coAppKit.PreLoaded),
+UI.RichEdit = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+
   OldButtons     : ['formatting', '|', 'bold', 'italic', 'underline', 'deleted'],
   SimpleButtons  : ['bold', 'italic', 'underline', 'deleted'],
   BtnNewOn       : true,
@@ -14,6 +16,10 @@ coAppUI.App.Components.RichEdit = {
     '|', 'btn_new','btn_save', '|','formatting','alignment','|', 'bold', 'italic', 'underline', 'deleted',
     '|','unorderedlist', 'orderedlist', '|', 'outdent', 'indent', '|','table', 'link', '|', 'horizontalrule'
   ],
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
   Create         : function(aOwner,aParent,sName,sClass,sHint,sPlaceHolder,Buttons,NewButton,SaveButton){
     if (sName==undefined) sName="";
     if (sClass==undefined) sClass="";

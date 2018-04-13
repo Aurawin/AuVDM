@@ -1,10 +1,18 @@
-coAppUI.App.Components.RosterView = {
-  Version        : new Version(2014,9,19,3),
-  Title          : new Title("Aurawin UI Roster View","RosterView"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2014.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Text.js',coAppKit.PreLoaded),
+UI.RosterView = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
   debugToConsole : true,
+  Compiled       : false,
+
   ViewMode       : {'Email':1,'Phone':2,'Address':3},
+  
+  init: function(){
+    this.Initialized=true;
+    UI.Controls.Add(this);
+  },
+ 
   releaseItemAsEmail:function(itm){
     itm.Title.removeChild(itm.Last);
     itm.Title.removeChild(itm.Sep);

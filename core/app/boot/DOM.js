@@ -429,6 +429,20 @@ const DOM={
     };
     base.target=Target;
   },
+  getAllStyleSheets:function(){
+    let all = document.getElementsByTagName("LINK");
+    let s=null;
+    let n = null;
+    let src = "";
+    let r = List.createArray();
+    for (let iLcv=0; iLcv<all.length; iLcv++){
+      src = all[iLcv].attributes['href'].value;
+      n=all[iLcv].attributes['name'];
+      s = StyleSheets.createSheet(src,n);
+      r.push(s);
+    }
+    return r;
+  },
   getAllScripts: function(){
     let all = document.getElementsByTagName("SCRIPT");
     var s = null;

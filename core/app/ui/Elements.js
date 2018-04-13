@@ -1,9 +1,10 @@
-coAppUI.App.Components.Elements = {
-  Version        : new Version(2013,12,2,241),
-  Title          : new Title("Aurawin UI Elements","Elements"),
-  Vendor         : new Vendor("Aurawin", "Copyright (&copy;) 2012-2013.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header         : coAppKit.Dependencies.Create(coAppUI.App,'/core/app/ui/Elements.js',coAppKit.PreLoaded),
-  debugToConsole : true,
+UI.Elements = {
+  Unit           : '',
+  Loaded         : true,
+  debugToConsole : false,
+  Initialized    : false,
+  Compiled       : false,
+
   Transition     : '',
   defaultSpacing : 10,
   ElementSpacing : 2,
@@ -11,10 +12,12 @@ coAppUI.App.Components.Elements = {
   TransitionDelay     : 1000,
   Kind           : null,
   init           : function(){
+    this.Initialized=true;
     this.Kind=this.createKind(this);
+    UI.Controls.Add(this);
   },
   createKind     : function(Owner){
-    k=coObject.Create(coObject.relInline,coObject.cpyAsVar,"Kind");
+    k=Objects.createNew("Kind");
     k.Owner=Owner;
     k.Single=0;
     k.Double=1;
@@ -23,7 +26,7 @@ coAppUI.App.Components.Elements = {
     k.Free=function(){
       var k=this;
       if (k.Owner) k.Owner.Kind=null;
-      k=coObject.Release(k);
+      k=Objects.Release(k);
       return null;
     };
     return k;
@@ -167,7 +170,7 @@ coAppUI.App.Components.Elements = {
         if (iKind==undefined) iKind=coAppUI.App.Components.Elements.Single;
         var lst=this;
         var vw=lst.Owner;
-        var e=coObject.Create(coObject.relInline,coObject.cpyAsVar,"Element");
+        var e=Objects.createNew("Element");
         e.Owner=lst;
         e.View=vw;
         e.Visible=false;
@@ -281,7 +284,7 @@ coAppUI.App.Components.Elements = {
             };
           };
           lst.Add=function(){
-            var si=coObject.Create(coObject.relInline,coObject.cpyAsVar,"ElementSubItem");
+            var si=Objects.createNew("ElementSubItem");
             si.Owner=this;
             si.View=this.View;
             si.Parent=this.Container;
@@ -356,7 +359,7 @@ coAppUI.App.Components.Elements = {
             si._createControls=function(){
               var si=this;
 
-              ctrls=coObject.Create(coObject.relInline,coObject.cpyAsVar,si.Class+"Controls");
+              ctrls=Objects.createNew("Controls");
               ctrls.Owner=si;
               ctrls.Visible=false;
               ctrls.toHide=0;
@@ -696,7 +699,7 @@ coAppUI.App.Components.Elements = {
                 ctrls.Parent.removeChild(ctrls.btnRotateRight);
 
                 ctrls.Owner.Controls=null;
-                ctrls=coObject.Release(ctrls);
+                ctrls=Objects.Release(ctrls);
                 return null;
               };
               ctrls.Hide();
@@ -734,7 +737,7 @@ coAppUI.App.Components.Elements = {
             };
             si.Glyphs.Create=function(sGlyph,sCategory){
               if (sCategory==undefined) sCategory="";
-              var g=coObject.Create(coObject.relInline,coObject.cpyAsVar,"Glyph");
+              var g=Objects.createNew("Glyph");
               g.Owner=this;
               g.Assigned=false;
               g.Parent=this.Owner.Container;
@@ -1088,7 +1091,7 @@ coAppUI.App.Components.Elements = {
                   if (idx!=-1)
                     g.Owner.splice(idx,1);
                 };
-                g=coObject.Release(g);
+                g=Objects.Release(g);
                 return null;
               };
               return g;
@@ -1185,7 +1188,7 @@ coAppUI.App.Components.Elements = {
               var si=gl.Owner;
               si.Glyph=null;
               gl.Clear();
-              gl=coObject.Release(gl);
+              gl=Objects.Release(gl);
               return null;
             };
             coDOM.clearMargins(si.Container);
@@ -1221,7 +1224,7 @@ coAppUI.App.Components.Elements = {
               si.Parent.removeChild(si.Container);
 
               if (si.Controls) si.Controls.Free();
-              si=coObject.Release(si);
+              si=Objects.Release(si);
               return null;
             };
             si.LoadCSS();
@@ -1371,7 +1374,7 @@ coAppUI.App.Components.Elements = {
             var lst=this;
             lst.Clear();
             lst.Parent.removeChild(lst.Container);
-            lst=coObject.Release(lst);
+            lst=Objects.Release(lst);
             return null;
           };
           return lst;
@@ -1414,7 +1417,7 @@ coAppUI.App.Components.Elements = {
           };
           e.Parent.removeChild(e.Container);
 
-          e=coObject.Release(e);
+          e=Objects.Release(e);
           return null;
         };
         e.subItems=e._createSubItems();
@@ -1462,4 +1465,3 @@ coAppUI.App.Components.Elements = {
     return _vw;
   }
 }
-coAppUI.App.Components.Elements.init();

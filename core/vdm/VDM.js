@@ -1,23 +1,32 @@
 /*
-unit /core/vdm/coVDM.js
+unit /core/vdm/VDM.js
 
 This unit provides the virtual desktop environment
 that uses server core objects/commands and services.
 
 */
 const VDM = {
-  Version               : new Version(2018,3,7,457),
-  Title                 : new Title("Virtual Desktop","coVDM"),
+  Version               : new Version(2018,4,12,458),
+  Title                 : new Title("Virtual Desktop","VDM"),
   Vendor                : new Vendor("Aurawin", "Copyright (&copy;) 2011-2018.  All rights reserved.", [{'REAL-TIME END-USE AWARE INTERACTIVE SEARCH UTILIZING LAYERED APPROACH' : 7720843}, {'SYSTEMS AND APPARATUSES FOR SEAMLESS INTEGRATION OF USER, CONTEXTUAL, AND SOCIALLY AWARE SEARCH UTILIZING LAYERED APPROACH' : 7860852} ]),
-  Header                : coAppKit.Dependencies.Create(null,'/core/vdm/coVDM.js',coAppKit.PreLoaded),
-  Usage                 : coAppKit.Units.Create(null,'/core/vdm/coVDM.js',coAppKit.PreLoaded),
-  Unit                  : '/core/vdm/coVDM.js',
-  Node                  : "{$i node_name}",
-  Server                : "{$i node_address}",
-  Domain                : "{$i domain_name}",
-  Service               : "{$i node_service}",
-  Daily                 : "{$i domain_name}"=="daily.aurawin.com",
+  Unit                  : '',
+  Loaded                : true,
+  debugToConsole        : false,
+  Initialized           : false,
+  debugToConsole        : true,
+  Compiled              : false,
+
+  App                   : null,
+  Browser               : null,
+
+  Node                  : null,
+  Server                : null,
+  Domain                : null,
+  Service               : null,
+  Daily                 : null,
+
   Secure                : window.location.protocol=="https:",
+
   NameSpace             : "/core/vdm",
   NS_CO_LOGIN           : "/core/login",
   NS_CC_CREDS           : "/creds",
@@ -63,7 +72,7 @@ const VDM = {
   URI_FILE_TRANSFORM    : "/core/vdm?fls/tfm&$id",
   URI_FILE_PALMPRINT    : "/core/vdm?fls/plp&$id",
 
-  Credentials             : new coCredentials("{$i domain_name}","","",""),
+  Credentials             : new Credentials("aurawin.com","","",""),
   Orientation             : new Orientation(),
   HintReset               : 5000,
 
@@ -208,8 +217,6 @@ const VDM = {
   BoxViewLeftMargin       : 80,
   BoxViewRightMargin      : 80,
   BoxViewNavMargin        : 21,
-  ListItemAlternateOdd    : "rgba(255,255,255,0.2)",
-  ListItemAlternateEven   : "rgba(250,250,250,0.1)",
   FooterLineHeight        : 28,
   MenuItemSelectDelay     : 50,
   TaskSwitchDelay         : 150,
@@ -227,11 +234,7 @@ const VDM = {
   ToolbarButtonSizeThin   : 34,
   ToolbarButtonMargin     : 4,
   ToolbarTextHeight       : 22,
-  PanelLabeledTextHeight  : 32,
-  PanelLabeledComboHeight : 24,
-  PanelLabelTextLabelHeight : 22,
-  PanelLabelComboLabelHeight : 22,
-
+  
   DaysToRememberLogin     : 35,
   DaysToRememberVersion   : 1000,
   LoginFailureResetDelay  : 2000,
@@ -242,43 +245,36 @@ const VDM = {
   Console                 : null,
   Events                  : null,
   Instance                : null,
-  Exception               : function (err){
-    if (this.Console)
-      this.Console.Exception(err);
-  },
+
   init                    : function(){
+    this.Initialized=true;
+
     if (this.Instance!=null) {
       alert("Cannot create duplicate Virtual Desktop Managers!");
       return;
     };
+   
     this.App=AppKit.createApplication(
-      this.Unit,
       this.Title,
       this.Version,
       this.Vendor,
       [
-        '/core/app/App.js',
-        '/core/app/AppUI.js',
-        '/core/app/AppScreens.js',
-        '/core/vdm/Startup.js'
+        {
+          "src":"./vdm/Browser.js",
+          "name":"VDM.Browser"
+        }
       ],
-      [
-        '/core/vdm/VDM.css'
-      ],
-      this.onInitialized
+      AppKit.NoStyleSheets,
+      this.onInitialized,
+      AppKit.AppSystem
     );
-    this.API=this.App.Components;
-    this.Header.App=this.App;
-    this.Usage.App=this.App;
-    this.App.Unit=this;
-    this.App.Components.Browser=null;
-    this.App.Components.Display=null;
+
     this.App.deferInit=function(App){
       if (  (AppKit.CacheUpdating==true) && (VDM ) ) {
         VDM.Torus.Show();
         if (VDM.Splash) {
           VDM.Splash.setStatus(
-            (AppKit.CacheObsolete==true) ? Lang.Table.Apps.VDM.Status.CacheUpdated : coLang.Table.Apps.VDM.Status.CacheInstall
+            (AppKit.CacheObsolete==true) ? Lang.Table.Apps.VDM.Status.CacheUpdated : Lang.Table.Apps.VDM.Status.CacheInstall
           );
         };
       };
@@ -291,23 +287,23 @@ const VDM = {
 
     };
     this.App.onPostBoot=function(App){
-      coVDM.VDM.Loading=false;
+      VDM.Loading=false;
     };
     this.App.onLogin=function(App){
-      if ( (coVDM.VDM.Devices) && (coVDM.VDM.Devices.List.DB.Loaded==true)) {
-        coVDM.VDM.LogIn();
-        coVDM.Manifest.Read();
-        coVDM.Events.BeforeUnload.setActive(true);
+      if ( (VDM.Devices) && (VDM.Devices.List.DB.Loaded==true)) {
+        VDM.LogIn();
+        VDM.Manifest.Read();
+        VDM.Events.BeforeUnload.setActive(true);
       } else {
         App.processLoggedIn=false;
       };
     };
     this.App.onLogout=function(App){
-      coVDM.Events.BeforeUnload.setActive(false);
+      VDM.Events.BeforeUnload.setActive(false);
     };
-    var _vdm=this.VDM=coObject.Create(coObject.relInline,coObject.cpyAsVar,"VDM");
+    let _vdm=this;
 
-    this.Events=_vdm.Events=coObject.Create(coObject.relInline,coObject.cpyAsVar,"Events");
+    _vdm.Events=Objects.createNew("Events");
     _vdm.Running=true;
     _vdm.Resizing=false;
     _vdm.Devices=null;
@@ -317,7 +313,7 @@ const VDM = {
     _vdm.Console=null;
     _vdm.Alerts=null;
 
-    _vdm.tmrResize=coAppKit.Timers.createItem(this.resizeDelay);
+    _vdm.tmrResize=AppKit.Timers.createItem(this.resizeDelay);
     _vdm.tmrResize.Owner=_vdm;
     _vdm.tmrResize.RunOnce=true;
     _vdm.tmrResize.onExecute=function(){
@@ -327,15 +323,16 @@ const VDM = {
 
 
     _vdm.onNetworkFailure=function(){
-      var vdm=coVDM.VDM;
+      var vdm=VDM;
 
-      coVDM.VDM.Status.Show(coLang.Table.Net.Failure,vdm.Login,vdm.Login.sldAuth.txtAccount);
+      VDM.Status.Show(coLang.Table.Net.Failure,vdm.Login,vdm.Login.sldAuth.txtAccount);
 
       vdm.Login.Show();
       vdm.Login.DisableButtons();
       vdm.Login.Frame.Shake();
     };
-    _vdm.Net=coNet.init(
+
+    _vdm.Net=Net.init(
       this.Domain,
       this.NameSpace,
       this.Credentials,
@@ -343,7 +340,7 @@ const VDM = {
     );
   },
   Load:function (){
-    var _vdm=coVDM.VDM;
+    var _vdm=this;
     _vdm.Container = document.getElementById('vdm');
     if (!_vdm.Container) {
       _vdm.Container=document.createElement('div');
@@ -359,36 +356,34 @@ const VDM = {
     document.body.style.margin="0";
     document.body.style.padding="0";
     document.body.style.overflow="hidden";
-    coVDM.divFormat=document.createElement('div');
-    document.body.appendChild(coVDM.divFormat);
-    coVDM.divFormat.className="divFormat";
-    coVDM.divParse=document.createElement('div');
-    document.body.appendChild(coVDM.divParse);
-    coVDM.divParse.className="divParse";
+    _vdm.divFormat=document.createElement('div');
+    document.body.appendChild(VDM.divFormat);
+    _vdm.divFormat.className="divFormat";
+    _vdm.divParse=document.createElement('div');
+    document.body.appendChild(VDM.divParse);
+    _vdm.divParse.className="divParse";
     _vdm.Torus=this.createTorus();
 
-    this.App.Initialized=true;
   },
   onInitialized:function(App){
-    var _vdm=coVDM.VDM;
-    coVDM.Credentials.Auth=coCookies.getCookie(coNet.fieldAuth);
-    coVDM.Credentials.User=coCookies.getCookie(coNet.fieldAccount);
-    coVDM.Credentials.ResourceID=coCookies.getCookieAsInt64(coNet.fieldRCID);
-    if (coVDM.Credentials.Auth)
-      coAppKit.CredsBooted=true;
-    coVDM.Startup();
-
-    coVDM.App.Components.Events.init(_vdm);
-    _vdm.Status=coVDM.App.Components.Status.Create(_vdm);
-    _vdm.TopBar=coVDM.App.Components.Topbar.Create(_vdm,_vdm.Container);
+    var _vdm=VDM;
+    _vdm.Credentials.Auth=Cookies.getCookie(Net.fieldAuth);
+    _vdm.Credentials.User=Cookies.getCookie(Net.fieldAccount);
+    _vdm.Credentials.ResourceID=Cookies.getCookieAsInt64(Net.fieldRCID);
+    if (VDM.Credentials.Auth)
+      AppKit.CredsBooted=true;
+    _vdm.Startup();
+    _vdm.Components.Events.init(_vdm);
+    _vdm.Status=VDM.App.Components.Status.Create(_vdm);
+    _vdm.TopBar=VDM.App.Components.Topbar.Create(_vdm,_vdm.Container);
     _vdm.Screens.onCreated();
     _vdm.setSize();
-    if ( (coVDM.Credentials.Auth) && (coVDM.Credentials.Auth.length>0) )
+    if ( (VDM.Credentials.Auth) && (VDM.Credentials.Auth.length>0) )
       _vdm.Authorize();
     App.Loaded=true;
   },
   Startup:function(){
-    var _vdm=coVDM.VDM;
+    var _vdm=VDM;
     _vdm.Loading=true;
 
     if (window.statusBarHidden) window.statusBarHidden=true;
@@ -396,7 +391,6 @@ const VDM = {
     if (window.menubar) window.menubar.visible = false;
     if (window.locationbar) window.locationbar.visible=false;
     this.VDM=_vdm;
-
 
     _vdm.LogIn=function(){
       var vdm=this;
@@ -427,17 +421,17 @@ const VDM = {
       vdm.Resizing=true;
       try {
         window.scrollTo(0,0);
-        coEvents.TouchLock.Lock(coVDM.TouchLock);
+        coEvents.TouchLock.Lock(VDM.TouchLock);
         vdm.Display.Update();
         vdm.Cover.style.width=vdm.Container.offsetWidth+"px";
         vdm.Cover.style.height=vdm.Container.offsetHeight+"px";
-        coVDM.Orientation.Current = (vdm.Container.offsetWidth>=vdm.Container.offsetHeight)? coVDM.Orientation.Landscape : coVDM.Orientation.Portrait;
+        VDM.Orientation.Current = (vdm.Container.offsetWidth>=vdm.Container.offsetHeight)? VDM.Orientation.Landscape : VDM.Orientation.Portrait;
         if (vdm.TopBar.Visible==true){
           vdm.TopBar.Container.style.top = "0px";
           vdm.TopBar.Container.style.left = "0px";
           vdm.TopBar.Container.style.width = vdm.Container.clientWidth + "px";
           vdm.TopBar.Clock.Container.style.left=vdm.TopBar.Container.clientWidth-vdm.ClockWidth-vdm.TopBar.Margin.Width+"px";
-          vdm.TopBar.Clock.Container.style.width=coVDM.ClockWidth+"px";
+          vdm.TopBar.Clock.Container.style.width=VDM.ClockWidth+"px";
         };
         vdm.WorkSpace.setSize();
         vdm.TopBar.Alerts.Container.style.width=vdm.TopBar.Container.clientWidth-vdm.TopBar.Clock.Container.clientWidth-vdm.TopBar.Margin.Width+"px";
@@ -449,7 +443,7 @@ const VDM = {
       };
     };
     _vdm.Resize=function(){
-      if (coVDM.VDM.Resizing==false)
+      if (VDM.Resizing==false)
         this.tmrResize.setActive(true);
     };
     _vdm.closeWorkSpace=function(){
@@ -475,39 +469,39 @@ const VDM = {
 
       coAppKit.Authorizing();
 
-      vdm.cmdAuthorize.Headers.Update(coNet.fieldAccount,coVDM.Credentials.User);
-      vdm.cmdAuthorize.Headers.Update(coNet.fieldAuth,coVDM.Credentials.Auth);
+      vdm.cmdAuthorize.Headers.Update(coNet.fieldAccount,VDM.Credentials.User);
+      vdm.cmdAuthorize.Headers.Update(coNet.fieldAuth,VDM.Credentials.Auth);
       vdm.cmdAuthorize.reTry();
     };
     _vdm.Authenticate=function(){
       var vdm=this;
       coAppKit.Authenticating();
-      vdm.cmdAuthenticate.Headers.Update(coNet.fieldAccount,coVDM.Credentials.User);
-      vdm.cmdAuthenticate.Headers.Update(coNet.fieldAuth,coVDM.Credentials.Auth);
+      vdm.cmdAuthenticate.Headers.Update(coNet.fieldAccount,VDM.Credentials.User);
+      vdm.cmdAuthenticate.Headers.Update(coNet.fieldAuth,VDM.Credentials.Auth);
       vdm.cmdAuthenticate.reTry();
     };
     _vdm.SaveLogin=function(){
       var vdm=this;
-      var rc=vdm.Devices.List.DB.getItemById(coVDM.Credentials.ResourceID);
-      var bSave=(rc) ? ( (rc.MAP.Flags.Value | coVDM.API.coDevice.FLAG_SAVE_SESSION) == rc.MAP.Flags.Value) : false;
+      var rc=vdm.Devices.List.DB.getItemById(VDM.Credentials.ResourceID);
+      var bSave=(rc) ? ( (rc.MAP.Flags.Value | VDM.API.coDevice.FLAG_SAVE_SESSION) == rc.MAP.Flags.Value) : false;
       if (bSave==true) {
-        coCookies.setCookie(coNet.fieldRCID,coVDM.Credentials.ResourceID,coVDM.DaysToRememberLogin);
-        coCookies.setCookie(coNet.fieldAuth,coVDM.Credentials.Auth,coVDM.DaysToRememberLogin);
-        coCookies.setCookie(coNet.fieldAccount,coVDM.Credentials.User,coVDM.DaysToRememberLogin);
+        coCookies.setCookie(coNet.fieldRCID,VDM.Credentials.ResourceID,VDM.DaysToRememberLogin);
+        coCookies.setCookie(coNet.fieldAuth,VDM.Credentials.Auth,VDM.DaysToRememberLogin);
+        coCookies.setCookie(coNet.fieldAccount,VDM.Credentials.User,VDM.DaysToRememberLogin);
       } else {
-        coCookies.setCookieTemp(coNet.fieldRCID,coVDM.Credentials.ResourceID);
-        coCookies.setCookieTemp(coNet.fieldAuth,coVDM.Credentials.Auth);
-        coCookies.setCookieTemp(coNet.fieldAccount,coVDM.Credentials.User);
+        coCookies.setCookieTemp(coNet.fieldRCID,VDM.Credentials.ResourceID);
+        coCookies.setCookieTemp(coNet.fieldAuth,VDM.Credentials.Auth);
+        coCookies.setCookieTemp(coNet.fieldAccount,VDM.Credentials.User);
       };
     };
     _vdm.onAuthenticateFailed=function(cmd){
       coAppKit.LoginFailed();
     };
     _vdm.onAuthenticateComplete=function(cmd){
-      var vdm=coVDM.VDM;
+      var vdm=VDM;
       switch (cmd.Code) {
         case coNet.CO_STATUS_OK :
-          coVDM.API.coDevice.List.cmdList.reTry();
+          VDM.API.coDevice.List.cmdList.reTry();
           coAppKit.Authenticated();
           break;
         default :
@@ -521,10 +515,10 @@ const VDM = {
       coAppKit.AuthorizationFailed();
     };
     _vdm.onAuthorizeComplete=function(cmd){
-      var vdm=coVDM.VDM;
+      var vdm=VDM;
       switch (cmd.Code) {
         case coNet.CO_STATUS_OK :
-          coVDM.Credentials.User=cmd.Headers.getValue(coNet.fieldAccount);
+          VDM.Credentials.User=cmd.Headers.getValue(coNet.fieldAccount);
           coAppKit.Authorized();
           break;
         default :
@@ -546,8 +540,8 @@ const VDM = {
 
     _vdm.cmdAuthorize=_vdm.Net.Commands.createCommand(
       _vdm.Net,
-      coVDM.NS_CO_LOGIN,
-      coVDM.NS_CC_AUTH,
+      VDM.NS_CO_LOGIN,
+      VDM.NS_CC_AUTH,
       coNet.NoData,
       _vdm.onAuthorizeComplete,
       _vdm.onAuthorizeFailed,
@@ -559,8 +553,8 @@ const VDM = {
     );
     _vdm.cmdAuthenticate=_vdm.Net.Commands.createCommand(
       _vdm.Net,
-      coVDM.NS_CO_LOGIN,
-      coVDM.NS_CC_CREDS,
+      VDM.NS_CO_LOGIN,
+      VDM.NS_CC_CREDS,
       coNet.NoData,
       _vdm.onAuthenticateComplete,
       _vdm.onAuthenticateFailed,
@@ -571,37 +565,34 @@ const VDM = {
       coNet.AutoLoadOff
     );
     _vdm.coverOn=function(){
-      var vdm=coVDM.VDM;
+      var vdm=VDM;
       vdm.Cover.style.display="block";
       vdm.Cover.style.visibility="visible";
-      vdm.Cover.style.zIndex=vdm.Screens.zIndex()+coVDM.zFactorCover;
+      vdm.Cover.style.zIndex=vdm.Screens.zIndex()+VDM.zFactorCover;
     };
     _vdm.coverOff=function(){
-      var vdm=coVDM.VDM;
+      var vdm=VDM;
       vdm.Cover.style.display="none";
       vdm.Cover.style.visibility="hidden";
     };
   },
   ScreenToClientX:function(elm){
-    return coUtils.getOffsetLeft(elm,coVDM.VDM.WorkSpace.Container);
+    return coUtils.getOffsetLeft(elm,VDM.WorkSpace.Container);
   },
   ScreenToClientY:function(elm){
-    return coUtils.getOffsetTop(elm,coVDM.VDM.WorkSpace.Container);
+    return coUtils.getOffsetTop(elm,VDM.WorkSpace.Container);
   },
   createTorus : function(){
-    var _tr=coObject.Create();
-    _tr.Unit=this;
-    _tr.Class="vdmTorus";
-    _tr.VDM=this.VDM;
+    var _tr=Objects.createNew("vdmTorus");
     _tr.Visible=false;
-    _tr.Parent=this.VDM.Container;
+    _tr.Parent=this.Container;
     _tr.Container=document.createElement('div');
     _tr.Parent.appendChild(_tr.Container);
     _tr.Container.className=_tr.Class;
     _tr.Overlay=document.createElement('div');
     _tr.Container.appendChild(_tr.Overlay);
     _tr.Overlay.className=_tr.Class+"Overlay";
-    _tr.Container.style.zIndex=coVDM.zTorus;
+    _tr.Container.style.zIndex=VDM.zTorus;
     _tr.Show=function(){
        var tr=this;
        tr.Container.style.visibility="visible";
@@ -621,5 +612,4 @@ const VDM = {
     return _tr;
   }
 };
-coVDM.init();
-coDOM.addEvent(window,"load",function(){ coVDM.Load();},false);
+DOM.addEvent(window,"load",function(){ VDM.Load();},false);
